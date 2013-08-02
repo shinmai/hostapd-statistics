@@ -1,6 +1,6 @@
 #!/bin/bash
 # this script greps for hostapd and then does.. stuff!
-isthisimportant=`tail -1 /var/log/syslog | grep "hostapd"`
+isthisimportant=`cat /dev/shm/hostapd-statistics | grep "hostapd"`
 if [ -n "$isthisimportant" ]; then
 	connected=`echo $isthisimportant | grep "handshake"`
 	disconnected=`echo $isthisimportant | grep "deauthenticated"`

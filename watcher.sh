@@ -21,6 +21,6 @@ bash ./webservice.sh &
 timeoutcheck &
 while :
 do
-	inotifywait -q -e modify /var/log/syslog && bash ./stuff.sh
+	inotifywait -q -e modify /var/log/syslog && tail -1 /var/log/syslog > /dev/shm/hostapd-statistics && bash ./stuff.sh
 done
 
