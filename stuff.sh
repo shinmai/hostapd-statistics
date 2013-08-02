@@ -11,7 +11,7 @@ if [ -n "$isthisimportant" ]; then
 			echo $mac
 			ip=`arp -n | grep "$mac" | cut -d" " -f1`
 				if [ -z "$ip" ]; then
-					ip=`nmap -sP 192.168.178.1/24 | tr "\n" " " | sed "s/Host is up./\n/g" | grep -i "$mac" | cut -d"(" -f2 | cut -d")" -f1`
+					ip=`nmap -sP 192.168.178.1/24 | tr "\n" " " | sed "s/Host is up./\n/g" | grep -i "$mac"`
 				fi
 			echo $ip
 			hostname=`nslookup "$ip" | grep "name" | cut -d"=" -f2 | tr -d ' '`
