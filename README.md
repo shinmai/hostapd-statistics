@@ -11,7 +11,11 @@ PROBABLY INCOMPATIBLE WITH LOGROTATE
 Todo:
 
 -Better Webinterface
+
 -PKGBUILD
+
 -Deb
+
 -Stuff
+
 -Remove hardcoded values like the Router IP
