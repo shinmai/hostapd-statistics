@@ -14,3 +14,4 @@ Todo:
 -PKGBUILD
 -Deb
 -Stuff
+-Remove hardcoded values like the Router IP
