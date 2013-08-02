@@ -6,6 +6,10 @@ if [ -n "$isthisimportant" ]; then
 	disconnected=`echo $isthisimportant | grep "deauthenticated"`
 	if [ -n "$connected" ]; then
 		mac=`echo $connected | cut -d" " -f8`
+		unique=`cat ./uniquemacs | grep "$mac"`
+		if [ -z "$unique" ]; then
+			echo $mac >> ./uniquemacs
+		fi
 		alreadythere=`cat ./conclients | grep $mac`
 		if [ -z "$alreadythere" ]; then
 			ip=`arp -n | grep "$mac" | cut -d" " -f1`
