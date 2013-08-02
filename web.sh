@@ -10,6 +10,12 @@ echo "<tr>"
 echo "<th>MAC</th>"
 echo "<th>IP</th>"
 echo "<th>HOSTNAME</th>"
+echo "<th>Inactive Time</th>"
+echo "<th>Send</th>"
+echo "<th>Recieved</th>"
+echo "<th>Signal</th>"
+echo "<th>Signal Avg.</th>"
+echo "<th>Bandwith</th>"
 echo "</tr>"
 while read line
 do
@@ -17,7 +23,35 @@ echo "<tr>"
 a="<td> $line"
 b=`echo $a | sed "s/;/ <\/td><td> /g"`
 encoded="$b </td>"
+mac=`echo $line | cut -d";" -f1`
+iwstationdump=`iw dev wlan0 station dump | tr "\n" "%" | sed "s/Station/;/g" | tr ";" "\n" | grep -i "$mac"`
 echo $encoded
+#timeout
+echo "<td>"
+echo $iwstationdump | cut -d"%" -f2 | cut -d":" -f2
+echo "</td>"
+#send
+echo "<td>"
+tmp=`echo $iwstationdump | cut -d"%" -f3 | cut -d":" -f2`
+echo "$(($(($tmp/1024))/1024)) MB"
+echo "</td>"
+#recieved
+echo "<td>"
+tmp=`echo $iwstationdump | cut -d"%" -f5 | cut -d":" -f2`
+echo "$(($(($tmp/1024))/1024)) MB"
+echo "</td>"
+#signal
+echo "<td>"
+echo $iwstationdump | cut -d"%" -f9 | cut -d":" -f2 | tr -d " "
+echo "</td>"
+#signal avg
+echo "<td>"
+echo $iwstationdump | cut -d"%" -f10 | cut -d":" -f2 | tr -d " "
+echo "</td>"
+#Bandwith
+echo "<td>"
+echo $iwstationdump | cut -d"%" -f11 | cut -d":" -f2 | tr -d " "
+echo "</td>"
 echo "</tr>"
 done < ./conclients
 echo "</table>"
