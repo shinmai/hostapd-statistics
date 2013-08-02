@@ -9,6 +9,7 @@ mac=`echo $line | cut -d";" -f1`
 iwcheck=`iw dev wlan0 station dump | grep -i "$mac"`
 if [ -z "$iwcheck" ]; then
 	sed -i.bak -e "/$mac/d" ./conclients
+	echo "$mac timed out."
 fi
 done < ./conclients
 sleep 5m

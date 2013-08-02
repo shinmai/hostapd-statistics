@@ -33,12 +33,16 @@ echo "</td>"
 #send
 echo "<td>"
 tmp=`echo $iwstationdump | cut -d"%" -f3 | cut -d":" -f2`
-echo "$(($tmp/1048576)) MB"
+if [ -n "$tmp" ]; then
+	echo "$(($tmp/1048576)) MB"
+fi
 echo "</td>"
 #recieved
 echo "<td>"
 tmp=`echo $iwstationdump | cut -d"%" -f5 | cut -d":" -f2`
-echo "$(($tmp/1048576)) MB"
+if [ -n "$tmp" ]; then
+	echo "$(($tmp/1048576)) MB"
+fi
 echo "</td>"
 #signal
 echo "<td>"
