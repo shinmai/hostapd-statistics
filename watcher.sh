@@ -6,7 +6,7 @@ timeoutcheck() {
 while read line
 do
 mac=`echo $line | cut -d";" -f1`
-iwcheck=`iw dev wlan0 station dum| grep -i i "$mac"`
+iwcheck=`iw dev wlan0 station dump | grep -i "$mac"`
 if [ -z "$iwcheck" ]; then
 	sed -i.bak -e "/$mac/d" ./conclients
 fi
