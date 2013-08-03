@@ -1,13 +1,16 @@
 #!/bin/bash
 echo -e "HTTP/1.1 200 OK\n\n"
 echo "<html>"
+echo "<style type='text/css'>"
+cat style.css
+echo "</style>"
 echo "<head>"
 echo "<title>Hostapd-statistics</title>"
 echo "</head>"
 echo "<body>"
 echo "<center><h1>Ugly first webinterface. :)</h1>"
 date
-echo '<table border="1">'
+echo '<table>'
 echo "<tr>"
 echo "<th>MAC</th>"
 echo "<th>IP</th>"
