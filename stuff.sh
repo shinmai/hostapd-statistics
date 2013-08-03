@@ -1,6 +1,7 @@
 #!/bin/bash
 # this script greps for hostapd and then does.. stuff!
-isthisimportant=`tail -1 /var/log/hostapd.log | grep "hostapd"`
+isthisimportant=`tail -1 /var/log/syslog | grep "hostapd"`
+if [ -n "$isthisimportant" ]; then
 	connected=`echo $isthisimportant | grep "handshake"`
 	disconnected=`echo $isthisimportant | grep "deauthenticated"`
 	if [ -n "$connected" ]; then
@@ -26,3 +27,4 @@ isthisimportant=`tail -1 /var/log/hostapd.log | grep "hostapd"`
 		echo "$mac removed from connected clients."
 	fi
 
+fi

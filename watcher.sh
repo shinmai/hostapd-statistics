@@ -18,10 +18,10 @@ timeoutcheck &
 echo "Hostapd-statistics launched"
 rm ./conclients
 touch ./conclients
-socat TCP4-LISTEN:1501,fork,reuseaddr EXEC:"bash ./web.sh" &
+socat TCP4-LISTEN:1500,fork,reuseaddr EXEC:"bash ./web.sh" &
 timeoutcheck &
 while :
 do
-	inotifywait -q -e modify /var/log/hostapd.log && bash ./stuff.sh
+	inotifywait -q -e modify /var/log/syslog && bash ./stuff.sh
 done
 
