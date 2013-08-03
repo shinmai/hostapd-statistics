@@ -4,7 +4,7 @@ hostapd-statistics
 Statistics for Hostapd
 
 
-Needs: socat, nmap, arp, inotifywait, vnstat, iw
+Needs: socat, nmap, arp, inotifywait, vnstat, iw, sensors
 
 PROBABLY INCOMPATIBLE WITH LOGROTATE
 
