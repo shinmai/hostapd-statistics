@@ -4,7 +4,7 @@ hostapd-statistics
 Statistics for Hostapd
 
 
-Needs: Netcat, nmap, arp, inotifywait, vnstat, iw
+Needs: socat, nmap, arp, inotifywait, vnstat, iw
 
 PROBABLY INCOMPATIBLE WITH LOGROTATE
 

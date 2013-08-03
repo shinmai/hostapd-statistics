@@ -1,10 +1,12 @@
 #!/bin/bash
+echo -e "HTTP/1.1 200 OK\n\n"
 echo "<html>"
 echo "<head>"
 echo "<title>Hostapd-statistics</title>"
 echo "</head>"
 echo "<body>"
 echo "<center><h1>Ugly first webinterface. :)</h1>"
+date
 echo '<table border="1">'
 echo "<tr>"
 echo "<th>MAC</th>"
@@ -75,5 +77,6 @@ echo "<br>"
 echo "<img src='data:image/png;base64,$t'>"
 echo "<br>"
 echo "<img src='data:image/png;base64,$m'>"
+echo "</center>"
 echo "</body>"
 echo "</html>"
