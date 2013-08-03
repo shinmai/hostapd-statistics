@@ -10,6 +10,8 @@ echo "</head>"
 echo "<body>"
 echo "<center><h1>Hostapd-statistics</h1>"
 date
+echo "<br>"
+uptime
 echo '<table>'
 echo "<tr>"
 echo "<th>MAC</th>"
@@ -83,14 +85,14 @@ t=`vnstati -i eth0 -t -o /dev/stdout | base64`
 m=`vnstati -i eth0 -m -o /dev/stdout | base64`
 echo "<br>"
 echo "<img src='data:image/png;base64,$s'>"
-echo "<br>"
+#echo "<br>"
 echo "<img src='data:image/png;base64,$h'>"
 echo "<br>"
 echo "<img src='data:image/png;base64,$d'>"
+#echo "<br>"
+echo "<img src='data:image/png;base64,$m'>"
 echo "<br>"
 echo "<img src='data:image/png;base64,$t'>"
-echo "<br>"
-echo "<img src='data:image/png;base64,$m'>"
 echo "</center>"
 echo "</body>"
 echo "</html>"
