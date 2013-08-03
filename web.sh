@@ -8,7 +8,7 @@ echo "<head>"
 echo "<title>Hostapd-statistics</title>"
 echo "</head>"
 echo "<body>"
-echo "<center><h1>Ugly first webinterface. :)</h1>"
+echo "<center><h1>Hostapd-statistics</h1>"
 date
 echo '<table>'
 echo "<tr>"
@@ -64,7 +64,18 @@ echo "</td>"
 echo "</tr>"
 done < ./conclients
 echo "</table>"
-
+echo "<br>"
+echo "<table>"
+echo "<tr>"
+echo "<th>Sensor</th>"
+echo "<th>Temp</th>"
+echo "</tr>"
+echo "<tr>"
+echo "<td>"
+sensors -A | grep "°" | cut -d"(" -f1 | grep "^" | head -c-1 - | tr "\n" ";" | sed 's/;/<\/td><\/tr><tr><td>/g' | sed 's/     /<\/td><td>/g' | sed 's/°/\&deg;/g'
+echo "</td>"
+echo "</tr>"
+echo "</table>"
 s=`vnstati -i eth0 -s -o /dev/stdout | base64`
 h=`vnstati -i eth0 -h -o /dev/stdout | base64`
 d=`vnstati -i eth0 -d -o /dev/stdout | base64`
