@@ -1,0 +1,7 @@
+wlandev="wlan0"
+sleeptime="5m"
+webinterfaceport="1500"
+dhcpserverip="192.168.178.1"
+use_sensors="1"
+use_vnstat="1"
+use_iw="1"

@@ -1,7 +1,21 @@
 #!/bin/bash
 # this script checks if the syslog event is relevant for us and then does the appropriate stuff
 # TODO: Rewrite this since there could be a race condition if multiple clients connect simultaniously. (Forking?)
+loadcfg() {
+#if we got no conf file define everything here.
+wlandev="wlan0"
+sleeptime="5m"
+webinterfaceport="1500"
+dhcpserverip="192.168.178.1"
+use_sensors="0"
+use_vnstat="0"
+use_iw="0"
 
+SCRIPT_FILE=$( readlink -f "${BASH_SOURCE[0]}" )
+SCRIPT_DIR="${SCRIPT_FILE%/*}"
+source "${SCRIPT_DIR}/CONFIG"
+}
+loadcfg
 #functions
 disconnect() {
 mac=`echo $disconnected | cut -d" " -f8`
@@ -44,7 +58,8 @@ hostname=`nslookup "$ip" | grep "name" | cut -d"=" -f2 | tr -d ' '` #this fails 
 }
 nmaplookup() {
 echo "IP lookup with nmap.."
-ip=`nmap -sP 192.168.178.1/24 | sed -n '/Nmap scan report for/{s/.* //;s/[)(]//g;h};/'"$mac"'/{x;p;q;}'` #thank you sluggr ##sed on freenode
+echo "$dhcpserverip"
+ip=`nmap -sP "${dhcpserverip}"/24 | sed -n '/Nmap scan report for/{s/.* //;s/[)(]//g;h};/'"$mac"'/{x;p;q;}'` #thank you sluggr ##sed on freenode
 }
 failcheck() {
 if [ -z "$ip" ]; then
