@@ -21,12 +21,12 @@ echo "Hostapd-statistics launched"
 # Remove all old entrys and create the file if it doesn't exist.
 > ./conclients
 # Launch the webinterface listener. In comparison to netcat, this method runs web.sh only at access and not as soon as netcat is startet.
-socat TCP4-LISTEN:1500,fork,reuseaddr EXEC:"bash ./web" & #TODO: Make port configurable
+socat TCP4-LISTEN:1500,fork,reuseaddr EXEC:"bash ./web.bash" & #TODO: Make port configurable
 # Run the infinite loop
 timeoutcheck &
 # The whole watch the syslog thingy
 while :
 do
-	inotifywait -q -e modify /var/log/syslog && bash ./core
+	inotifywait -q -e modify /var/log/syslog && bash ./core.bash
 done
 
