@@ -44,7 +44,7 @@ hostname=`nslookup "$ip" | grep "name" | cut -d"=" -f2 | tr -d ' '` #this fails 
 }
 nmaplookup() {
 echo "IP lookup with nmap.."
-ip=`nmap -sP 192.168.178.1/24 | awk -v mac="$mac" '/Nmap scan report for / { lastip=$0; sub(".* ","",lastip); gsub("[)(]","",lastip); }  { if ($0 ~ mac) { print lastip; exit } }'`
+ip=`nmap -sP 192.168.178.1/24 | sed -n '/Nmap scan report for/{s/.* //;s/[)(]//g;h};/'"$mac"'/{x;p;q;}'` #thank you sluggr ##sed on freenode
 }
 failcheck() {
 if [ -z "$ip" ]; then
