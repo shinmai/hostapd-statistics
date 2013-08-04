@@ -23,15 +23,15 @@ do
 	mac=`echo "$line" | cut -d";" -f1`
 	iwcheck=`iw dev "$wlandev" station dump | grep -i "$mac"` 
 	if [ -z "$iwcheck" ]; then
-		sed -i -e "/$mac/d" ./conclients #remove the line with $mac from conclients
+		sed -i -e "/$mac/d" "${SCRIPT_DIR}/conclients" #remove the line with $mac from conclients
 		echo "$mac timed out."
 	fi
-done < ./conclients
+done < "${SCRIPT_DIR}/conclients"
 }
 timeoutcheck_loop() { timeoutcheck; while sleep "$sleeptime"; do timeoutcheck; done; }
 echo "Hostapd-statistics launched"
 # Remove all old entrys and create the file if it doesn't exist.
-> ./conclients
+> "${SCRIPT_DIR}/conclients"
 # Launch the webinterface listener. In comparison to netcat, this method runs web.sh only at access and not as soon as netcat is startet.
 socat TCP4-LISTEN:"$webinterfaceport",fork,reuseaddr EXEC:"bash ${SCRIPT_DIR}/web.bash" & 
 # Run the infinite loop

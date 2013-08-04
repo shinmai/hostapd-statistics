@@ -93,7 +93,7 @@ do
 		echo "</td>"
 	fi
 	echo "</tr>"
-done < ./conclients
+done < "${SCRIPT_DIR}/conclients"
 echo "</table>"
 echo "<br>"
 if  (( ${use_sensors} == 1 )); then
