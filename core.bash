@@ -30,7 +30,8 @@ unique
 #TODO: This does not always work right. Sometimes for some reason it won't find the ip adress. (Delayed execution?)
 alreadythere=`cat "${SCRIPT_DIR}/conclients" | grep $mac`
 if [ -z "$alreadythere" ]; then
-	iphostlookup
+	iplookup
+	hostname=`nslookup "$ip" | grep "name" | cut -d"=" -f2 | tr -d ' '` #this fails if we for some reason don't get the IP adress for the mac adress
 	time=`date +"%H:%M"`
 	write="$mac;$ip;$hostname;$time"
 	echo "Client $mac added."
@@ -45,18 +46,15 @@ if ! grep -q "$mac" "${SCRIPT_DIR}/uniquemacs" ; then
 	echo "$mac" >> "${SCRIPT_DIR}/uniquemacs"
 fi
 }
-iphostlookup() {
+iplookup() {
 #Find out the corresponding IP to the mac adress
 ip=`arp -n | grep "$mac" | cut -d" " -f1`
-	
 #for devices like my sgs2: find out the ip with arp-scan or nmap since it doesn't appear in the arp cache
 trys=0
 if [ -z "$ip" ]; then
 	arp-scanlookup
 fi
 arp-scanfailcheck
-	
-hostname=`nslookup "$ip" | grep "name" | cut -d"=" -f2 | tr -d ' '` #this fails if we for some reason don't get the IP adress for the mac adress
 }
 nmaplookup() {
 echo "IP lookup with nmap.."
@@ -64,7 +62,7 @@ ip=`nmap -sP "${dhcpserverip}"/24 | sed -n '/Nmap scan report for/{s/.* //;s/[)(
 }
 arp-scanlookup() {
 echo "IP lookup with arp-scan.."
-ip=`arp-scan -l -I "$arp_scan_dev" | grep -i "$mac" | grep -E -o '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}'` 
+ip=`arp-scan -l -I "$arp_scan_dev" | grep -i "$mac" | head -n1 |grep -E -o '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}'`
 }
 failcheck() {
 if [ -z "$ip" ]; then
@@ -87,7 +85,7 @@ if [ -z "$ip" ]; then
 	if (( trys < 3 )); then
 		echo "Whoops, arp-scan ip lookup failed. Try again.."
 		arp-scanlookup
-		failcheck
+		arp-scanfailcheck
 	else
 		trys=0
 		echo "Okay.. lets try nmap."
