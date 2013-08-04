@@ -19,7 +19,7 @@ loadcfg
 #functions
 disconnect() {
 mac=`echo $disconnected | cut -d" " -f8`
-sed -i -e "/$mac/d" ./conclients
+sed -i -e "/$mac/d" "${SCRIPT_DIR}/conclients"
 echo "$mac removed from connected clients."
 }
 connect () {
@@ -27,21 +27,21 @@ mac=`echo $connected | cut -d" " -f8 | tr [:lower:] [:upper:]`
 unique
 #check if the mac is already in our list of connected clients
 #TODO: This does not always work right. Sometimes for some reason it won't find the ip adress. (Delayed execution?)
-alreadythere=`cat ./conclients | grep $mac`
+alreadythere=`cat "${SCRIPT_DIR}/conclients" | grep $mac`
 if [ -z "$alreadythere" ]; then
 	iphostlookup
 	time=`date +"%H:%M"`
 	write="$mac;$ip;$hostname;$time"
 	echo "Client $mac added."
-	echo $write >> ./conclients
+	echo "$write" >> "${SCRIPT_DIR}/conclients"
 fi
 
 
 }
 unique() {
-unique=`cat ./uniquemacs | grep "$mac"`
-if ! grep -q $mac ./uniquemacs ; then
-	echo $mac >> ./uniquemacs
+unique=`cat "${SCRIPT_DIR}/uniquemacs" | grep "$mac"`
+if ! grep -q "$mac" "${SCRIPT_DIR}/uniquemacs" ; then
+	echo "$mac" >> "${SCRIPT_DIR}/uniquemacs"
 fi
 }
 iphostlookup() {
