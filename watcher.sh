@@ -28,6 +28,6 @@ timeoutcheck &
 # The whole watch the syslog thingy
 while :
 do
-	inotifywait -q -e modify /var/log/syslog && bash ./stuff.sh
+	inotifywait -q -e modify /var/log/syslog && bash ./core.sh
 done
 
