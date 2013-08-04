@@ -5,7 +5,7 @@
 #functions
 disconnect() {
 mac=`echo $disconnected | cut -d" " -f8`
-sed -i.bak -e "/$mac/d" ./conclients
+sed -i -e "/$mac/d" ./conclients
 echo "$mac removed from connected clients."
 }
 connect () {
@@ -26,7 +26,7 @@ fi
 }
 unique() {
 unique=`cat ./uniquemacs | grep "$mac"`
-if [ -z "$unique" ]; then
+if ! grep -q $mac ./uniquemacs ; then
 	echo $mac >> ./uniquemacs
 fi
 }
@@ -64,8 +64,8 @@ fi
 
 isthisimportant=`tail -1 /var/log/syslog | grep "hostapd"`
 if [ -n "$isthisimportant" ]; then
-	connected=`echo $isthisimportant | grep "handshake"`
-	disconnected=`echo $isthisimportant | grep "deauthenticated"`
+	connected=`echo "$isthisimportant" | grep "handshake"`
+	disconnected=`echo "$isthisimportant" | grep "deauthenticated"`
 	if [ -n "$connected" ]; then
 		connect
 	elif [ -n "$disconnected" ]; then

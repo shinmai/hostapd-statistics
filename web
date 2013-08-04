@@ -1,7 +1,7 @@
 #!/bin/bash
 #This bash script generates the HTML page on the fly.
 #Since we use socat, we don't need dependencies to real webservers like apache. Also, it is nearly impossible to exploit this. (I hope..)
-
+str_trim() { sed -r -e 's,^\s+,,' -e 's,\s+$,,' -e 's,\s+, ,g' "$@"; } # stolen from dywi
 
 #Headers'n'stuff
 echo -e "HTTP/1.1 200 OK\n\n"
@@ -31,48 +31,48 @@ echo "<th>Signal Avg.</th>"
 echo "<th>Bandwith</th>"
 echo "</tr>"
 #Teh realz stuff
-while read line # cycle through all lines in conclients (flatfile ftw!) and parse the values so they fit into our html page
+while read -r line # cycle through all lines in conclients (flatfile ftw!) and parse the values so they fit into our html page
 do
 	
 	echo "<tr>"
 	#this uses the values given in the file. (mac, ip, hostname)
 	a="<td> $line"
-	b=`echo $a | sed "s/;/ <\/td><td> /g"`
+	b=`echo "$a" | sed "s/;/ <\/td><td> /g"`
 	encoded="$b </td>"
-	echo $encoded
+	echo "$encoded"
 	
 	#This uses current data aquired with iw.
-	mac=`echo $line | cut -d";" -f1`
+	mac=`echo "$line" | cut -d";" -f1`
 	iwstationdump=`iw dev wlan0 station dump | tr "\n" "%" | sed "s/Station/;/g" | tr ";" "\n" | grep -i "$mac"` #TODO: make wlan0 configurable
 	#timeout
 	echo "<td>"
-	echo $iwstationdump | cut -d"%" -f2 | cut -d":" -f2
+	echo "$iwstationdump" | cut -d"%" -f2 | cut -d":" -f2
 	echo "</td>"
 	#send
 	echo "<td>"
-	tmp=`echo $iwstationdump | cut -d"%" -f3 | cut -d":" -f2`
+	tmp=`echo "$iwstationdump" | cut -d"%" -f3 | cut -d":" -f2`
 	if [ -n "$tmp" ]; then
 		echo "$(($tmp/1048576)) MB"
 	fi
 	echo "</td>"
 	#recieved
 	echo "<td>"
-	tmp=`echo $iwstationdump | cut -d"%" -f5 | cut -d":" -f2`
+	tmp=`echo "$iwstationdump" | cut -d"%" -f5 | cut -d":" -f2`
 	if [ -n "$tmp" ]; then
 		echo "$(($tmp/1048576)) MB"
 	fi
 	echo "</td>"
 	#signal
 	echo "<td>"
-	echo $iwstationdump | cut -d"%" -f9 | cut -d":" -f2 | tr -d " "
+	echo "$iwstationdump" | cut -d"%" -f9 | cut -d":" -f2 | tr -d " "
 	echo "</td>"
 	#signal avg
 	echo "<td>"
-	echo $iwstationdump | cut -d"%" -f10 | cut -d":" -f2 | tr -d " "
+	echo "$iwstationdump" | cut -d"%" -f10 | cut -d":" -f2 | tr -d " "
 	echo "</td>"
 	#Bandwith
 	echo "<td>"
-	echo $iwstationdump | cut -d"%" -f11 | cut -d":" -f2 | tr -d " "
+	echo "$iwstationdump" | cut -d"%" -f11 | cut -d":" -f2 | tr -d " "
 	echo "</td>"
 	echo "</tr>"
 done < ./conclients
@@ -85,11 +85,7 @@ echo "<tr>"
 echo "<th>Sensor</th>"
 echo "<th>Temp</th>"
 echo "</tr>"
-echo "<tr>"
-echo "<td>"
-sensors -A | grep "°" | cut -d"(" -f1 | grep "^" | head -c-1 - | tr "\n" ";" | sed 's/;/<\/td><\/tr><tr><td>/g' | sed 's/     /<\/td><td>/g' | sed 's/°/\&deg;/g' #Does this work on other hardware? There must be a better regex way.
-echo "</td>"
-echo "</tr>"
+LANG=C LC_ALL=C sensors -A | sed -nr -e 's,^(.*+)[:]\s+[+]?([0-9.]+).C.*$,<tr><td>\1</td><td>\2</td></tr>,p' #thanks dywi
 echo "</table>"
 
 #generate the vnstat images with vnstati
