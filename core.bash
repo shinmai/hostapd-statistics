@@ -7,6 +7,7 @@ wlandev="wlan0"
 sleeptime="5m"
 webinterfaceport="1500"
 dhcpserverip="192.168.178.1"
+arp_scan_dev="br0"
 use_sensors="0"
 use_vnstat="0"
 use_iw="0"
@@ -48,17 +49,22 @@ iphostlookup() {
 #Find out the corresponding IP to the mac adress
 ip=`arp -n | grep "$mac" | cut -d" " -f1`
 	
-#for devices like my sgs2: find out the ip with nmap since it doesn't appear in the arp cache
+#for devices like my sgs2: find out the ip with arp-scan or nmap since it doesn't appear in the arp cache
 trys=0
 if [ -z "$ip" ]; then
-	nmaplookup
+	arp-scanlookup
 fi
-failcheck		
+arp-scanfailcheck
+	
 hostname=`nslookup "$ip" | grep "name" | cut -d"=" -f2 | tr -d ' '` #this fails if we for some reason don't get the IP adress for the mac adress
 }
 nmaplookup() {
 echo "IP lookup with nmap.."
 ip=`nmap -sP "${dhcpserverip}"/24 | sed -n '/Nmap scan report for/{s/.* //;s/[)(]//g;h};/'"$mac"'/{x;p;q;}'` #thank you sluggr ##sed on freenode
+}
+arp-scanlookup() {
+echo "IP lookup with arp-scan.."
+ip=`arp-scan -l -I "$arp_scan_dev" | grep -i "$mac" | grep -E -o '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}'` 
 }
 failcheck() {
 if [ -z "$ip" ]; then
@@ -75,7 +81,23 @@ fi
 
 
 }
+arp-scanfailcheck() {
+if [ -z "$ip" ]; then
+	trys=$((trys+1))
+	if (( trys < 3 )); then
+		echo "Whoops, arp-scan ip lookup failed. Try again.."
+		arp-scanlookup
+		failcheck
+	else
+		trys=0
+		echo "Okay.. lets try nmap."
+		nmaplookup
+		failcheck
+	fi
+fi
 
+
+}
 isthisimportant=`tail -1 /var/log/syslog | grep "hostapd"`
 if [ -n "$isthisimportant" ]; then
 	connected=`echo "$isthisimportant" | grep "handshake"`

@@ -4,9 +4,9 @@ hostapd-statistics
 Statistics for Hostapd
 
 
-Needs: socat, nmap, arp, inotifywait
+Needs: socat, nmap, arp, inotifywait, arp-scan
 
-Optional: vnstat, sensors, iw
+Optional: vnstati, sensors, iw
 
 
 There may be incompabilities with logrotate, but I'm not sure about that
@@ -21,3 +21,4 @@ Todo:
 -Deb
 
 -Stuff
+
