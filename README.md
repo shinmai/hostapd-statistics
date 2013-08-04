@@ -21,5 +21,3 @@ Todo:
 -Deb
 
 -Stuff
-
--Remove hardcoded values like the Router IP
