@@ -4,7 +4,7 @@ hostapd-statistics
 Statistics for Hostapd
 
 
-Needs: socat, nmap, arp, inotifywait, arp-scan
+Needs: socat, nmap, inotifywait, arp-scan
 
 Optional: vnstati, sensors, iw
 

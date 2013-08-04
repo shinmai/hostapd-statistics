@@ -27,11 +27,10 @@ connect () {
 mac=`echo $connected | cut -d" " -f8 | tr [:lower:] [:upper:]`
 unique
 #check if the mac is already in our list of connected clients
-#TODO: This does not always work right. Sometimes for some reason it won't find the ip adress. (Delayed execution?)
 alreadythere=`cat "${SCRIPT_DIR}/conclients" | grep $mac`
 if [ -z "$alreadythere" ]; then
 	iplookup
-	hostname=`nslookup "$ip" | grep "name" | cut -d"=" -f2 | tr -d ' '` #this fails if we for some reason don't get the IP adress for the mac adress
+	hostname=`nslookup "$ip" | grep "name" | cut -d"=" -f2 | tr -d ' '` 
 	time=`date +"%H:%M"`
 	write="$mac;$ip;$hostname;$time"
 	echo "Client $mac added."
@@ -48,7 +47,7 @@ fi
 }
 iplookup() {
 #Find out the corresponding IP to the mac adress
-ip=`arp -n | grep "$mac" | cut -d" " -f1`
+ip=`grep "$mac" /proc/net/arp | cut -d" " -f1`
 #for devices like my sgs2: find out the ip with arp-scan or nmap since it doesn't appear in the arp cache
 trys=0
 if [ -z "$ip" ]; then
