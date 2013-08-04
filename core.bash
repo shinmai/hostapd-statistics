@@ -58,7 +58,6 @@ hostname=`nslookup "$ip" | grep "name" | cut -d"=" -f2 | tr -d ' '` #this fails 
 }
 nmaplookup() {
 echo "IP lookup with nmap.."
-echo "$dhcpserverip"
 ip=`nmap -sP "${dhcpserverip}"/24 | sed -n '/Nmap scan report for/{s/.* //;s/[)(]//g;h};/'"$mac"'/{x;p;q;}'` #thank you sluggr ##sed on freenode
 }
 failcheck() {
