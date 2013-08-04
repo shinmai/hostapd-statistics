@@ -17,8 +17,9 @@ if [ -n "$isthisimportant" ]; then
 					ip=`nmap -sP 192.168.178.1/24 | tr "\n" " " | sed "s/Nmap scan report for /\n/g" | grep -i "$mac" | cut -d"(" -f2 | cut -d")" -f1`
 				fi
 			hostname=`nslookup "$ip" | grep "name" | cut -d"=" -f2 | tr -d ' '`
-			write="$mac;$ip;$hostname"
-			echo "Client $write added."
+			time=`date +"%H:%M"`
+			write="$mac;$ip;$hostname;$time"
+			echo "Client $mac added."
 			echo $write >> ./conclients
 		fi
 	elif [ -n "$disconnected" ]; then
