@@ -102,7 +102,7 @@ if  (( ${use_sensors} == 1 )); then
 	echo "<table>"
 	echo "<tr>"
 	echo "<th>Sensor</th>"
-	echo "<th>T (°C)</th>"
+	echo "<th>T (&deg;C)</th>"
 	echo "</tr>"
 	LANG=C LC_ALL=C sensors -A | sed -nr -e 's,^(.*+)[:]\s+[+]?([0-9.]+).C.*$,<tr><td>\1</td><td>\2</td></tr>,p' #thanks dywi
 	echo "</table>"
