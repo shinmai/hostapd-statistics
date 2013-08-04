@@ -9,7 +9,7 @@ Needs: socat, nmap, inotifywait, arp-scan
 Optional: vnstati, sensors, iw
 
 
-There may be incompabilities with logrotate, but I'm not sure about that
+Works with logrotate
 
 
 Todo:
