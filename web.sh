@@ -52,18 +52,14 @@ if  (( ${webradio} == 1 )); then # Ajax would be much better for this..
 					mplayer '-really-quiet' '-msglevel' 'all=-1' "$webradio_url" > /dev/null 2>&1 &
 					echo "$!" > "/dev/shm/hostapd_statistics_webradio.pid"
 				fi
-			fi
-			if  [ "$request" == "/mplayeroff" ]; then
+			elif  [ "$request" == "/mplayeroff" ]; then
 				kill $(< /dev/shm/hostapd_statistics_webradio.pid)
 				rm "/dev/shm/hostapd_statistics_webradio.pid" > /dev/null 2>&1 > /dev/null
-			fi
-			if  [ "$request" == "/louder" ]; then
+			elif  [ "$request" == "/louder" ]; then
 				amixer 'sset' 'Master,0' '5%+' > /dev/null 2>&1 > /dev/null
-			fi
-			if  [ "$request" == "/quieter" ]; then
+			elif  [ "$request" == "/quieter" ]; then
 				amixer 'sset' 'Master,0' '5%-' > /dev/null 2>&1 > /dev/null
-			fi
-			if  [ "$request" == "/mute" ]; then
+			elif  [ "$request" == "/mute" ]; then
 				amixer 'sset' 'Master,0' 'toggle' > /dev/null 2>&1 > /dev/null
 			fi
 			echo "<meta http-equiv='refresh' content='0; URL=./'>"
@@ -97,22 +93,18 @@ if  (( ${webradio} == 1 )); then
 		if  [ "$request" == "/webradio/mplayeron" ]; then 
 			if [ ! -f "/dev/shm/hostapd_statistics_webradio.pid" ]; then
 				mplayer '-really-quiet' '-msglevel' 'all=-1' "$webradio_url" > /dev/null 2>&1 &
-				echo "$!" > "/dev/shm/hostapd_statistics_webradio.pid"
+			echo "$!" > "/dev/shm/hostapd_statistics_webradio.pid"
 			fi
-			fi
-			if  [ "$request" == "/webradio/mplayeroff" ]; then
-				kill $(< /dev/shm/hostapd_statistics_webradio.pid)
-				rm "/dev/shm/hostapd_statistics_webradio.pid" > /dev/null 2>&1 > /dev/null			
-			fi
-			if  [ "$request" == "/webradio/louder" ]; then
-				amixer 'sset' 'Master,0' '5%+' > /dev/null 2>&1 > /dev/null
-			fi
-			if  [ "$request" == "/webradio/quieter" ]; then
-				amixer 'sset' 'Master,0' '5%-' > /dev/null 2>&1 > /dev/null
-			fi
-			if  [ "$request" == "/webradio/mute" ]; then
-				amixer 'sset' 'Master,0' 'toggle' > /dev/null 2>&1 > /dev/null
-			fi
+		elif  [ "$request" == "/webradio/mplayeroff" ]; then
+			kill $(< /dev/shm/hostapd_statistics_webradio.pid)
+			rm "/dev/shm/hostapd_statistics_webradio.pid" > /dev/null 2>&1 > /dev/null			
+		elif  [ "$request" == "/webradio/louder" ]; then
+			amixer 'sset' 'Master,0' '5%+' > /dev/null 2>&1 > /dev/null
+		elif  [ "$request" == "/webradio/quieter" ]; then
+			amixer 'sset' 'Master,0' '5%-' > /dev/null 2>&1 > /dev/null
+		elif  [ "$request" == "/webradio/mute" ]; then
+			amixer 'sset' 'Master,0' 'toggle' > /dev/null 2>&1 > /dev/null
+		fi
 		exit 0
 	fi
 fi
