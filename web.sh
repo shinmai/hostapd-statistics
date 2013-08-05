@@ -49,7 +49,7 @@ if  (( ${webradio} == 1 )); then # Ajax would be much better for this..
 		[ "$request" == "/mute" ]; then
 			if  [ "$request" == "/mplayeron" ]; then 
 				if [ ! -f "/dev/shm/hostapd_statistics_webradio.pid" ]; then
-					mplayer '-really-quiet' '-msglevel' 'all=-1' "$webradio_url" > /dev/null 2>&1 > /dev/null &
+					mplayer '-really-quiet' '-msglevel' 'all=-1' "$webradio_url" > /dev/null 2>&1 &
 					echo "$!" > "/dev/shm/hostapd_statistics_webradio.pid"
 				fi
 			fi
@@ -96,7 +96,7 @@ if  (( ${webradio} == 1 )); then
 		echo "</html>"
 		if  [ "$request" == "/webradio/mplayeron" ]; then 
 			if [ ! -f "/dev/shm/hostapd_statistics_webradio.pid" ]; then
-				mplayer '-really-quiet' '-msglevel' 'all=-1' "$webradio_url" > /dev/null 2>&1 > /dev/null &
+				mplayer '-really-quiet' '-msglevel' 'all=-1' "$webradio_url" > /dev/null 2>&1 &
 				echo "$!" > "/dev/shm/hostapd_statistics_webradio.pid"
 			fi
 			fi
