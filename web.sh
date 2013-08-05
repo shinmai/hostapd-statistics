@@ -22,6 +22,67 @@ SCRIPT_DIR="${SCRIPT_FILE%/*}"
 source "${SCRIPT_DIR}/CONFIG"
 }
 loadcfg
+tablecontentgen() {
+while read -r line # cycle through all lines in conclients (flatfile ftw!) and parse the values so they fit into our html page
+do
+	
+	echo "<tr>"
+	#this uses the values given in the file. (mac, ip, hostname)
+	a="<td> $line"
+	b=`echo "$a" | sed "s/;/ <\/td><td> /g"`
+	encoded="$b </td>"
+	echo "$encoded"
+	if  (( ${use_iw} == 1 )); then
+		#This uses current data aquired with iw.
+		mac=`echo "$line" | cut -d";" -f1`
+		iwstationdump=`iw dev "$wlandev" station dump | tr "\n" "%" | sed "s/Station/;/g" | tr ";" "\n" | grep -i "$mac"`
+		#timeout
+		echo "<td>"
+		echo "$iwstationdump" | cut -d"%" -f2 | cut -d":" -f2
+		echo "</td>"
+		#send
+		echo "<td>"
+		tmp=`echo "$iwstationdump" | cut -d"%" -f3 | cut -d":" -f2`
+		if [ -n "$tmp" ]; then
+			echo "$(($tmp/1048576)) MB"
+		fi
+		echo "</td>"
+		#recieved
+		echo "<td>"
+		tmp=`echo "$iwstationdump" | cut -d"%" -f5 | cut -d":" -f2`
+		if [ -n "$tmp" ]; then
+			echo "$(($tmp/1048576)) MB"
+		fi
+		echo "</td>"
+		#signal
+		echo "<td>"
+		echo "$iwstationdump" | cut -d"%" -f9 | cut -d":" -f2 | tr -d " "
+		echo "</td>"
+		#signal avg
+		echo "<td>"
+		echo "$iwstationdump" | cut -d"%" -f10 | cut -d":" -f2 | tr -d " "
+		echo "</td>"
+		#Bandwith
+		echo "<td>"
+		echo "$iwstationdump" | cut -d"%" -f11 | cut -d":" -f2 | tr -d " "
+		echo "</td>"
+	fi
+	echo "</tr>"
+done < "${SCRIPT_DIR}/conclients"
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
 if  (( ${webradio} == 1 )); then
 	#Images
 	play="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAA7tJREFUWIXtlk9oXEUcx7+/mffeJpjdTbpZs2Z3m83WHDTBQ9hirMaeAm0S4yU16aEQiiAFiwcRW6kkoodqNLkVpC32FJEcLFoQqWCKKApeWihCqMpmS5Ju9m3cNMn7tzPjYTeKEDbbmMaD+cKc5r35fd53fvOdB+xpT/+x+BbzzQAaAHjlsesAkaN9PR8ZumYuLZkWAAeA2E2AUDLZeqG9veOl5uhjrcv5P2bX19cFABuA2hWAA48nT09NfcZbWhJPLC7On4g0N2FhfnFOCCFRcuThAwwOHkNDqJ4GBgZ0w9C7pBLHAv669Pz8wgqAIgD3oQIMDQ3DdR0oJdHe0cGPHDnqX8rl+kP76p9TSsya5rKLbfZH1QCeV/pIKSU4Z+juPsxTqYOxTCYz3BxrfjS3lLtj2zbKIHJHAAKBQCgWj/4DYENSCvgDfvT19fP98fhTOTN7ItLUZOXzy3d9Ph8cx7H/NUAymQwFg/7TQ8PHURRFMCIQsb8HCFIKxKIx6n9hwABUN0G8WBcM/lpbU7ve2NgoTNOs2B9UabKnp6eNmJy9evULWLYFooqPgzOO+6urGP/gvDeXznx/31p7m0mWdl13aWZmZlNHWKUFo9FoiZIYOOfgjINzDsZKDiilIKWAV/RgOzZWVguQqojR0Xf00bGxw8G6uu8C9XWvJRKJ+MjISM0DA4TDYQCAUhKWbcF2LNi2Bcd14HkOhChCSAkoBUYEjWvw+WrAGcfC/IK0LAucWDocDmNtbW3TKNcqAcRiMdz+5RaIGDSugbGNHiAQqLSBClDlUNQ1A5nMHCYmx13HcT999tAzE37/voV8Pm9OT09vejIqAkSjURi6ASL6awsYYyDGwIiw0UKccxQKBUxOTnh35zI/JxL7z7a1PflbMBjM9vb2VkzLLR3QdR0EgBEDMQJjDKzcC5xzWOsWrl370rt+/etsuDF85tSpV38QQuS6urpWKq1dvQOGDgVAKgmSBAkJxhikkLh186a8/MlFu76+4cOzZ85N1dbW5iORiElEVQdRVQ4opSBEsfSCpiN77x4uXvrYVQqfv3zylfHOzs4sgCwRPfDlVBEAAAzDgFISmqZDCoUrVy576fTvtw+mnn5zcHDoDoAcEVVl97YAdF0H5xp++vFG8duZb8x4vOXc++cnbgAolItXbff2AAwd7743Zvsf8V944/W3LoVCoVVs0+5tAbS2to4d6nr+q1QqlQNgElFhJwpvqGK4K6UOoJSWhXLxHf0f3FJKKV0p5dvVonv63+lPeip8lRfpXtkAAAAASUVORK5CYII="
@@ -34,6 +95,26 @@ fi
 read request
 request=`echo $request | cut -d" " -f2`
 echo -e "HTTP/1.1 200 OK\n"
+if  [ "$request" == "/refreshtable" ]; then
+	echo '<table>'
+	echo "<tr>"
+	echo "<th>MAC</th>"
+	echo "<th>IP</th>"
+	echo "<th>HOSTNAME</th>"
+	echo "<th>Con. since</th>"
+	if  (( ${use_iw} == 1 )); then
+		echo "<th>Inactive Time</th>"
+		echo "<th>Send</th>"
+		echo "<th>Recieved</th>"
+		echo "<th>Signal</th>"
+		echo "<th>Signal Avg.</th>"
+		echo "<th>Bandwith</th>"
+	fi
+	echo "</tr>"
+	tablecontentgen
+	echo "</table>"
+	#exit 0
+fi
 echo "<!DOCTYPE html>"
 echo "<html>"
 echo "<style type='text/css'>"
@@ -113,69 +194,40 @@ echo "<center><h1>Hostapd-statistics</h1>"
 date   #Todo: beautify this.
 echo "<br>"
 uptime #Todo: beautify this.
-echo '<table>'
-echo "<tr>"
-echo "<th>MAC</th>"
-echo "<th>IP</th>"
-echo "<th>HOSTNAME</th>"
-echo "<th>Con. since</th>"
-if  (( ${use_iw} == 1 )); then
-	echo "<th>Inactive Time</th>"
-	echo "<th>Send</th>"
-	echo "<th>Recieved</th>"
-	echo "<th>Signal</th>"
-	echo "<th>Signal Avg.</th>"
-	echo "<th>Bandwith</th>"
-fi
-echo "</tr>"
-#Teh realz stuff
-while read -r line # cycle through all lines in conclients (flatfile ftw!) and parse the values so they fit into our html page
-do
-	
-	echo "<tr>"
-	#this uses the values given in the file. (mac, ip, hostname)
-	a="<td> $line"
-	b=`echo "$a" | sed "s/;/ <\/td><td> /g"`
-	encoded="$b </td>"
-	echo "$encoded"
-	if  (( ${use_iw} == 1 )); then
-		#This uses current data aquired with iw.
-		mac=`echo "$line" | cut -d";" -f1`
-		iwstationdump=`iw dev "$wlandev" station dump | tr "\n" "%" | sed "s/Station/;/g" | tr ";" "\n" | grep -i "$mac"`
-		#timeout
-		echo "<td>"
-		echo "$iwstationdump" | cut -d"%" -f2 | cut -d":" -f2
-		echo "</td>"
-		#send
-		echo "<td>"
-		tmp=`echo "$iwstationdump" | cut -d"%" -f3 | cut -d":" -f2`
-		if [ -n "$tmp" ]; then
-			echo "$(($tmp/1048576)) MB"
-		fi
-		echo "</td>"
-		#recieved
-		echo "<td>"
-		tmp=`echo "$iwstationdump" | cut -d"%" -f5 | cut -d":" -f2`
-		if [ -n "$tmp" ]; then
-			echo "$(($tmp/1048576)) MB"
-		fi
-		echo "</td>"
-		#signal
-		echo "<td>"
-		echo "$iwstationdump" | cut -d"%" -f9 | cut -d":" -f2 | tr -d " "
-		echo "</td>"
-		#signal avg
-		echo "<td>"
-		echo "$iwstationdump" | cut -d"%" -f10 | cut -d":" -f2 | tr -d " "
-		echo "</td>"
-		#Bandwith
-		echo "<td>"
-		echo "$iwstationdump" | cut -d"%" -f11 | cut -d":" -f2 | tr -d " "
-		echo "</td>"
-	fi
-	echo "</tr>"
-done < "${SCRIPT_DIR}/conclients"
-echo "</table>"
+
+#echo '<table>'
+#echo "<tr>"
+#echo "<th>MAC</th>"
+#echo "<th>IP</th>"
+#echo "<th>HOSTNAME</th>"
+#echo "<th>Con. since</th>"
+#if  (( ${use_iw} == 1 )); then
+#	echo "<th>Inactive Time</th>"
+#	echo "<th>Send</th>"
+#	echo "<th>Recieved</th>"
+#	echo "<th>Signal</th>"
+#	echo "<th>Signal Avg.</th>"
+#	echo "<th>Bandwith</th>"
+#fi
+#echo "</tr>"
+##Teh realz stuff
+#tablecontentgen
+#echo "</table>"
+echo "<div id='tableHolder'></div>"
+echo "<script type='text/javascript'>"
+echo '$(document).ready(function(){'
+echo '     refreshTable();'
+echo '   });'
+echo '   function refreshTable(){'
+echo '        $("#tableHolder").load(".refreshtable", function(){'
+echo '          setTimeout(refreshTable, 5000);'
+echo '        });'
+echo '    }'
+echo '</script>'
+
+
+
+
 echo "<br>"
 if  (( ${use_sensors} == 1 )); then
 	# A new table for our temperature values
