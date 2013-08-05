@@ -30,7 +30,7 @@ connect () {
 mac=`echo $connected | cut -d" " -f8 | tr [:lower:] [:upper:]`
 unique
 #check if the mac is already in our list of connected clients
-alreadythere=`cat "${SCRIPT_DIR}/conclients" | grep $mac`
+alreadythere=`grep $mac "${SCRIPT_DIR}/conclients"`
 if [ -z "$alreadythere" ]; then
 	iplookup
 	hostname=`nslookup "$ip" | grep "name" | cut -d"=" -f2 | tr -d ' '` 
@@ -43,7 +43,6 @@ fi
 
 }
 unique() {
-unique=`cat "${SCRIPT_DIR}/uniquemacs" | grep "$mac"`
 if ! grep -q "$mac" "${SCRIPT_DIR}/uniquemacs" ; then
 	echo "$mac" >> "${SCRIPT_DIR}/uniquemacs"
 fi
