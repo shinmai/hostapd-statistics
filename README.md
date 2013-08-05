@@ -6,7 +6,7 @@ Statistics for Hostapd
 
 Needs: socat, nmap, inotifywait, arp-scan
 
-Optional: vnstati, sensors, iw
+Optional: vnstati, sensors, iw, mplayer
 
 
 Works with logrotate
