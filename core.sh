@@ -28,6 +28,7 @@ echo "$mac removed from connected clients."
 }
 connect () {
 mac=`echo $connected | cut -d" " -f8 | tr [:lower:] [:upper:]`
+echo "Looks like somebody says hello.."
 unique
 #check if the mac is already in our list of connected clients
 alreadythere=`grep $mac "${SCRIPT_DIR}/conclients"`
@@ -38,8 +39,9 @@ if [ -z "$alreadythere" ]; then
 	write="$mac;$ip;$hostname;$time"
 	echo "Client $mac added."
 	echo "$write" >> "${SCRIPT_DIR}/conclients"
+else
+	echo "Wait, he is already in our Database.."
 fi
-
 
 }
 unique() {
