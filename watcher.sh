@@ -42,7 +42,7 @@ socat TCP4-LISTEN:"$webinterfaceport",fork,reuseaddr EXEC:"bash ${SCRIPT_DIR}/we
 # Run the infinite loop
 timeoutcheck_loop &
 readonly TIMEOUTCHECK_PID=$!
-trap "kill ${TIMEOUTCHECK_PID}" TERM EXIT
+trap "kill ${TIMEOUTCHECK_PID}; rm '/dev/shm/hostapd_statistics_webradio.pid' > /dev/null 2>&1 > /dev/null" TERM EXIT
 # The whole watch the syslog thingy
 while :
 do

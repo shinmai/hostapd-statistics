@@ -42,30 +42,35 @@ echo "</style>"
 echo "<head>"
 echo "<title>Hostapd-statistics</title>"
 if  (( ${webradio} == 1 )); then # Ajax would be much better for this..
-	if  [ "$request" == "/mplayeron" ] || [ "$request" == "/mplayeroff" ] || [ "$request" == "/louder" ] || [ "$request" == "/quieter" ] || [ "$request" == "/mute" ]; then
-		if  [ "$request" == "/mplayeron" ]; then 
-			mplayerinstance=`pgrep -f "$webradio_url"`
-			if [ -z "$mplayerinstance" ]; then
-				echo "mplayer -really-quiet -msglevel all=-1 $webradio_url > /dev/null 2>&1 > /dev/null" | bash &
+	if  [ "$request" == "/mplayeron" ] || \
+		[ "$request" == "/mplayeroff" ] || \
+		[ "$request" == "/louder" ] || \
+		[ "$request" == "/quieter" ] || \
+		[ "$request" == "/mute" ]; then
+			if  [ "$request" == "/mplayeron" ]; then 
+				if [ ! -f "/dev/shm/hostapd_statistics_webradio.pid" ]; then
+					mplayer '-really-quiet' '-msglevel' 'all=-1' "$webradio_url" > /dev/null 2>&1 > /dev/null &
+					echo "$!" > "/dev/shm/hostapd_statistics_webradio.pid"
+				fi
 			fi
-		fi
-		if  [ "$request" == "/mplayeroff" ]; then
-			pkill -f "$webradio_url" 
-		fi
-		if  [ "$request" == "/louder" ]; then
-			echo "amixer sset Master,0 5%+ > /dev/null 2>&1 > /dev/null" | bash
-		fi
-		if  [ "$request" == "/quieter" ]; then
-			echo "amixer sset Master,0 5%- > /dev/null 2>&1 > /dev/null" | bash
-		fi
-		if  [ "$request" == "/mute" ]; then
-			echo "amixer sset Master,0 toggle > /dev/null 2>&1 > /dev/null" | bash
-		fi
-		echo "<meta http-equiv='refresh' content='0; URL=./'>"
-		echo "</head>"
-		echo "<body>"
-		echo "</body>"
-        echo "</html>"
+			if  [ "$request" == "/mplayeroff" ]; then
+				kill $(< /dev/shm/hostapd_statistics_webradio.pid)
+				rm "/dev/shm/hostapd_statistics_webradio.pid" > /dev/null 2>&1 > /dev/null
+			fi
+			if  [ "$request" == "/louder" ]; then
+				amixer 'sset' 'Master,0' '5%+' > /dev/null 2>&1 > /dev/null
+			fi
+			if  [ "$request" == "/quieter" ]; then
+				amixer 'sset' 'Master,0' '5%-' > /dev/null 2>&1 > /dev/null
+			fi
+			if  [ "$request" == "/mute" ]; then
+				amixer 'sset' 'Master,0' 'toggle' > /dev/null 2>&1 > /dev/null
+			fi
+			echo "<meta http-equiv='refresh' content='0; URL=./'>"
+			echo "</head>"
+			echo "<body>"
+			echo "</body>"
+			echo "</html>"
 	fi
 fi
 echo "</head>"
@@ -90,23 +95,24 @@ if  (( ${webradio} == 1 )); then
 		echo "</body>"
 		echo "</html>"
 		if  [ "$request" == "/webradio/mplayeron" ]; then 
-			mplayerinstance=`pgrep -f "$webradio_url"`
-			if [ -z "$mplayerinstance" ]; then
-				echo "mplayer -really-quiet -msglevel all=-1 $webradio_url > /dev/null 2>&1 > /dev/null" | bash &
+			if [ ! -f "/dev/shm/hostapd_statistics_webradio.pid" ]; then
+				mplayer '-really-quiet' '-msglevel' 'all=-1' "$webradio_url" > /dev/null 2>&1 > /dev/null &
+				echo "$!" > "/dev/shm/hostapd_statistics_webradio.pid"
 			fi
-		fi
-		if  [ "$request" == "/webradio/mplayeroff" ]; then
-			pkill -f "$webradio_url" 
-		fi
-		if  [ "$request" == "/webradio/louder" ]; then
-			echo "amixer sset Master,0 5%+ > /dev/null 2>&1 > /dev/null" | bash
-		fi
-		if  [ "$request" == "/webradio/quieter" ]; then
-			echo "amixer sset Master,0 5%- > /dev/null 2>&1 > /dev/null" | bash
-		fi
-		if  [ "$request" == "/webradio/mute" ]; then
-			echo "amixer sset Master,0 toggle > /dev/null 2>&1 > /dev/null" | bash
-		fi
+			fi
+			if  [ "$request" == "/webradio/mplayeroff" ]; then
+				kill $(< /dev/shm/hostapd_statistics_webradio.pid)
+				rm "/dev/shm/hostapd_statistics_webradio.pid" > /dev/null 2>&1 > /dev/null			
+			fi
+			if  [ "$request" == "/webradio/louder" ]; then
+				amixer 'sset' 'Master,0' '5%+' > /dev/null 2>&1 > /dev/null
+			fi
+			if  [ "$request" == "/webradio/quieter" ]; then
+				amixer 'sset' 'Master,0' '5%-' > /dev/null 2>&1 > /dev/null
+			fi
+			if  [ "$request" == "/webradio/mute" ]; then
+				amixer 'sset' 'Master,0' 'toggle' > /dev/null 2>&1 > /dev/null
+			fi
 		exit 0
 	fi
 fi
