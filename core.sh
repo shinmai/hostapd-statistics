@@ -47,6 +47,7 @@ fi
 unique() {
 if ! grep -q "$mac" "${SCRIPT_DIR}/uniquemacs" ; then
 	echo "$mac" >> "${SCRIPT_DIR}/uniquemacs"
+	echo "New device connected. Mac: $mac"
 fi
 }
 iplookup() {
