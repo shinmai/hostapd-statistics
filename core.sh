@@ -1,6 +1,5 @@
 #!/bin/bash
 # this script checks if the syslog event is relevant for us and then does the appropriate stuff
-# TODO: Rewrite this since there could be a race condition if multiple clients connect simultaniously. (Forking?)
 loadcfg() {
 #if we got no conf file define everything here.
 wlandev="wlan0"

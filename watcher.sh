@@ -36,7 +36,7 @@ echo "Hostapd-statistics launched"
 # Remove all old entrys and create the file if it doesn't exist.
 > "${SCRIPT_DIR}/conclients"
 # Launch the webinterface listener. In comparison to netcat, this method runs web.sh only at access and not as soon as netcat is startet.
-socat TCP4-LISTEN:"$webinterfaceport",fork,reuseaddr EXEC:"bash ${SCRIPT_DIR}/web.bash" & 
+socat TCP4-LISTEN:"$webinterfaceport",fork,reuseaddr EXEC:"bash ${SCRIPT_DIR}/web.sh" & 
 # Run the infinite loop
 timeoutcheck_loop &
 readonly TIMEOUTCHECK_PID=$!
@@ -44,6 +44,6 @@ trap "kill ${TIMEOUTCHECK_PID}" TERM EXIT
 # The whole watch the syslog thingy
 while :
 do
-	inotifywait -q -e modify /var/log/syslog && bash "${SCRIPT_DIR}/core.bash"
+	inotifywait -q -e modify /var/log/syslog && bash "${SCRIPT_DIR}/core.sh"
 done
 
