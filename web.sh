@@ -167,16 +167,16 @@ case  "$request"  in
 		;;		
 		"/mplayeroff")
 			kill $(< /dev/shm/hostapd_statistics_webradio.pid)
-			rm "/dev/shm/hostapd_statistics_webradio.pid" > /dev/null 2>&1 > /dev/null
+			rm "/dev/shm/hostapd_statistics_webradio.pid" > /dev/null 2>&1
 		;;            
 		"/louder")       
-		amixer 'sset' 'Master,0' '5%+' > /dev/null 2>&1 > /dev/null
+		amixer 'sset' 'Master,0' '5%+' > /dev/null 2>&1
 		;;
 		"/quieter")       
-		amixer 'sset' 'Master,0' '5%-' > /dev/null 2>&1 > /dev/null
+		amixer 'sset' 'Master,0' '5%-' > /dev/null 2>&1
 		;;
 		"/mute")       
-		amixer 'sset' 'Master,0' 'toggle' > /dev/null 2>&1 > /dev/null
+		amixer 'sset' 'Master,0' 'toggle' > /dev/null 2>&1
 		;;
 		"/webradio/mplayeron")       
 		if [ ! -f "/dev/shm/hostapd_statistics_webradio.pid" ]; then
@@ -186,16 +186,16 @@ case  "$request"  in
 		;;
 		"/webradio/mplayeroff")
 			kill $(< /dev/shm/hostapd_statistics_webradio.pid)
-			rm "/dev/shm/hostapd_statistics_webradio.pid" > /dev/null 2>&1 > /dev/null
+			rm "/dev/shm/hostapd_statistics_webradio.pid" > /dev/null 2>&1
 		;;            
 		"/webradio/louder")       
-		amixer 'sset' 'Master,0' '5%+' > /dev/null 2>&1 > /dev/null
+		amixer 'sset' 'Master,0' '5%+' > /dev/null 2>&1
 		;;
 		"/webradio/quieter")       
-		amixer 'sset' 'Master,0' '5%-' > /dev/null 2>&1 > /dev/null
+		amixer 'sset' 'Master,0' '5%-' > /dev/null 2>&1
 		;;
 		"/webradio/mute")       
-		amixer 'sset' 'Master,0' 'toggle' > /dev/null 2>&1 > /dev/null
+		amixer 'sset' 'Master,0' 'toggle' > /dev/null 2>&1
 		;;
 		"/webradio")
 		if  (( ${webradio} == 1 )); then
