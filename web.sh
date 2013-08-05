@@ -151,6 +151,7 @@ fi
 read request
 request=`echo $request | cut -d" " -f2`
 echo -e "HTTP/1.1 200 OK\n"
+# Everything
 case  "$request"  in
 		"/refreshtable")
 		refreshtablefunction
@@ -163,39 +164,39 @@ case  "$request"  in
 			mplayer '-really-quiet' '-msglevel' 'all=-1' "$webradio_url" > /dev/null 2>&1 &
 			echo "$!" > "/dev/shm/hostapd_statistics_webradio.pid"
 		fi
-        ;;
-        "/mplayeroff")
+		;;		
+		"/mplayeroff")
 			kill $(< /dev/shm/hostapd_statistics_webradio.pid)
 			rm "/dev/shm/hostapd_statistics_webradio.pid" > /dev/null 2>&1 > /dev/null
-        ;;            
-        "/louder")       
+		;;            
+		"/louder")       
 		amixer 'sset' 'Master,0' '5%+' > /dev/null 2>&1 > /dev/null
-        ;;
+		;;
 		"/quieter")       
 		amixer 'sset' 'Master,0' '5%-' > /dev/null 2>&1 > /dev/null
-        ;;
+		;;
 		"/mute")       
 		amixer 'sset' 'Master,0' 'toggle' > /dev/null 2>&1 > /dev/null
-        ;;
+		;;
 		"/webradio/mplayeron")       
 		if [ ! -f "/dev/shm/hostapd_statistics_webradio.pid" ]; then
 			mplayer '-really-quiet' '-msglevel' 'all=-1' "$webradio_url" > /dev/null 2>&1 &
 			echo "$!" > "/dev/shm/hostapd_statistics_webradio.pid"
 		fi
-        ;;
-        "/webradio/mplayeroff")
+		;;
+		"/webradio/mplayeroff")
 			kill $(< /dev/shm/hostapd_statistics_webradio.pid)
 			rm "/dev/shm/hostapd_statistics_webradio.pid" > /dev/null 2>&1 > /dev/null
-        ;;            
-        "/webradio/louder")       
+		;;            
+		"/webradio/louder")       
 		amixer 'sset' 'Master,0' '5%+' > /dev/null 2>&1 > /dev/null
-        ;;
+		;;
 		"/webradio/quieter")       
 		amixer 'sset' 'Master,0' '5%-' > /dev/null 2>&1 > /dev/null
-        ;;
+		;;
 		"/webradio/mute")       
 		amixer 'sset' 'Master,0' 'toggle' > /dev/null 2>&1 > /dev/null
-        ;;
+		;;
 		"/webradio")
 		if  (( ${webradio} == 1 )); then
 			echo "<!DOCTYPE html>"
