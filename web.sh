@@ -1,6 +1,8 @@
 #!/bin/bash
 #This bash script generates the HTML page on the fly.
 #Since we use socat, we don't need dependencies to real webservers like apache. Also, it is nearly impossible to exploit this. (I hope..)
+# uncomment to debug
+#set -x
 str_trim() { sed -r -e 's,^\s+,,' -e 's,\s+$,,' -e 's,\s+, ,g' "$@"; } # stolen from dywi
 loadcfg() {
 #if we got no conf file define everything here.
@@ -39,6 +41,33 @@ cat style.css
 echo "</style>"
 echo "<head>"
 echo "<title>Hostapd-statistics</title>"
+if  (( ${webradio} == 1 )); then # Ajax would be much better for this..
+	if  [ "$request" == "/mplayeron" ] || [ "$request" == "/mplayeroff" ] || [ "$request" == "/louder" ] || [ "$request" == "/quieter" ] || [ "$request" == "/mute" ]; then
+		if  [ "$request" == "/mplayeron" ]; then 
+			mplayerinstance=`pgrep -f "$webradio_url"`
+			if [ -z "$mplayerinstance" ]; then
+				echo "mplayer -really-quiet -msglevel all=-1 $webradio_url > /dev/null 2>&1 > /dev/null" | bash &
+			fi
+		fi
+		if  [ "$request" == "/mplayeroff" ]; then
+			pkill -f "$webradio_url" 
+		fi
+		if  [ "$request" == "/louder" ]; then
+			echo "amixer sset Master,0 5%+ > /dev/null 2>&1 > /dev/null" | bash
+		fi
+		if  [ "$request" == "/quieter" ]; then
+			echo "amixer sset Master,0 5%- > /dev/null 2>&1 > /dev/null" | bash
+		fi
+		if  [ "$request" == "/mute" ]; then
+			echo "amixer sset Master,0 toggle > /dev/null 2>&1 > /dev/null" | bash
+		fi
+		echo "<meta http-equiv='refresh' content='0; URL=./'>"
+		echo "</head>"
+		echo "<body>"
+		echo "</body>"
+        echo "</html>"
+	fi
+fi
 echo "</head>"
 if  (( ${webradio} == 1 )); then
 	if  [ "$request" == "/webradio" ] || [ "$request" == "/webradio/mplayeron" ] || [ "$request" == "/webradio/mplayeroff" ] || [ "$request" == "/webradio/louder" ] || [ "$request" == "/webradio/quieter" ] || [ "$request" == "/webradio/mute" ]; then 
@@ -181,33 +210,15 @@ fi
 echo "<br>"
 if  (( ${webradio} == 1 )); then
 	#mplayer stuff
-	echo "<table>"
-	echo "<th>"
+	echo "<div class='mplayermenu'>"
+	echo "<center>"
 	echo "<a href='/mplayeron'><img src='data:image/png;base64,$play'></a>"
 	echo "<a href='/mplayeroff'><img src='data:image/png;base64,$stop'></a>"
 	echo "<a href='/louder'><img src='data:image/png;base64,$louder'></a>"
 	echo "<a href='/quieter'><img src='data:image/png;base64,$quieter'></a>"
 	echo "<a href='/mute'><img src='data:image/png;base64,$mute'></a>"
-	echo "</th>"
-	echo "</table>"
-	if  [ "$request" == "/mplayeron" ]; then 
-		mplayerinstance=`pgrep -f "$webradio_url"`
-		if [ -z "$mplayerinstance" ]; then
-			echo "mplayer -really-quiet -msglevel all=-1 $webradio_url > /dev/null 2>&1 > /dev/null" | bash &
-		fi
-	fi
-	if  [ "$request" == "/mplayeroff" ]; then
-		pkill -f "$webradio_url" 
-	fi
-	if  [ "$request" == "/louder" ]; then
-		echo "amixer sset Master,0 5%+ > /dev/null 2>&1 > /dev/null" | bash
-	fi
-	if  [ "$request" == "/quieter" ]; then
-		echo "amixer sset Master,0 5%- > /dev/null 2>&1 > /dev/null" | bash
-	fi
-	if  [ "$request" == "/mute" ]; then
-		echo "amixer sset Master,0 toggle > /dev/null 2>&1 > /dev/null" | bash
-	fi
+	echo "</center>"
+	echo "</div>"
 fi
 echo "</center>"
 #the end

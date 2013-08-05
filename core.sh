@@ -1,5 +1,7 @@
 #!/bin/bash
 # this script checks if the syslog event is relevant for us and then does the appropriate stuff
+# uncomment to debug
+#set -x
 loadcfg() {
 #if we got no conf file define everything here.
 wlandev="wlan0"

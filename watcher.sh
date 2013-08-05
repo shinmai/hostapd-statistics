@@ -1,5 +1,7 @@
 #!/bin/bash
 #This script simply waits for stuff from Hostapd to appear in the syslog
+# uncomment to debug
+#set -x
 loadcfg() {
 #if we got no conf file define everything here.
 wlandev="wlan0"
