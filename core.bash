@@ -11,6 +11,8 @@ arp_scan_dev="br0"
 use_sensors="0"
 use_vnstat="0"
 use_iw="0"
+webradio="0"
+webradio_url="http://main-high.rautemusik.fm"
 
 SCRIPT_FILE=$( readlink -f "${BASH_SOURCE[0]}" )
 SCRIPT_DIR="${SCRIPT_FILE%/*}"
