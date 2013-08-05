@@ -113,7 +113,7 @@ if  [ "$request" == "/refreshtable" ]; then
 	echo "</tr>"
 	tablecontentgen
 	echo "</table>"
-	#exit 0
+	exit 0
 fi
 echo "<!DOCTYPE html>"
 echo "<html>"
@@ -214,16 +214,7 @@ uptime #Todo: beautify this.
 #tablecontentgen
 #echo "</table>"
 echo "<div id='tableHolder'></div>"
-echo "<script type='text/javascript'>"
-echo '$(document).ready(function(){'
-echo '     refreshTable();'
-echo '   });'
-echo '   function refreshTable(){'
-echo '        $("#tableHolder").load(".refreshtable", function(){'
-echo '          setTimeout(refreshTable, 5000);'
-echo '        });'
-echo '    }'
-echo '</script>'
+cat javascript1.js
 
 
 
