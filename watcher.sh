@@ -46,6 +46,6 @@ trap "kill ${TIMEOUTCHECK_PID}; rm '/dev/shm/hostapd_statistics_webradio.pid' > 
 # The whole watch the syslog thingy
 while :
 do
-	inotifywait -q -e modify /var/log/syslog && bash "${SCRIPT_DIR}/core.sh"
+	inotifywait -q -q -e modify /var/log/syslog && bash "${SCRIPT_DIR}/core.sh"
 done
 

@@ -75,8 +75,6 @@ done < "${SCRIPT_DIR}/conclients"
 
 }
 refreshtablefunction() {
-date   #Todo: beautify this.
-	echo "<br>"
 	uptime #Todo: beautify this.
 	echo '<table>'
 	echo "<tr>"
@@ -201,9 +199,9 @@ case  "$request"  in
 		if  (( ${webradio} == 1 )); then
 			echo "<!DOCTYPE html>"
 			echo "<html>"
-			cat javascript1.js
+			cat "${SCRIPT_DIR}/javascript1.js"
 			echo "<style type='text/css'>"
-			cat style.css
+			cat "${SCRIPT_DIR}/style.css"
 			echo "</style>"
 			echo "<head>"
 			echo "<title>Hostapd-statistics</title>"
@@ -232,9 +230,9 @@ case  "$request"  in
 		*)
 		echo "<!DOCTYPE html>"
 		echo "<html>"
-		cat javascript1.js
+		cat "${SCRIPT_DIR}/javascript1.js"
 		echo "<style type='text/css'>"
-		cat style.css
+		cat "${SCRIPT_DIR}/style.css"
 		echo "</style>"
 		echo "<head>"
 		echo "<title>Hostapd-statistics</title>"
