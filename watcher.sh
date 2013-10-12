@@ -11,7 +11,6 @@ dhcpserverip="192.168.178.1"
 arp_scan_dev="br0"
 use_sensors="0"
 use_vnstat="0"
-use_iw="0"
 webradio="0"
 webradio_url="http://main-high.rautemusik.fm"
 
@@ -43,6 +42,78 @@ socat TCP4-LISTEN:"$webinterfaceport",fork,reuseaddr EXEC:"bash ${SCRIPT_DIR}/we
 timeoutcheck_loop &
 readonly TIMEOUTCHECK_PID=$!
 trap "kill ${TIMEOUTCHECK_PID}; rm '/dev/shm/hostapd_statistics_webradio.pid' > /dev/null 2>&1 " TERM EXIT
+
+#functions from core.sh to do some stuff
+
+unique() {
+if ! grep -q "$mac" "${SCRIPT_DIR}/uniquemacs" ; then
+	echo "$mac" >> "${SCRIPT_DIR}/uniquemacs"
+	echo "New device connected. Mac: $mac"
+fi
+}
+iplookup() {
+#Find out the corresponding IP to the mac adress
+ip=`grep "$mac" /proc/net/arp | cut -d" " -f1`
+#for devices like my sgs2: find out the ip with arp-scan or nmap since it doesn't appear in the arp cache
+trys=0
+if [ -z "$ip" ]; then
+	arp-scanlookup
+fi
+arp-scanfailcheck
+}
+nmaplookup() {
+echo "IP lookup with nmap.."
+ip=`nmap -sP "${dhcpserverip}"/24 | sed -n '/Nmap scan report for/{s/.* //;s/[)(]//g;h};/'"$mac"'/{x;p;q;}'` #thank you sluggr ##sed on freenode
+}
+arp-scanlookup() {
+echo "IP lookup with arp-scan.."
+ip=`arp-scan -l -I "$arp_scan_dev" | grep -i "$mac" | head -n1 |grep -E -o '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}'`
+}
+failcheck() {
+if [ -z "$ip" ]; then
+	trys=$((trys+1))
+	if (( trys < 3 )); then
+		echo "Whoops, nmap ip lookup failed. Try again.."
+		nmaplookup
+		failcheck
+	else
+		echo "Looks like $mac disappeared from the network."
+		exit 0
+	fi
+fi
+
+
+}
+arp-scanfailcheck() {
+if [ -z "$ip" ]; then
+	trys=$((trys+1))
+	if (( trys < 3 )); then
+		echo "Whoops, arp-scan ip lookup failed. Try again.."
+		arp-scanlookup
+		arp-scanfailcheck
+	else
+		trys=0
+		echo "Okay.. lets try nmap."
+		nmaplookup
+		failcheck
+	fi
+fi
+
+
+}
+initialdevices1=`iw dev "$wlandev" station dump | sed -e "s/Station/;/g" | grep ";" | cut -d" " -f2`
+for item in $initialdevices1
+do
+		mac=$item
+		unique
+		iplookup
+		hostname=`nslookup "$ip" | grep "name" | cut -d"=" -f2 | tr -d ' '` 
+		time=`date +"%H:%M"`
+		write="$mac;$ip;$hostname;$time"
+		echo "Client $mac added."
+		echo "$write" >> "${SCRIPT_DIR}/conclients"
+done 
+
 # The whole watch the syslog thingy
 while :
 do

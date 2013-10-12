@@ -3,51 +3,50 @@
 # uncomment to debug
 #set -x
 loadcfg() {
-#if we got no conf file define everything here.
-wlandev="wlan0"
-sleeptime="5m"
-webinterfaceport="1500"
-dhcpserverip="192.168.178.1"
-arp_scan_dev="br0"
-use_sensors="0"
-use_vnstat="0"
-use_iw="0"
-webradio="0"
-webradio_url="http://main-high.rautemusik.fm"
+	#if we got no conf file define everything here.
+	wlandev="wlan0"
+	sleeptime="5m"
+	webinterfaceport="1500"
+	dhcpserverip="192.168.178.1"
+	arp_scan_dev="br0"
+	use_sensors="0"
+	use_vnstat="0"
+	webradio="0"
+	webradio_url="http://main-high.rautemusik.fm"
 
-SCRIPT_FILE=$( readlink -f "${BASH_SOURCE[0]}" )
-SCRIPT_DIR="${SCRIPT_FILE%/*}"
-source "${SCRIPT_DIR}/CONFIG"
+	SCRIPT_FILE=$( readlink -f "${BASH_SOURCE[0]}" )
+	SCRIPT_DIR="${SCRIPT_FILE%/*}"
+	source "${SCRIPT_DIR}/CONFIG"
 }
 loadcfg
 #functions
 disconnect() {
-mac=`echo $disconnected | cut -d" " -f8`
-sed -i -e "/$mac/d" "${SCRIPT_DIR}/conclients"
-echo "$mac removed from connected clients."
+	mac=`echo $disconnected | cut -d" " -f8`
+	sed -i -e "/$mac/d" "${SCRIPT_DIR}/conclients"
+	echo "$mac removed from connected clients."
 }
 connect () {
-mac=`echo $connected | cut -d" " -f8 | tr [:lower:] [:upper:]`
-echo "Looks like somebody says hello.."
-unique
-#check if the mac is already in our list of connected clients
-alreadythere=`grep $mac "${SCRIPT_DIR}/conclients"`
-if [ -z "$alreadythere" ]; then
-	iplookup
-	hostname=`nslookup "$ip" | grep "name" | cut -d"=" -f2 | tr -d ' '` 
-	time=`date +"%H:%M"`
-	write="$mac;$ip;$hostname;$time"
-	echo "Client $mac added."
-	echo "$write" >> "${SCRIPT_DIR}/conclients"
-else
-	echo "Wait, he is already in our Database.."
-fi
+	mac=`echo $connected | cut -d" " -f8 | tr [:lower:] [:upper:]`
+	echo "Looks like somebody says hello.."
+	unique
+	#check if the mac is already in our list of connected clients
+	alreadythere=`grep $mac "${SCRIPT_DIR}/conclients"`
+	if [ -z "$alreadythere" ]; then
+		iplookup
+		hostname=`nslookup "$ip" | grep "name" | cut -d"=" -f2 | tr -d ' '` 
+		time=`date +"%H:%M"`
+		write="$mac;$ip;$hostname;$time"
+		echo "Client $mac added."
+		echo "$write" >> "${SCRIPT_DIR}/conclients"
+	else
+		echo "Wait, he is already in our Database.."
+	fi
 
 }
 unique() {
-if ! grep -q "$mac" "${SCRIPT_DIR}/uniquemacs" ; then
-	echo "$mac" >> "${SCRIPT_DIR}/uniquemacs"
-	echo "New device connected. Mac: $mac"
+	if ! grep -q "$mac" "${SCRIPT_DIR}/uniquemacs" ; then
+		echo "$mac" >> "${SCRIPT_DIR}/uniquemacs"
+		echo "New device connected. Mac: $mac"
 fi
 }
 iplookup() {

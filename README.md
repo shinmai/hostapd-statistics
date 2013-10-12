@@ -1,12 +1,12 @@
-hostapd-statistics
+#hostapd-statistics
 ==================
 
 Statistics for Hostapd
 
 
-Needs: socat, nmap, inotifywait, arp-scan
+Needs: socat, nmap, inotifywait, arp-scan, iw
 
-Optional: vnstati, sensors, iw, mplayer
+Optional: vnstati, sensors, mplayer
 
 
 Works with logrotate

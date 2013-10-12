@@ -13,7 +13,6 @@ dhcpserverip="192.168.178.1"
 arp_scan_dev="br0"
 use_sensors="0"
 use_vnstat="0"
-use_iw="0"
 webradio="0"
 webradio_url="http://main-high.rautemusik.fm"
 
@@ -32,7 +31,7 @@ do
 	b=`echo "$a" | sed "s/;/ <\/td><td> /g"`
 	encoded="$b </td>"
 	echo "$encoded"
-	if  (( ${use_iw} == 1 )); then
+
 		#This uses current data aquired with iw.
 		mac=`echo "$line" | cut -d";" -f1`
 		iwstationdump=`iw dev "$wlandev" station dump | tr "\n" "%" | sed "s/Station/;/g" | tr ";" "\n" | grep -i "$mac"`
@@ -66,7 +65,7 @@ do
 		echo "<td>"
 		echo "$iwstationdump" | cut -d"%" -f11 | cut -d":" -f2 | tr -d " "
 		echo "</td>"
-	fi
+	
 	echo "</tr>"
 done < "${SCRIPT_DIR}/conclients"
 
@@ -82,14 +81,14 @@ refreshtablefunction() {
 	echo "<th>IP</th>"
 	echo "<th>HOSTNAME</th>"
 	echo "<th>Con. since</th>"
-	if  (( ${use_iw} == 1 )); then
+
 		echo "<th>Inactive Time</th>"
 		echo "<th>Send</th>"
 		echo "<th>Recieved</th>"
 		echo "<th>Signal</th>"
 		echo "<th>Signal Avg.</th>"
 		echo "<th>Bandwith</th>"
-	fi
+
 	echo "</tr>"
 	tablecontentgen
 	echo "</table>"
@@ -243,10 +242,11 @@ case  "$request"  in
 		echo "<div id='tableHolder'></div>"
 		echo "<script>"
 		echo "refreshMainTable();"
-		echo "refreshVnstati();"
+#		echo "refreshVnstati();"
 		echo "</script>"
 
-		echo "<div id='VnstatiHolder'></div>"
+#		echo "<div id='VnstatiHolder'></div>"
+		refreshvnstatifunction
 
 		echo "<br>"
 		if  (( ${webradio} == 1 )); then
