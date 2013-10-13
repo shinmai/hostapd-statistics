@@ -1,7 +1,7 @@
 Package: hostapd-statistics
 Architecture: all
 Maintainer: Soeren Beye
-Depends: socat, nmap, arp-scan, iw, inotify-tools
+Depends: socat, nmap, arp-scan, iw, inotify-tools, bash
 Recommends: vnstati, sensors, mplayer
 Priority: optional
 Version: 0.1
