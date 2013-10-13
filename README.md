@@ -7,7 +7,7 @@ Statistics for Hostapd
 TESTING:
 
 No initscript for now.
-I suggest running /usr/bin/hostapd-statistics/hostapd-statistics in screen or tmux
+I suggest running /usr/bin/hostapd-statistics in screen or tmux
 
 
 
