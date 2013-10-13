@@ -229,9 +229,9 @@ case  "$request"  in
 		*)
 		echo "<!DOCTYPE html>"
 		echo "<html>"
-		cat "${SCRIPT_DIR}/javascript1.js"
+		cat "/etc/hostapd-statistics/javascript1.js"
 		echo "<style type='text/css'>"
-		cat "${SCRIPT_DIR}/style.css"
+		cat "/etc/hostapd-statistics/style.css"
 		echo "</style>"
 		echo "<head>"
 		echo "<title>Hostapd-statistics</title>"
