@@ -4,6 +4,17 @@
 Statistics for Hostapd
 
 
+TESTING:
+
+No initscript for now.
+I suggest running /usr/bin/hostapd-statistics/hostapd-statistics in screen or tmux
+
+
+
+
+
+
+________________________________
 Needs: socat, nmap, inotifywait, arp-scan, iw
 
 Optional: vnstati, sensors, mplayer
@@ -22,4 +33,5 @@ Todo:
 -Deb
 
 -Stuff
+
 
