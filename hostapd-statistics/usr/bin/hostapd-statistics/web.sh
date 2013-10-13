@@ -67,7 +67,7 @@ do
 		echo "</td>"
 	
 	echo "</tr>"
-done < "${SCRIPT_DIR}/conclients"
+done < "/dev/shm/conclients"
 
 
 
