@@ -255,7 +255,7 @@ main() {
 	# The whole watch the syslog thingy
 	while :
 	do
-		inotifywait -q -q -e modify /var/log/syslog && bash /usr/bin/hostapd-statistics core
+		inotifywait -q -q -e modify /var/log/syslog && bash "/usr/bin/hostapd-statistics core"
 	done
 }
 
