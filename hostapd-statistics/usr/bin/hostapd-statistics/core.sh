@@ -44,8 +44,8 @@ connect () {
 
 }
 unique() {
-	if ! grep -q "$mac" "${SCRIPT_DIR}/uniquemacs" ; then
-		echo "$mac" >> "${SCRIPT_DIR}/uniquemacs"
+	if ! grep -q "$mac" "/etc/hostapd-statistics/uniquemacs" ; then
+		echo "$mac" >> "/etc/hostapd-statistics/uniquemacs"
 		echo "New device connected. Mac: $mac"
 	fi
 }
