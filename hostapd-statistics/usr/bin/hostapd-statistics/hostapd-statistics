@@ -24,7 +24,7 @@ timeoutcheck() {
 # It uses the iw tool to dump all connected clients.
 while read -r line
 do
-	mac=`echo "$line" | cut -d";" -f1`
+	mac=`echo "$line" | cut -d";" -f1 | tr [:lower:] [:upper:]`
 	iwcheck=`iw dev "$wlandev" station dump | grep -i "$mac"` 
 	if [ -z "$iwcheck" ]; then
 		sed -i -e "/$mac/d" "/dev/shm/conclients" #remove the line with $mac from conclients
