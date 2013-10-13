@@ -25,7 +25,7 @@ timeoutcheck() {
 while read -r line
 do
 	mac=`echo "$line" | cut -d";" -f1 | tr [:lower:] [:upper:]`
-	iwcheck=`iw dev "$wlandev" station dump | grep -i "$mac"` 
+	iwcheck=`iw dev "$wlandev" station dump | tr [:lower:] [:upper:] |grep -i "$mac"` 
 	if [ -z "$iwcheck" ]; then
 		sed -i -e "/$mac/d" "/dev/shm/conclients" #remove the line with $mac from conclients
 		echo "$mac timed out."
