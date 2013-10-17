@@ -9,7 +9,7 @@ TESTING:
 No initscript for now.
 I suggest running /usr/bin/hostapd-statistics in screen or tmux
 
-
+Sadly, it is incompatible to realtek cards since iw doesn't support them :(
 
 
 
