@@ -196,7 +196,7 @@ refreshtablefunction() {
 		echo "</table>"
 	fi
 
-	exit 0
+#	exit 0
 
 
 
