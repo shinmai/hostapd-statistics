@@ -233,7 +233,8 @@ main() {
 	# Remove all old entrys and create the file if it doesn't exist.
 	> "/dev/shm/conclients"
 	# Launch the webinterface listener.
-	socat TCP4-LISTEN:"$webinterfaceport",fork,reuseaddr EXEC:"bash /usr/bin/hostapd-statistics web" & 
+	socat TCP4-LISTEN:"$webinterfaceport",fork,reuseaddr EXEC:"bash /usr/bin/hostapd-statistics web" &
+	echo $! > /var/run/hostapd-statistics.1.pid
 	# Run the infinite loop
 	timeoutcheck_loop &
 	readonly TIMEOUTCHECK_PID=$!

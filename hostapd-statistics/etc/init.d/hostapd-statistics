@@ -1,0 +1,62 @@
+#!/bin/sh
+
+### BEGIN INIT INFO
+# Provides:		hostapd-statistics
+# Required-Start:	$remote_fs
+# Required-Stop:	$remote_fs
+# Should-Start:		$network
+# Should-Stop:
+# Default-Start:	2 3 4 5
+# Default-Stop:		0 1 6
+# Short-Description:	Statistics for Hostapd
+# Description:		Statistics for Hostapd
+### END INIT INFO
+
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+NAME=hostapd-statistics
+DESC="Statistics for hostapd"
+PIDFILE=/var/run/hostapd-statistics.pid
+
+
+. /lib/lsb/init-functions
+
+case "$1" in
+  start)
+	if [ -f $PIDFILE ]
+	then
+		log_daemon_msg "Hostapd-statistics is already running. (Or the pidfile still exists)"
+		echo ""
+		exit 0
+	fi
+	log_daemon_msg "Starting $DESC" "$NAME"
+	echo ""
+	bash /usr/bin/hostapd-statistics 2>&1 > /var/log/hostapd-statistics &
+	echo $! > $PIDFILE
+	;;
+  stop)
+	if [ -f $PIDFILE ]
+	then
+		log_daemon_msg "Stopping $DESC" "$NAME"
+		echo ""
+		kill -9 $(cat $PIDFILE) 2>&1 > /dev/null
+		kill -9 $(cat /var/run/hostapd-statistics.1.pid) 2>&1 > /dev/null
+		rm $PIDFILE 2>&1 > /dev/null
+		rm /var/run/hostapd-statistics.1.pid 2>&1 > /dev/null
+	else
+	log_daemon_msg "$NAME is not running"
+	echo ""
+	fi
+	;;
+  restart)
+  	$0 stop
+	sleep 8
+	$0 start
+	;;
+  *)
+	N=/etc/init.d/$NAME
+	echo "Usage: $N {start|stop|restart}" >&2
+	exit 1
+	;;
+esac
+
+exit 0
