@@ -40,7 +40,7 @@ disconnect() {
 }
 connect () {
 	mac=`echo $connected | cut -d" " -f8 | tr [:lower:] [:upper:]`
-	echo "Looks like somebody says hello.."
+#	echo "Looks like somebody says hello.."
 	unique
 	#check if the mac is already in our list of connected clients
 	alreadythere=`grep $mac "/dev/shm/conclients"`
@@ -51,8 +51,8 @@ connect () {
 		write="$mac;$ip;$hostname;$time"
 		echo "Client $mac added."
 		echo "$write" >> "/dev/shm/conclients"
-	else
-		echo "Wait, he is already in our Database.."
+#	else
+#		echo "Wait, he is already in our Database.."
 	fi
 
 }
@@ -73,19 +73,19 @@ iplookup() {
 	arp-scanfailcheck
 }
 nmaplookup() {
-	echo "IP lookup with nmap.."
+#	echo "IP lookup with nmap.."
 	ip=`nmap -sP "${dhcpserverip}"/24 | sed -n '/Nmap scan report for/{s/.* //;s/[)(]//g;h};/'"$mac"'/{x;p;q;}'` #thank you sluggr 	
 ##sed on freenode
 }
 arp-scanlookup() {
-	echo "IP lookup with arp-scan.."
+#	echo "IP lookup with arp-scan.."
 	ip=`arp-scan -l -I "$arp_scan_dev" | grep -i "$mac" | head -n1 |grep -E -o '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}'`
 }
 failcheck() {
 	if [ -z "$ip" ]; then
 		trys=$((trys+1))
 		if (( trys < 3 )); then
-			echo "Whoops, nmap ip lookup failed. Try again.."
+#			echo "Whoops, nmap ip lookup failed. Try again.."
 			nmaplookup
 			failcheck
 		else
@@ -100,7 +100,7 @@ arp-scanfailcheck() {
 	if [ -z "$ip" ]; then
 		trys=$((trys+1))
 		if (( trys < 3 )); then
-			echo "Whoops, arp-scan ip lookup failed. Try again.."
+#			echo "Whoops, arp-scan ip lookup failed. Try again.."
 			arp-scanlookup
 			arp-scanfailcheck
 		else
