@@ -4,10 +4,7 @@
 Statistics for Hostapd
 
 
-TESTING:
-
-No initscript for now.
-I suggest running /usr/bin/hostapd-statistics in screen or tmux
+service hostapd-statistics start
 
 Raspian uses the wrong realtek module..
 
