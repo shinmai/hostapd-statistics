@@ -30,7 +30,7 @@ case "$1" in
 	fi
 	log_daemon_msg "Starting $DESC" "$NAME"
 	echo ""
-	bash /usr/bin/hostapd-statistics 2>&1 > /var/log/hostapd-statistics &
+	bash /usr/bin/hostapd-statistics 2>&1 >> /var/log/hostapd-statistics &
 	echo $! > $PIDFILE
 	;;
   stop)
@@ -42,6 +42,7 @@ case "$1" in
 		kill -9 $(cat /var/run/hostapd-statistics.1.pid) 2>&1 > /dev/null
 		rm $PIDFILE 2>&1 > /dev/null
 		rm /var/run/hostapd-statistics.1.pid 2>&1 > /dev/null
+		echo "Hostapd-Statistics stopped" >> /var/log/hostapd-statistics
 	else
 	log_daemon_msg "$NAME is not running"
 	echo ""
