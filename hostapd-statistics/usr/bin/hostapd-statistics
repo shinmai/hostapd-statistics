@@ -220,7 +220,7 @@ if  (( ${use_vnstat} == 1 )); then
 		echo "<br>"
 		echo "<img src='data:image/png;base64,$t'>"
 	fi
-	exit 0
+#	exit 0
 
 
 }
