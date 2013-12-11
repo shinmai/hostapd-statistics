@@ -4,5 +4,5 @@ Maintainer: Soeren Beye
 Depends: socat, nmap, arp-scan, iw, inotify-tools, bash
 Recommends: vnstati, sensors, mplayer, screen
 Priority: optional
-Version: 0.1
+Version: 1.0
 Description: This package provides statistics for Hostapd

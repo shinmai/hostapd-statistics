@@ -27,8 +27,6 @@ Todo:
 
 -PKGBUILD
 
--Deb
-
 -Stuff
 
 
