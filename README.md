@@ -1,16 +1,13 @@
 #hostapd-statistics
-==================
 
-Statistics for Hostapd
 
+Webinterface with statistics for Hostapd
+
+FIRST! Read the Manpage
 
 service hostapd-statistics start
 
-Raspian uses the wrong realtek module..
-
-
-
-
+Incompatible with raspian due to the wrong realtek module.
 ________________________________
 Needs: socat, nmap, inotifywait, arp-scan, iw
 
