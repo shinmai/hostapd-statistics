@@ -35,7 +35,7 @@ done < "/dev/shm/conclients"
 timeoutcheck_loop() { timeoutcheck; while sleep "$sleeptime"; do timeoutcheck; done; }
 
 disconnect() {
-	mac=`echo $disconnected | cut -d" " -f8`
+	mac=`echo $disconnected | cut -d" " -f8 | tr [:lower:] [:upper:]`
 	sed -i -e "/$mac/d" "/dev/shm/conclients"
 	if  (( ${log} == 1 )); then
 		echo "$mac removed from connected clients."
