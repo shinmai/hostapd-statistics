@@ -101,7 +101,7 @@
 00:00:64;YOKOGAWA DIGITAL COMPUTER CORP
 00:00:65;Network General Corporation
 00:00:66;TALARIS SYSTEMS INC
-00:00:67;SOFT * RITE INC
+00:00:67;SOFT   RITE INC
 00:00:68;ROSEMOUNT CONTROLS
 00:00:69;CONCORD COMMUNICATIONS INC
 00:00:6A;COMPUTER CONSOLES INC
@@ -138,7 +138,7 @@
 00:00:89;CAYMAN SYSTEMS INC
 00:00:8A;DATAHOUSE INFORMATION SYSTEMS
 00:00:8B;INFOTRON
-00:00:8C;Alloy Computer Products (Australia) Pty Ltd
+00:00:8C;Alloy Computer Products  Australia  Pty Ltd
 00:00:8D;Cryptek Inc
 00:00:8E;SOLBOURNE COMPUTER INC
 00:00:8F;Raytheon
@@ -279,7 +279,7 @@
 00:01:16;Netspect Technologies Inc
 00:01:17;CANAL +
 00:01:18;EZ Digital Co Ltd
-00:01:19;RTUnet (Australia)
+00:01:19;RTUnet  Australia 
 00:01:1A;Hoffmann und Burmeister GbR
 00:01:1B;Unizone Technologies Inc
 00:01:1C;Universal Talkware Corporation
@@ -582,7 +582,7 @@
 00:02:44;SURECOM Technology Co
 00:02:45;Lampus Co Ltd
 00:02:46;All:Win Tech Co Ltd
-00:02:47;Great Dragon Information Technology (Group) Co Ltd
+00:02:47;Great Dragon Information Technology  Group  Co Ltd
 00:02:48;Pilz GmbH   Co
 00:02:49;Aviv Infocom Co Ltd
 00:02:4A;CISCO SYSTEMS INC
@@ -600,10 +600,10 @@
 00:02:56;Alpha Processor Inc
 00:02:57;Microcom Corp
 00:02:58;Flying Packets Communications
-00:02:59;Tsann Kuen China (Shanghai)Enterprise Co Ltd IT Group
+00:02:59;Tsann Kuen China  Shanghai Enterprise Co Ltd IT Group
 00:02:5A;Catena Networks
 00:02:5B;Cambridge Silicon Radio
-00:02:5C;SCI Systems (Kunshan) Co Ltd
+00:02:5C;SCI Systems  Kunshan  Co Ltd
 00:02:5D;Calix Networks
 00:02:5E;High Technology Ltd
 00:02:5F;Nortel Networks
@@ -711,7 +711,7 @@
 00:02:C5;Evertz Microsystems Ltd
 00:02:C6;Data Track Technology PLC
 00:02:C7;ALPS ELECTRIC Co Ltd
-00:02:C8;Technocom Communications Technology (pte) Ltd
+00:02:C8;Technocom Communications Technology  pte  Ltd
 00:02:C9;Mellanox Technologies
 00:02:CA;EndPoints Inc
 00:02:CB;TriState Ltd
@@ -782,7 +782,7 @@
 00:03:0C;Telesoft Technologies Ltd
 00:03:0D;Uniwill Computer Corp
 00:03:0E;Core Communications Co Ltd
-00:03:0F;Digital China (Shanghai) Networks Ltd
+00:03:0F;Digital China  Shanghai  Networks Ltd
 00:03:10;E:Globaledge Corporation
 00:03:11;Micro Technology Co Ltd
 00:03:12;TR:Systemtechnik GmbH
@@ -877,7 +877,7 @@
 00:03:6B;CISCO SYSTEMS INC
 00:03:6C;CISCO SYSTEMS INC
 00:03:6D;Runtop Inc
-00:03:6E;Nicon Systems (Pty) Limited
+00:03:6E;Nicon Systems  Pty  Limited
 00:03:6F;Telsey SPA
 00:03:70;NXTV Inc
 00:03:71;Acomz Networks Corp
@@ -1275,7 +1275,7 @@
 00:04:F9;Xtera Communications Inc
 00:04:FA;NBS Technologies Inc
 00:04:FB;Commtech Inc
-00:04:FC;Stratus Computer (DE) Inc
+00:04:FC;Stratus Computer  DE  Inc
 00:04:FD;Japan Control Engineering Co Ltd
 00:04:FE;Pelago Networks
 00:04:FF;Acronet Co Ltd
@@ -1313,9 +1313,9 @@
 00:05:1F;Taijin Media Co Ltd
 00:05:20;Smartronix Inc
 00:05:21;Control Microsystems
-00:05:22;LEA*D Corporation Inc
+00:05:22;LEA D Corporation Inc
 00:05:23;AVL List GmbH
-00:05:24;BTL System (HK) Limited
+00:05:24;BTL System  HK  Limited
 00:05:25;Puretek Industrial Co Ltd
 00:05:26;IPAS GmbH
 00:05:27;SJ Tek Co Ltd
@@ -1590,7 +1590,7 @@
 00:06:34;GTE Airfone Inc
 00:06:35;PacketAir Networks Inc
 00:06:36;Jedai Broadband Networks
-00:06:37;Toptrend:Meta Information (ShenZhen) Inc
+00:06:37;Toptrend:Meta Information  ShenZhen  Inc
 00:06:38;Sungjin C C Co Ltd
 00:06:39;Newtec
 00:06:3A;Dura Micro Inc
@@ -1609,7 +1609,7 @@
 00:06:47;Etrali SA
 00:06:48;Seedsware Inc
 00:06:49;3M Deutschland GmbH
-00:06:4A;Honeywell Co Ltd (KOREA)
+00:06:4A;Honeywell Co Ltd  KOREA 
 00:06:4B;Alexon Co Ltd
 00:06:4C;Invicta Networks Inc
 00:06:4D;Sencore
@@ -1624,7 +1624,7 @@
 00:06:56;Tactel AB
 00:06:57;Market Central Inc
 00:06:58;Helmut Fischer GmbH Institut für Elektronik und Messtechnik
-00:06:59;EAL (Apeldoorn) BV
+00:06:59;EAL  Apeldoorn  BV
 00:06:5A;Strix Systems
 00:06:5B;Dell Computer Corp
 00:06:5C;Malachite Technologies Inc
@@ -1734,10 +1734,10 @@
 00:06:C4;Piolink Inc
 00:06:C5;INNOVI Technologies Limited
 00:06:C6;lesswire AG
-00:06:C7;RFNET Technologies Pte Ltd (S)
+00:06:C7;RFNET Technologies Pte Ltd  S 
 00:06:C8;Sumitomo Metal Micro Devices Inc
 00:06:C9;Technical Marketing Research Inc
-00:06:CA;American Computer   Digital Components Inc (ACDC)
+00:06:CA;American Computer   Digital Components Inc  ACDC 
 00:06:CB;Jotron Electronics AS
 00:06:CC;JMI Electronics Co Ltd
 00:06:CD;Leaf Imaging Ltd
@@ -1755,7 +1755,7 @@
 00:06:D9;IPM:Net SpA
 00:06:DA;ITRAN Communications Ltd
 00:06:DB;ICHIPS Co Ltd
-00:06:DC;Syabas Technology (Amquest)
+00:06:DC;Syabas Technology  Amquest 
 00:06:DD;AT   T Laboratories : Cambridge Ltd
 00:06:DE;Flash Technology
 00:06:DF;AIDONIC Corporation
@@ -1830,7 +1830,7 @@
 00:07:24;Telemax Co Ltd
 00:07:25;Bematech International Corp
 00:07:26;Shenzhen Gongjin Electronics Co Ltd
-00:07:27;Zi Corporation (HK) Ltd
+00:07:27;Zi Corporation  HK  Ltd
 00:07:28;Neo Telecom
 00:07:29;Kistler Instrumente AG
 00:07:2A;Innovance Networks
@@ -1935,12 +1935,12 @@
 00:07:8D;NetEngines Ltd
 00:07:8E;Garz   Friche GmbH
 00:07:8F;Emkay Innovative Products
-00:07:90;Tri:M Technologies (s) Limited
+00:07:90;Tri:M Technologies  s  Limited
 00:07:91;International Data Communications Inc
 00:07:92;Sütron Electronic GmbH
 00:07:93;Shin Satellite Public Company Limited
 00:07:94;Simple Devices Inc
-00:07:95;Elitegroup Computer System Co (ECS)
+00:07:95;Elitegroup Computer System Co  ECS 
 00:07:96;LSI Systems Inc
 00:07:97;Netpower Co Ltd
 00:07:98;Selea SRL
@@ -2073,7 +2073,7 @@
 00:08:17;EmergeCore Networks LLC
 00:08:18;Pixelworks Inc
 00:08:19;Banksys
-00:08:1A;Sanrad Intelligence Storage Communications (2000) Ltd
+00:08:1A;Sanrad Intelligence Storage Communications  2000  Ltd
 00:08:1B;Windigo Systems
 00:08:1C;@poscom
 00:08:1D;Ipsil Incorporated
@@ -2317,7 +2317,7 @@
 00:09:26;YODA COMMUNICATIONS INC
 00:09:27;TOYOKEIKI COLTD
 00:09:28;Telecore
-00:09:29;Sanyo Industries (UK) Limited
+00:09:29;Sanyo Industries  UK  Limited
 00:09:2A;MYTECS CoLtd
 00:09:2B;iQstor Networks Inc
 00:09:2C;Hitpoint Inc
@@ -2362,13 +2362,13 @@
 00:09:53;Linkage System Integration CoLtd
 00:09:54;AMiT spol s r o
 00:09:55;Young Generation International Corp
-00:09:56;Network Systems Group Ltd (NSG)
+00:09:56;Network Systems Group Ltd  NSG 
 00:09:57;Supercaller Inc
 00:09:58;INTELNET SA
 00:09:59;Sitecsoft
 00:09:5A;RACEWOOD TECHNOLOGY
 00:09:5B;Netgear Inc
-00:09:5C;Philips Medical Systems : Cardiac and Monitoring Systems (CM
+00:09:5C;Philips Medical Systems : Cardiac and Monitoring Systems  CM
 00:09:5D;Dialogue Technology Corp
 00:09:5E;Masstech Group Inc
 00:09:5F;Telebyte Inc
@@ -2478,7 +2478,7 @@
 00:09:C7;Movistec
 00:09:C8;SINAGAWA TSUSHIN KEISOU SERVICE
 00:09:C9;BlueWINC Co Ltd
-00:09:CA;iMaxNetworks(Shenzhen)Limited
+00:09:CA;iMaxNetworks Shenzhen Limited
 00:09:CB;HBrain
 00:09:CC;Moog GmbH
 00:09:CD;HUDSON SOFT COLTD
@@ -2731,7 +2731,7 @@
 00:0A:C5;Color Kinetics
 00:0A:C6;Overture Networks
 00:0A:C7;Unication Group
-00:0A:C8;ZPSYS COLTD (Planning Management)
+00:0A:C8;ZPSYS COLTD  Planning Management 
 00:0A:C9;Zambeel Inc
 00:0A:CA;YOKOYAMA SHOKAI COLtd
 00:0A:CB;XPAK MSA Group
@@ -2761,7 +2761,7 @@
 00:0A:E3;YANG MEI TECHNOLOGY CO LTD
 00:0A:E4;Wistron Corp
 00:0A:E5;ScottCare Corporation
-00:0A:E6;Elitegroup Computer System Co (ECS)
+00:0A:E6;Elitegroup Computer System Co  ECS 
 00:0A:E7;ELIOP SA
 00:0A:E8;Cathay Roxus Information Technology Co LTD
 00:0A:E9;AirVast Technology Inc
@@ -2828,12 +2828,12 @@
 00:0B:26;Wetek Corporation
 00:0B:27;Scion Corporation
 00:0B:28;Quatech Inc
-00:0B:29;LS(LG) Industrial Systems coLtd
+00:0B:29;LS LG  Industrial Systems coLtd
 00:0B:2A;HOWTEL Co Ltd
 00:0B:2B;HOSTNET CORPORATION
 00:0B:2C;Eiki Industrial Co Ltd
 00:0B:2D;Danfoss Inc
-00:0B:2E;Cal:Comp Electronics (Thailand) Public Company Limited Taipe
+00:0B:2E;Cal:Comp Electronics  Thailand  Public Company Limited Taipe
 00:0B:2F;bplan GmbH
 00:0B:30;Beijing Gongye Science   Technology CoLtd
 00:0B:31;Yantai ZhiYang Scientific and technology industry CO LTD
@@ -2861,9 +2861,9 @@
 00:0B:47;Advanced Energy
 00:0B:48;sofrel
 00:0B:49;RF:Link System Inc
-00:0B:4A;Visimetrics (UK) Ltd
+00:0B:4A;Visimetrics  UK  Ltd
 00:0B:4B;VISIOWAVE SA
-00:0B:4C;Clarion (M) Sdn Bhd
+00:0B:4C;Clarion  M  Sdn Bhd
 00:0B:4D;Emuzed
 00:0B:4E;VertexRSI General Dynamics SatCOM Technologies Inc
 00:0B:4F;Verifone INC
@@ -2951,14 +2951,14 @@
 00:0B:A1;SYSCOM Ltd
 00:0B:A2;Sumitomo Electric Networks Inc
 00:0B:A3;Siemens AG I S
-00:0B:A4;Shiron Satellite Communications Ltd (1996)
+00:0B:A4;Shiron Satellite Communications Ltd  1996 
 00:0B:A5;Quasar Cipta Mandiri PT
 00:0B:A6;Miyakawa Electric Works Ltd
 00:0B:A7;Maranti Networks
 00:0B:A8;HANBACK ELECTRONICS CO LTD
 00:0B:A9;CloudShield Technologies Inc
 00:0B:AA;Aiphone coLtd
-00:0B:AB;Advantech Technology (CHINA) Co Ltd
+00:0B:AB;Advantech Technology  CHINA  Co Ltd
 00:0B:AC;3Com Ltd
 00:0B:AD;PC:PoS Inc
 00:0B:AE;Vitals System Inc
@@ -3089,7 +3089,7 @@
 00:0C:2B;ELIAS Technology Inc
 00:0C:2C;Enwiser Inc
 00:0C:2D;FullWave Technology Co Ltd
-00:0C:2E;Openet information technology(shenzhen) Co Ltd
+00:0C:2E;Openet information technology shenzhen  Co Ltd
 00:0C:2F;SeorimTechnology CoLtd
 00:0C:30;CISCO SYSTEMS INC
 00:0C:31;CISCO SYSTEMS INC
@@ -3114,10 +3114,10 @@
 00:0C:44;Automated Interfaces Inc
 00:0C:45;Animation Technologies Inc
 00:0C:46;Allied Telesyn Inc
-00:0C:47;SK Teletech(R D Planning Team)
+00:0C:47;SK Teletech R D Planning Team 
 00:0C:48;QoStek Corporation
 00:0C:49;Dangaard Telecom RTC Division AS
-00:0C:4A;Cygnus Microsystems (P) Limited
+00:0C:4A;Cygnus Microsystems  P  Limited
 00:0C:4B;Cheops Elektronik
 00:0C:4C;Arcor AG Co
 00:0C:4D;Curtiss:Wright Controls Avionics   Electronics
@@ -3129,14 +3129,14 @@
 00:0C:53;PRIVATE
 00:0C:54;Pedestal Networks Inc
 00:0C:55;Microlink Communications Inc
-00:0C:56;Megatel Computer (1986) Corp
+00:0C:56;Megatel Computer  1986  Corp
 00:0C:57;MACKIE Engineering Services Belgium BVBA
 00:0C:58;M S Systems
 00:0C:59;Indyme Electronics Inc
 00:0C:5A;IBSmm Embedded Electronics Consulting
 00:0C:5B;HANWANG TECHNOLOGY COLTD
 00:0C:5C;GTN Systems BV
-00:0C:5D;CHIC TECHNOLOGY (CHINA) CORP
+00:0C:5D;CHIC TECHNOLOGY  CHINA  CORP
 00:0C:5E;Calypso Medical
 00:0C:5F;Avtec Inc
 00:0C:60;ACM Systems
@@ -3172,7 +3172,7 @@
 00:0C:7E;Tellium Incorporated
 00:0C:7F;synertronixx GmbH
 00:0C:80;Opelcomm Inc
-00:0C:81;Schneider Electric (Australia)
+00:0C:81;Schneider Electric  Australia 
 00:0C:82;NETWORK TECHNOLOGIES INC
 00:0C:83;Logical Solutions
 00:0C:84;Eazix Inc
@@ -3191,7 +3191,7 @@
 00:0C:91;Riverhead Networks Inc
 00:0C:92;WolfVision Gmbh
 00:0C:93;Xeline Co Ltd
-00:0C:94;United Electronic Industries Inc (EUI)
+00:0C:94;United Electronic Industries Inc  EUI 
 00:0C:95;PrimeNet
 00:0C:96;OQO Inc
 00:0C:97;NV ADB TTV Technologies SA
@@ -3210,7 +3210,7 @@
 00:0C:A4;Prompttec Product Management GmbH
 00:0C:A5;Naman NZ LTd
 00:0C:A6;Mintera Corporation
-00:0C:A7;Metro (Suzhou) Technologies Co Ltd
+00:0C:A7;Metro  Suzhou  Technologies Co Ltd
 00:0C:A8;Garuda Networks Corporation
 00:0C:A9;Ebtron Inc
 00:0C:AA;Cubic Transportation Systems Inc
@@ -3220,7 +3220,7 @@
 00:0C:AE;Ailocom Oy
 00:0C:AF;TRI TERM COLTD
 00:0C:B0;Star Semiconductor Corporation
-00:0C:B1;Salland Engineering (Europe) BV
+00:0C:B1;Salland Engineering  Europe  BV
 00:0C:B2;Comstar Co Ltd
 00:0C:B3;ROUND CoLtd
 00:0C:B4;AutoCell Laboratories Inc
@@ -3237,7 +3237,7 @@
 00:0C:BF;Holy Stone Ent Co Ltd
 00:0C:C0;Genera Oy
 00:0C:C1;Cooper Industries Inc
-00:0C:C2;ControlNet (India) Private Limited
+00:0C:C2;ControlNet  India  Private Limited
 00:0C:C3;BeWAN systems
 00:0C:C4;Tiptel AG
 00:0C:C5;Nextlink Co Ltd
@@ -3308,7 +3308,7 @@
 00:0D:06;Compulogic Limited
 00:0D:07;Calrec Audio Ltd
 00:0D:08;AboveCable Inc
-00:0D:09;Yuehua(Zhuhai) Electronic CO LTD
+00:0D:09;Yuehua Zhuhai  Electronic CO LTD
 00:0D:0A;Projectiondesign as
 00:0D:0B;Buffalo Inc
 00:0D:0C;MDI Security Systems
@@ -3426,7 +3426,7 @@
 00:0D:7C;Codian Ltd
 00:0D:7D;Afco Systems
 00:0D:7E;Axiowave Networks Inc
-00:0D:7F;MIDASCOMMUNICATION TECHNOLOGIES PTE LTD ( Foreign Branch)
+00:0D:7F;MIDASCOMMUNICATION TECHNOLOGIES PTE LTD   Foreign Branch 
 00:0D:80;Online Development Inc
 00:0D:81;Pepperl+Fuchs GmbH
 00:0D:82;PHS srl
@@ -3434,7 +3434,7 @@
 00:0D:84;Makus Inc
 00:0D:85;Tapwave Inc
 00:0D:86;Huber + Suhner AG
-00:0D:87;Elitegroup Computer System Co (ECS)
+00:0D:87;Elitegroup Computer System Co  ECS 
 00:0D:88;D:Link Corporation
 00:0D:89;Bils Technology Inc
 00:0D:8A;Winners Electronics Co Ltd
@@ -3444,7 +3444,7 @@
 00:0D:8E;Koden Electronics Co Ltd
 00:0D:8F;King Tsushin Kogyo Co LTD
 00:0D:90;Factum Electronics AB
-00:0D:91;Eclipse (HQ Espana) SL
+00:0D:91;Eclipse  HQ Espana  SL
 00:0D:92;Arima Communication Corporation
 00:0D:93;Apple
 00:0D:94;AFAR CommunicationsInc
@@ -3474,7 +3474,7 @@
 00:0D:AC;Japan CBM Corporation
 00:0D:AD;Dataprobe Inc
 00:0D:AE;SAMSUNG HEAVY INDUSTRIES CO LTD
-00:0D:AF;Plexus Corp (UK) Ltd
+00:0D:AF;Plexus Corp  UK  Ltd
 00:0D:B0;Olym:tech CoLtd
 00:0D:B1;Japan Network Service Co Ltd
 00:0D:B2;Ammasso Inc
@@ -3665,7 +3665,7 @@
 00:0E:6B;Janitza electronics GmbH
 00:0E:6C;Device Drivers Limited
 00:0E:6D;Murata Manufacturing Co Ltd
-00:0E:6E;MAT SA (Mircrelec Advanced Technology)
+00:0E:6E;MAT SA  Mircrelec Advanced Technology 
 00:0E:6F;IRIS Corporation Berhad
 00:0E:70;in2 Networks
 00:0E:71;Gemstar Technology Development Ltd
@@ -3790,7 +3790,7 @@
 00:0E:E8;zioncom
 00:0E:E9;WayTech Development Inc
 00:0E:EA;Shadong Luneng Jicheng ElectronicsCoLtd
-00:0E:EB;Sandmartin(zhong shan)Electronics CoLtd
+00:0E:EB;Sandmartin zhong shan Electronics CoLtd
 00:0E:EC;Orban
 00:0E:ED;Nokia Danmark AS
 00:0E:EE;Muco Industrie BV
@@ -3906,7 +3906,7 @@
 00:0F:5C;Day One Digital Media Limited
 00:0F:5D;Genexis BV
 00:0F:5E;Veo
-00:0F:5F;Nicety Technologies Inc (NTS)
+00:0F:5F;Nicety Technologies Inc  NTS 
 00:0F:60;Lifetron CoLtd
 00:0F:61;Hewlett:Packard Company
 00:0F:62;Alcatel Bell Space NV
@@ -3968,7 +3968,7 @@
 00:0F:9A;Synchrony Inc
 00:0F:9B;Ross Video Limited
 00:0F:9C;Panduit Corp
-00:0F:9D;DisplayLink (UK) Ltd
+00:0F:9D;DisplayLink  UK  Ltd
 00:0F:9E;Murrelektronik GmbH
 00:0F:9F;ARRIS Group Inc
 00:0F:A0;CANON KOREA BUSINESS SOLUTIONS INC
@@ -3989,7 +3989,7 @@
 00:0F:AF;Dialog Inc
 00:0F:B0;Compal ElectronicsINC
 00:0F:B1;Cognio Inc
-00:0F:B2;Broadband Pacenet (India) Pvt Ltd
+00:0F:B2;Broadband Pacenet  India  Pvt Ltd
 00:0F:B3;Actiontec Electronics Inc
 00:0F:B4;Timespace Technology
 00:0F:B5;NETGEAR Inc
@@ -4000,7 +4000,7 @@
 00:0F:BA;Tevebox AB
 00:0F:BB;Nokia Siemens Networks GmbH   Co KG
 00:0F:BC;Onkey Technologies Inc
-00:0F:BD;MRV Communications (Networks) LTD
+00:0F:BD;MRV Communications  Networks  LTD
 00:0F:BE;e:wyou Inc
 00:0F:BF;DGT Sp z oo
 00:0F:C0;DELCOMp
@@ -4085,7 +4085,7 @@
 00:10:0F;INDUSTRIAL CPU SYSTEMS
 00:10:10;INITIO CORPORATION
 00:10:11;CISCO SYSTEMS INC
-00:10:12;PROCESSOR SYSTEMS (I) PVT LTD
+00:10:12;PROCESSOR SYSTEMS  I  PVT LTD
 00:10:13;Kontron America Inc
 00:10:14;CISCO SYSTEMS INC
 00:10:15;OOmon Inc
@@ -4149,7 +4149,7 @@
 00:10:4F;Oracle Corporation
 00:10:50;RION CO LTD
 00:10:51;CMICRO CORPORATION
-00:10:52;METTLER:TOLEDO (ALBSTADT) GMBH
+00:10:52;METTLER:TOLEDO  ALBSTADT  GMBH
 00:10:53;COMPUTER TECHNOLOGY CORP
 00:10:54;CISCO SYSTEMS INC
 00:10:55;FUJITSU MICROELECTRONICS INC
@@ -4159,7 +4159,7 @@
 00:10:59;DIABLO RESEARCH CO LLC
 00:10:5A;3COM CORPORATION
 00:10:5B;NET INSIGHT AB
-00:10:5C;QUANTUM DESIGNS (HK) LTD
+00:10:5C;QUANTUM DESIGNS  HK  LTD
 00:10:5D;Draeger Medical
 00:10:5E;HEKIMIAN LABORATORIES INC
 00:10:5F;ZODIAC DATA SYSTEMS
@@ -4256,7 +4256,7 @@
 00:10:BA;MARTINHO:DAVIS SYSTEMS INC
 00:10:BB;DATA   INFORMATION TECHNOLOGY
 00:10:BC;Aastra Telecom
-00:10:BD;THE TELECOMMUNICATION TECHNOLOGY COMMITTEE (TTC)
+00:10:BD;THE TELECOMMUNICATION TECHNOLOGY COMMITTEE  TTC 
 00:10:BE;MARCH NETWORKS CORPORATION
 00:10:BF;InterAir Wireless
 00:10:C0;ARMA Inc
@@ -4329,7 +4329,7 @@
 00:11:03;kawamura electric inc
 00:11:04;TELEXY
 00:11:05;Sunplus Technology Co Ltd
-00:11:06;Siemens NV (Belgium)
+00:11:06;Siemens NV  Belgium 
 00:11:07;RGB Networks Inc
 00:11:08;Orbital Data Corporation
 00:11:09;Micro:Star International
@@ -4353,7 +4353,7 @@
 00:11:1B;Targa Systems Div L:3 Communications Canada
 00:11:1C;Pleora Technologies Inc
 00:11:1D;Hectrix Limited
-00:11:1E;EPSG (Ethernet Powerlink Standardization Group)
+00:11:1E;EPSG  Ethernet Powerlink Standardization Group 
 00:11:1F;Doremi Labs Inc
 00:11:20;CISCO SYSTEMS INC
 00:11:21;CISCO SYSTEMS INC
@@ -4371,7 +4371,7 @@
 00:11:2D;iPulse Systems
 00:11:2E;CEICOM
 00:11:2F;ASUSTek Computer Inc
-00:11:30;Allied Telesis (Hong Kong) Ltd
+00:11:30;Allied Telesis  Hong Kong  Ltd
 00:11:31;UNATECH COLTD
 00:11:32;Synology Incorporated
 00:11:33;Siemens Austria SIMEA
@@ -4414,7 +4414,7 @@
 00:11:58;Nortel Networks
 00:11:59;MATISSE NETWORKS INC
 00:11:5A;Ivoclar Vivadent AG
-00:11:5B;Elitegroup Computer System Co (ECS)
+00:11:5B;Elitegroup Computer System Co  ECS 
 00:11:5C;CISCO SYSTEMS INC
 00:11:5D;CISCO SYSTEMS INC
 00:11:5E;ProMinent Dosiertechnik GmbH
@@ -4585,7 +4585,7 @@
 00:12:03;ActivNetworks
 00:12:04;u10 Networks Inc
 00:12:05;Terrasat Communications Inc
-00:12:06;iQuest (NZ) Ltd
+00:12:06;iQuest  NZ  Ltd
 00:12:07;Head Strong International Limited
 00:12:08;Gantner Instruments GmbH
 00:12:09;Fastrax Ltd
@@ -4613,7 +4613,7 @@
 00:12:1F;Harding Instruments
 00:12:20;Cadco Systems
 00:12:21;BBraun Melsungen AG
-00:12:22;Skardin (UK) Ltd
+00:12:22;Skardin  UK  Ltd
 00:12:23;Pixim
 00:12:24;NexQL Corporation
 00:12:25;ARRIS Group Inc
@@ -4651,7 +4651,7 @@
 00:12:45;Zellweger Analytics Inc
 00:12:46;TOM TECHNOLOGY INC
 00:12:47;Samsung Electronics Co Ltd
-00:12:48;EMC Corporation (Kashya)
+00:12:48;EMC Corporation  Kashya 
 00:12:49;Delta Elettronica SpA
 00:12:4A;Dedicated Devices Inc
 00:12:4B;Texas Instruments
@@ -4731,7 +4731,7 @@
 00:12:95;Aiware Inc
 00:12:96;Addlogix
 00:12:97;O2Micro Inc
-00:12:98;MICO ELECTRIC(SHENZHEN) LIMITED
+00:12:98;MICO ELECTRIC SHENZHEN  LIMITED
 00:12:99;Ktech Telecommunications Inc
 00:12:9A;IRT Electronics Pty Ltd
 00:12:9B;E2S Electronic Engineering Solutions SL
@@ -4755,7 +4755,7 @@
 00:12:AD;IDS GmbH
 00:12:AE;HLS HARD:LINE Solutions Inc
 00:12:AF;ELPRO Technologies
-00:12:B0;Efore Oyj (Plc)
+00:12:B0;Efore Oyj  Plc 
 00:12:B1;Dai Nippon Printing Co Ltd
 00:12:B2;AVOLITES LTD
 00:12:B3;Advance Wireless Technology Corp
@@ -4776,7 +4776,7 @@
 00:12:C2;Apex Electronics Factory
 00:12:C3;WIT SA
 00:12:C4;Viseon Inc
-00:12:C5;V:ShowTechnology (China) CoLtd
+00:12:C5;V:ShowTechnology  China  CoLtd
 00:12:C6;TGC America Inc
 00:12:C7;SECURAY Technologies LtdCo
 00:12:C8;Perfect tech
@@ -4800,7 +4800,7 @@
 00:12:DA;CISCO SYSTEMS INC
 00:12:DB;ZIEHL industrie:elektronik GmbH + Co KG
 00:12:DC;SunCorp Industrial Limited
-00:12:DD;Shengqu Information Technology (Shanghai) Co Ltd
+00:12:DD;Shengqu Information Technology  Shanghai  Co Ltd
 00:12:DE;Radio Components Sweden AB
 00:12:DF;Novomatic AG
 00:12:E0;Codan Limited
@@ -4902,7 +4902,7 @@
 00:13:40;ADEL srl
 00:13:41;Shandong New Beiyang Information Technology CoLtd
 00:13:42;Vision Research Inc
-00:13:43;Matsushita Electronic Components (Europe) GmbH
+00:13:43;Matsushita Electronic Components  Europe  GmbH
 00:13:44;Fargo Electronics Inc
 00:13:45;Eaton Corporation
 00:13:46;D:Link Corporation
@@ -5012,7 +5012,7 @@
 00:13:AE;Radiance Technologies Inc
 00:13:AF;NUMA TechnologyInc
 00:13:B0;Jablotron
-00:13:B1;Intelligent Control Systems (Asia) Pte Ltd
+00:13:B1;Intelligent Control Systems  Asia  Pte Ltd
 00:13:B2;Carallon Limited
 00:13:B3;Ecom Communications Technology Co Ltd
 00:13:B4;Appear TV
@@ -5079,7 +5079,7 @@
 00:13:F1;AMOD Technology Co Ltd
 00:13:F2;Klas Ltd
 00:13:F3;Giga:byte Communications Inc
-00:13:F4;Psitek (Pty) Ltd
+00:13:F4;Psitek  Pty  Ltd
 00:13:F5;Akimbi Systems
 00:13:F6;Cintech
 00:13:F7;SMC Networks Inc
@@ -5142,7 +5142,7 @@
 00:14:30;ViPowER Inc
 00:14:31;PDL Electronics Ltd
 00:14:32;Tarallax Wireless Inc
-00:14:33;Empower Technologies(Canada) Inc
+00:14:33;Empower Technologies Canada  Inc
 00:14:34;Keri Systems Inc
 00:14:35;CityCom Corp
 00:14:36;Qwerty Elektronik AB
@@ -5234,7 +5234,7 @@
 00:14:8C;Fortress Technologies
 00:14:8D;Cubic Defense Simulation Systems
 00:14:8E;Tele Power Inc
-00:14:8F;Protronic (Far East) Ltd
+00:14:8F;Protronic  Far East  Ltd
 00:14:90;ASP Corporation
 00:14:91;Daniels Electronics Ltd dbo Codan Rado Communications
 00:14:92;Liteon Mobile Media Solution SBU
@@ -5311,7 +5311,7 @@
 00:14:D9;IP Fabrics Inc
 00:14:DA;Huntleigh Healthcare
 00:14:DB;Elma Trenew Electronic GmbH
-00:14:DC;Communication System Design   Manufacturing (CSDM)
+00:14:DC;Communication System Design   Manufacturing  CSDM 
 00:14:DD;Covergence Inc
 00:14:DE;Sage Instruments Inc
 00:14:DF;HI:P Tech Corporation
@@ -5325,7 +5325,7 @@
 00:14:E7;Stolinx Inc
 00:14:E8;ARRIS Group Inc
 00:14:E9;Nortech International
-00:14:EA;S Digm Inc (Safe Paradigm Inc)
+00:14:EA;S Digm Inc  Safe Paradigm Inc 
 00:14:EB;AwarePoint Corporation
 00:14:EC;Acro Telecom
 00:14:ED;Airak Inc
@@ -5377,8 +5377,8 @@
 00:15:1B;Isilon Systems Inc
 00:15:1C;LENECO
 00:15:1D;M2I CORPORATION
-00:15:1E;Ethernet Powerlink Standardization Group (EPSG)
-00:15:1F;Multivision Intelligent Surveillance (Hong Kong) Ltd
+00:15:1E;Ethernet Powerlink Standardization Group  EPSG 
+00:15:1F;Multivision Intelligent Surveillance  Hong Kong  Ltd
 00:15:20;Radiocrafts AS
 00:15:21;Horoquartz
 00:15:22;Dea Security
@@ -5493,7 +5493,7 @@
 00:15:8F;NTT Advanced Technology Corporation
 00:15:90;Hectronic GmbH
 00:15:91;RLW Inc
-00:15:92;Facom UK Ltd (Melksham)
+00:15:92;Facom UK Ltd  Melksham 
 00:15:93;U4EA Technologies Inc
 00:15:94;BIXOLON COLTD
 00:15:95;Quester Tangent Corporation
@@ -5581,7 +5581,7 @@
 00:15:E7;Quantec Tontechnik
 00:15:E8;Nortel
 00:15:E9;D:Link Corporation
-00:15:EA;Tellumat (Pty) Ltd
+00:15:EA;Tellumat  Pty  Ltd
 00:15:EB;ZTE CORPORATION
 00:15:EC;Boca Devices LLC
 00:15:ED;Fulcrum Microsystems Inc
@@ -5700,7 +5700,7 @@
 00:16:5E;Precision IO
 00:16:5F;Fairmount Automation
 00:16:60;Nortel
-00:16:61;Novatium Solutions (P) Ltd
+00:16:61;Novatium Solutions  P  Ltd
 00:16:62;Liyuh Technology Ltd
 00:16:63;KBT Mobile
 00:16:64;Prod:El SpA
@@ -5708,18 +5708,18 @@
 00:16:66;Quantier Communication Inc
 00:16:67;A:TEC Subsystem INC
 00:16:68;Eishin Electronics
-00:16:69;MRV Communication (Networks) LTD
+00:16:69;MRV Communication  Networks  LTD
 00:16:6A;TPS
 00:16:6B;Samsung Electronics
 00:16:6C;Samsung Electonics Digital Video System Division
-00:16:6D;Yulong Computer Telecommunication Scientific(shenzhen)CoLt
+00:16:6D;Yulong Computer Telecommunication Scientific shenzhen CoLt
 00:16:6E;Arbitron Inc
 00:16:6F;Intel Corporate
 00:16:70;SKNET Corporation
 00:16:71;Symphox Information Co
 00:16:72;Zenway enterprise ltd
 00:16:73;Bury GmbH   Co KG
-00:16:74;EuroCB (Phils) Inc
+00:16:74;EuroCB  Phils  Inc
 00:16:75;ARRIS Group Inc
 00:16:76;Intel Corporate
 00:16:77;Bihl + Wiedemann GmbH
@@ -5752,8 +5752,8 @@
 00:16:92;Scientific:Atlanta Inc
 00:16:93;PowerLink Technology Inc
 00:16:94;Sennheiser Communications AS
-00:16:95;AVC Technology (International) Limited
-00:16:96;QDI Technology (HK) Limited
+00:16:95;AVC Technology  International  Limited
+00:16:96;QDI Technology  HK  Limited
 00:16:97;NEC Corporation
 00:16:98;T A Mobile Phones
 00:16:99;Tonic DVB Marketing Ltd
@@ -5782,7 +5782,7 @@
 00:16:B0;VK Corporation
 00:16:B1;KBS
 00:16:B2;DriveCam Inc
-00:16:B3;Photonicbridges (China) Co Ltd
+00:16:B3;Photonicbridges  China  Co Ltd
 00:16:B4;PRIVATE
 00:16:B5;ARRIS Group Inc
 00:16:B6;Cisco:Linksys
@@ -5901,7 +5901,7 @@
 00:17:27;Thermo Ramsey Italia srl
 00:17:28;Selex Communications
 00:17:29;Ubicod CoLTD
-00:17:2A;Proware Technology Corp(By Unifosa)
+00:17:2A;Proware Technology Corp By Unifosa 
 00:17:2B;Global Technologies Inc
 00:17:2C;TAEJIN INFOTECH
 00:17:2D;Axcen Photonics Corporation
@@ -5970,7 +5970,7 @@
 00:17:6C;Pivot3 Inc
 00:17:6D;CORE CORPORATION
 00:17:6E;DUCATI SISTEMI
-00:17:6F;PAX Computer Technology(Shenzhen) Ltd
+00:17:6F;PAX Computer Technology Shenzhen  Ltd
 00:17:70;Arti Industrial Electronics Ltd
 00:17:71;APD Communications Ltd
 00:17:72;ASTRO Strobel Kommunikationssysteme GmbH
@@ -6155,7 +6155,7 @@
 00:18:25;PRIVATE
 00:18:26;Cale Access AB
 00:18:27;NEC UNIFIED SOLUTIONS NEDERLAND BV
-00:18:28;e2v technologies (UK) ltd
+00:18:28;e2v technologies  UK  ltd
 00:18:29;Gatsometer
 00:18:2A;Taiwan Video   Monitor
 00:18:2B;Softier
@@ -6208,7 +6208,7 @@
 00:18:5A;uControl Inc
 00:18:5B;Network Chemistry Inc
 00:18:5C;EDS Lab Pte Ltd
-00:18:5D;TAIGUEN TECHNOLOGY (SHEN:ZHEN) CO LTD
+00:18:5D;TAIGUEN TECHNOLOGY  SHEN:ZHEN  CO LTD
 00:18:5E;Nexterm Inc
 00:18:5F;TAC Inc
 00:18:60;SIM Technology Group Shanghai Simcom Ltd
@@ -6388,7 +6388,7 @@
 00:19:0E;Atech Technology Co Ltd
 00:19:0F;Advansus Corp
 00:19:10;Knick Elektronische Messgeraete GmbH   Co KG
-00:19:11;Just In Mobile Information Technologies (Shanghai) Co Ltd
+00:19:11;Just In Mobile Information Technologies  Shanghai  Co Ltd
 00:19:12;Welcat Inc
 00:19:13;Chuang:Yi Network Equipment CoLtd
 00:19:14;Winix Co Ltd
@@ -6434,7 +6434,7 @@
 00:19:3C;HighPoint Technologies Incorporated
 00:19:3D;GMC Guardian Mobility Corp
 00:19:3E;ADB Broadband Italia
-00:19:3F;RDI technology(Shenzhen) CoLTD
+00:19:3F;RDI technology Shenzhen  CoLTD
 00:19:40;Rackable Systems
 00:19:41;Pitney Bowes Inc
 00:19:42;ON SOFTWARE INTERNATIONAL LIMITED
@@ -6449,7 +6449,7 @@
 00:19:4B;SAGEM COMMUNICATION
 00:19:4C;Fujian Stelcom information   Technology COLtd
 00:19:4D;Avago Technologies Sdn Bhd
-00:19:4E;Ultra Electronics : TCS (Tactical Communication Systems)
+00:19:4E;Ultra Electronics : TCS  Tactical Communication Systems 
 00:19:4F;Nokia Danmark AS
 00:19:50;Harman Multimedia
 00:19:51;NETCONS sro
@@ -6472,20 +6472,20 @@
 00:19:62;Commerciant LP
 00:19:63;Sony Ericsson Mobile Communications AB
 00:19:64;Doorking Inc
-00:19:65;YuHua TelTech (ShangHai) Co Ltd
+00:19:65;YuHua TelTech  ShangHai  Co Ltd
 00:19:66;Asiarock Technology Limited
 00:19:67;TELDAT SpJ
-00:19:68;Digital Video Networks(Shanghai) CO LTD
+00:19:68;Digital Video Networks Shanghai  CO LTD
 00:19:69;Nortel
 00:19:6A;MikroM GmbH
 00:19:6B;Danpex Corporation
 00:19:6C;ETROVISION TECHNOLOGY
 00:19:6D;Raybit Systems Korea Inc
-00:19:6E;Metacom (Pty) Ltd
+00:19:6E;Metacom  Pty  Ltd
 00:19:6F;SensoPart GmbH
 00:19:70;Z:Com Inc
 00:19:71;Guangzhou Unicomp Technology CoLtd
-00:19:72;Plexus (Xiamen) Coltd
+00:19:72;Plexus  Xiamen  Coltd
 00:19:73;Zeugma Systems
 00:19:74;AboCom Systems Inc
 00:19:75;Beijing Huisen networks technology Inc
@@ -6518,9 +6518,9 @@
 00:19:90;ELM DATA Co Ltd
 00:19:91;avinfo
 00:19:92;ADTRAN INC
-00:19:93;Changshu Switchgear MFG CoLtd (Former Changshu Switchgea
+00:19:93;Changshu Switchgear MFG CoLtd  Former Changshu Switchgea
 00:19:94;Jorjin Technologies Inc
-00:19:95;Jurong Hi:Tech (Suzhou)Coltd
+00:19:95;Jurong Hi:Tech  Suzhou Coltd
 00:19:96;TurboChef Technologies Inc
 00:19:97;Soft Device Sdn Bhd
 00:19:98;SATO CORPORATION
@@ -6535,7 +6535,7 @@
 00:19:A1;LG INFORMATION   COMM
 00:19:A2;ORDYN TECHNOLOGIES
 00:19:A3;asteel electronique atlantique
-00:19:A4;Austar Technology (hang zhou) CoLtd
+00:19:A4;Austar Technology  hang zhou  CoLtd
 00:19:A5;RadarFind Corporation
 00:19:A6;ARRIS Group Inc
 00:19:A7;ITU:T
@@ -6570,12 +6570,12 @@
 00:19:C4;Infocrypt Inc
 00:19:C5;SONY Computer Entertainment inc
 00:19:C6;ZTE Corporation
-00:19:C7;Cambridge Industries(Group) CoLtd
+00:19:C7;Cambridge Industries Group  CoLtd
 00:19:C8;AnyDATA Corporation
 00:19:C9;S C ELECTRIC COMPANY
 00:19:CA;Broadata Communications Inc
 00:19:CB;ZyXEL Communications Corporation
-00:19:CC;RCG (HK) Ltd
+00:19:CC;RCG  HK  Ltd
 00:19:CD;Chengdu ethercom information technology Ltd
 00:19:CE;Progressive Gaming International
 00:19:CF;SALICRU SA
@@ -6617,7 +6617,7 @@
 00:19:F3;Cetis Inc
 00:19:F4;Convergens Oy Ltd
 00:19:F5;Imagination Technologies Ltd
-00:19:F6;Acconet (PTE) Ltd
+00:19:F6;Acconet  PTE  Ltd
 00:19:F7;Onset Computer Corporation
 00:19:F8;Embedded Systems Design Inc
 00:19:F9;TDK:Lambda
@@ -6717,7 +6717,7 @@
 00:1A:57;Matrix Design Group LLC
 00:1A:58;CCV Deutschland GmbH : Celectronic eHealth Div
 00:1A:59;Ircona
-00:1A:5A;Korea Electric Power Data Network(KDN) Co Ltd
+00:1A:5A;Korea Electric Power Data Network KDN  Co Ltd
 00:1A:5B;NetCare Service Co Ltd
 00:1A:5C;Euchner GmbH+Co KG
 00:1A:5D;Mobinnova Corp
@@ -6752,7 +6752,7 @@
 00:1A:7A;Lismore Instruments Limited
 00:1A:7B;Teleco Inc
 00:1A:7C;Hirschmann Multimedia BV
-00:1A:7D;cyber:blue(HK)Ltd
+00:1A:7D;cyber:blue HK Ltd
 00:1A:7E;LN Srithai Comm Ltd
 00:1A:7F;GCI Science Technology CoLtd
 00:1A:80;Sony Corporation
@@ -6780,8 +6780,8 @@
 00:1A:96;ECLER SA
 00:1A:97;fitivision technology Inc
 00:1A:98;Asotel Communication Limited Taiwan Branch
-00:1A:99;Smarty (HZ) Information Electronics Co Ltd
-00:1A:9A;Skyworth Digital technology(shenzhen)coltd
+00:1A:99;Smarty  HZ  Information Electronics Co Ltd
+00:1A:9A;Skyworth Digital technology shenzhen coltd
 00:1A:9B;ADEC   Parter AG
 00:1A:9C;RightHand Technologies Inc
 00:1A:9D;Skipper Wireless Inc
@@ -6827,7 +6827,7 @@
 00:1A:C5;BreakingPoint Systems Inc
 00:1A:C6;Micro Control Designs
 00:1A:C7;UNIPOINT
-00:1A:C8;ISL (Instrumentation Scientifique de Laboratoire)
+00:1A:C8;ISL  Instrumentation Scientifique de Laboratoire 
 00:1A:C9;SUZUKEN COLTD
 00:1A:CA;Tilera Corporation
 00:1A:CB;Autocom Products Ltd
@@ -6876,7 +6876,7 @@
 00:1A:F6;Woven Systems Inc
 00:1A:F7;dataschalt e+a GmbH
 00:1A:F8;Copley Controls Corporation
-00:1A:F9;AeroVIronment (AV Inc)
+00:1A:F9;AeroVIronment  AV Inc 
 00:1A:FA;Welch Allyn Inc
 00:1A:FB;Joby Inc
 00:1A:FC;ModusLink Corporation
@@ -6886,7 +6886,7 @@
 00:1B:00;Neopost Technologies
 00:1B:01;Applied Radio Technologies
 00:1B:02;ED CoLtd
-00:1B:03;Action Technology (SZ) Co Ltd
+00:1B:03;Action Technology  SZ  Co Ltd
 00:1B:04;Affinity International Spa
 00:1B:05;YMC AG
 00:1B:06;Ateliers R LAUMONIER
@@ -6917,7 +6917,7 @@
 00:1B:1F;DELTA : Danish Electronics Light   Acoustics
 00:1B:20;TPine Technology
 00:1B:21;Intel Corporate
-00:1B:22;Palit Microsystems ( HK) Ltd
+00:1B:22;Palit Microsystems   HK  Ltd
 00:1B:23;SimpleComTools
 00:1B:24;Quanta Computer Inc
 00:1B:25;Nortel
@@ -6937,9 +6937,9 @@
 00:1B:33;Nokia Danmark AS
 00:1B:34;Focus System Inc
 00:1B:35;ChongQing JINOU Science   Technology Development COLtd
-00:1B:36;Tsubata Engineering CoLtd (Head Office)
+00:1B:36;Tsubata Engineering CoLtd  Head Office 
 00:1B:37;Computec Oy
-00:1B:38;COMPAL INFORMATION (KUNSHAN) CO LTD
+00:1B:38;COMPAL INFORMATION  KUNSHAN  CO LTD
 00:1B:39;Proxicast
 00:1B:3A;SIMS Corp
 00:1B:3B;Yi:Qing CO LTD
@@ -6963,7 +6963,7 @@
 00:1B:4D;Areca Technology Corporation
 00:1B:4E;Navman New Zealand
 00:1B:4F;Avaya Inc
-00:1B:50;Nizhny Novgorod Factory named after MFrunze FSUE (NZiF)
+00:1B:50;Nizhny Novgorod Factory named after MFrunze FSUE  NZiF 
 00:1B:51;Vector Technology Corp
 00:1B:52;ARRIS Group Inc
 00:1B:53;CISCO SYSTEMS INC
@@ -7088,7 +7088,7 @@
 00:1B:CA;Beijing Run Technology LTD Company
 00:1B:CB;PEMPEK SYSTEMS PTY LTD
 00:1B:CC;KINGTEK CCTV ALLIANCE CO LTD
-00:1B:CD;DAVISCOMMS (S) PTE LTD
+00:1B:CD;DAVISCOMMS  S  PTE LTD
 00:1B:CE;Measurement Devices Ltd
 00:1B:CF;Dataupia Corporation
 00:1B:D0;IDENTEC SOLUTIONS
@@ -7127,7 +7127,7 @@
 00:1B:F1;Nanjing SilverNet Software Co Ltd
 00:1B:F2;KWORLD COMPUTER CO LTD
 00:1B:F3;TRANSRADIO SenderSysteme Berlin AG
-00:1B:F4;KENWIN INDUSTRIAL(HK) LTD
+00:1B:F4;KENWIN INDUSTRIAL HK  LTD
 00:1B:F5;Tellink Sistemas de Telecomunicación SL
 00:1B:F6;CONWISE Technology Corporation Ltd
 00:1B:F7;Lund IP Products AB
@@ -7187,7 +7187,7 @@
 00:1C:2D;FlexRadio Systems
 00:1C:2E;HPN Supply Chain
 00:1C:2F;Pfister GmbH
-00:1C:30;Mode Lighting (UK ) Ltd
+00:1C:30;Mode Lighting  UK   Ltd
 00:1C:31;Mobile XP Technology Co LTD
 00:1C:32;Telian Corporation
 00:1C:33;Sutron
@@ -7219,7 +7219,7 @@
 00:1C:4D;Aplix IP Holdings Corporation
 00:1C:4E;TASA International Limited
 00:1C:4F;MACAB AB
-00:1C:50;TCL Technoly Electronics(Huizhou)CoLtd
+00:1C:50;TCL Technoly Electronics Huizhou CoLtd
 00:1C:51;Celeno Communications
 00:1C:52;VISIONEE SRL
 00:1C:53;Synergy Lighting Controls
@@ -7247,7 +7247,7 @@
 00:1C:69;Packet Vision Ltd
 00:1C:6A;Weiss Engineering Ltd
 00:1C:6B;COVAXCo Ltd
-00:1C:6C;Jabil Circuit (Guangzhou) Limited
+00:1C:6C;Jabil Circuit  Guangzhou  Limited
 00:1C:6D;KYOHRITSU ELECTRONIC INDUSTRY CO LTD
 00:1C:6E;Newbury Networks Inc
 00:1C:6F;Emfit Ltd
@@ -7291,7 +7291,7 @@
 00:1C:95;Opticomm Corporation
 00:1C:96;Linkwise Technology Pte Ltd
 00:1C:97;Enzytek Technology Inc
-00:1C:98;LUCKY TECHNOLOGY (HK) COMPANY LIMITED
+00:1C:98;LUCKY TECHNOLOGY  HK  COMPANY LIMITED
 00:1C:99;Shunra Software Ltd
 00:1C:9A;Nokia Danmark AS
 00:1C:9B;FEIG ELECTRONIC GmbH
@@ -7320,7 +7320,7 @@
 00:1C:B2;BPT SPA
 00:1C:B3;Apple
 00:1C:B4;Iridium Satellite LLC
-00:1C:B5;Neihua Network Technology CoLTD(NHN)
+00:1C:B5;Neihua Network Technology CoLTD NHN 
 00:1C:B6;Duzon CNT Co Ltd
 00:1C:B7;USC DigiArk Corporation
 00:1C:B8;CBC Co Ltd
@@ -7349,7 +7349,7 @@
 00:1C:CF;LIMETEK
 00:1C:D0;Circleone CoLtd
 00:1C:D1;Waves Audio LTD
-00:1C:D2;King Champion (Hong Kong) Limited
+00:1C:D2;King Champion  Hong Kong  Limited
 00:1C:D3;ZP Engineering SEL
 00:1C:D4;Nokia Danmark AS
 00:1C:D5;ZeeVee Inc
@@ -7375,7 +7375,7 @@
 00:1C:E9;Galaxy Technology Limited
 00:1C:EA;Scientific:Atlanta Inc
 00:1C:EB;Nortel
-00:1C:EC;Mobilesoft (Aust) Pty Ltd
+00:1C:EC;Mobilesoft  Aust  Pty Ltd
 00:1C:ED;ENVIRONNEMENT SA
 00:1C:EE;SHARP Corporation
 00:1C:EF;Primax Electronics LTD
@@ -7391,7 +7391,7 @@
 00:1C:F9;CISCO SYSTEMS INC
 00:1C:FA;Alarmcom
 00:1C:FB;ARRIS Group Inc
-00:1C:FC;Suminet Communication Technologies (Shanghai) Co Ltd
+00:1C:FC;Suminet Communication Technologies  Shanghai  Co Ltd
 00:1C:FD;Universal Electronics
 00:1C:FE;Quartics Inc
 00:1C:FF;Napera Networks Inc
@@ -7439,13 +7439,13 @@
 00:1D:29;Doro AB
 00:1D:2A;SHENZHEN BUL:TECH COLTD
 00:1D:2B;Wuhan Pont Technology CO  LTD
-00:1D:2C;Wavetrend Technologies (Pty) Limited
+00:1D:2C;Wavetrend Technologies  Pty  Limited
 00:1D:2D;Pylone Inc
 00:1D:2E;Ruckus Wireless
 00:1D:2F;QuantumVision Corporation
 00:1D:30;YX Wireless SA
 00:1D:31;HIGHPRO INTERNATIONAL R D COLTD
-00:1D:32;Longkay Communication   Technology (Shanghai) Co Ltd
+00:1D:32;Longkay Communication   Technology  Shanghai  Co Ltd
 00:1D:33;Maverick Systems Inc
 00:1D:34;SYRIS Technology Corp
 00:1D:35;Viconics Electronics Inc
@@ -7478,7 +7478,7 @@
 00:1D:50;SPINETIX SA
 00:1D:51;Babcock   Wilcox Power Generation Group Inc
 00:1D:52;Defzone BV
-00:1D:53;S O Electronics (Malaysia) Sdn Bhd
+00:1D:53;S O Electronics  Malaysia  Sdn Bhd
 00:1D:54;Sunnic Technology   Merchandise INC
 00:1D:55;ZANTAZ Inc
 00:1D:56;Kramer Electronics Ltd
@@ -7525,11 +7525,11 @@
 00:1D:7F;Tekron International Ltd
 00:1D:80;Beijing Huahuan Eletronics CoLtd
 00:1D:81;GUANGZHOU GATEWAY ELECTRONICS CO LTD
-00:1D:82;GN AS (GN Netcom AS)
+00:1D:82;GN AS  GN Netcom AS 
 00:1D:83;Emitech Corporation
 00:1D:84;Gateway Inc
 00:1D:85;Call Direct Cellular Solutions
-00:1D:86;Shinwa Industries(China) Ltd
+00:1D:86;Shinwa Industries China  Ltd
 00:1D:87;VigTech Labs Sdn Bhd
 00:1D:88;Clearwire
 00:1D:89;VaultStor Corporation
@@ -7627,7 +7627,7 @@
 00:1D:E5;CISCO SYSTEMS INC
 00:1D:E6;CISCO SYSTEMS INC
 00:1D:E7;Marine Sonic Technology Ltd
-00:1D:E8;Nikko Denki Tsushin Corporation(NDTC)
+00:1D:E8;Nikko Denki Tsushin Corporation NDTC 
 00:1D:E9;Nokia Danmark AS
 00:1D:EA;Commtest Instruments Ltd
 00:1D:EB;DINEC International
@@ -7644,7 +7644,7 @@
 00:1D:F6;Samsung Electronics CoLtd
 00:1D:F7;R STAHL Schaltgeräte GmbH
 00:1D:F8;Webpro Vision Technology Corporation
-00:1D:F9;Cybiotronics (Far East) Limited
+00:1D:F9;Cybiotronics  Far East  Limited
 00:1D:FA;Fujian LANDI Commercial Equipment CoLtd
 00:1D:FB;NETCLEUS Systems Corporation
 00:1D:FC;KSIC
@@ -7782,7 +7782,7 @@
 00:1E:80;Last Mile Ltd
 00:1E:81;CNB Technology Inc
 00:1E:82;SanDisk Corporation
-00:1E:83;LANMAN Standards Association (LMSC)
+00:1E:83;LANMAN Standards Association  LMSC 
 00:1E:84;Pika Technologies Inc
 00:1E:85;Lagotek Corporation
 00:1E:86;MEL CoLtd
@@ -7817,7 +7817,7 @@
 00:1E:A3;Nokia Danmark AS
 00:1E:A4;Nokia Danmark AS
 00:1E:A5;ROBOTOUS Inc
-00:1E:A6;Best IT World (India) Pvt Ltd
+00:1E:A6;Best IT World  India  Pvt Ltd
 00:1E:A7;ActionTec Electronics Inc
 00:1E:A8;Datang Mobile Communications Equipment COLTD
 00:1E:A9;Nintendo Co Ltd
@@ -7878,7 +7878,7 @@
 00:1E:E0;Urmet Domus SpA
 00:1E:E1;Samsung Electronics CoLtd
 00:1E:E2;Samsung Electronics CoLtd
-00:1E:E3;T W Electronics (ShenZhen) CoLtd
+00:1E:E3;T W Electronics  ShenZhen  CoLtd
 00:1E:E4;ACS Solutions France
 00:1E:E5;Cisco:Linksys LLC
 00:1E:E6;Shenzhen Advanced Video Info:Tech Co Ltd
@@ -7887,7 +7887,7 @@
 00:1E:E9;Stoneridge Electronics AB
 00:1E:EA;Sensor Switch Inc
 00:1E:EB;Talk:A:Phone Co
-00:1E:EC;COMPAL INFORMATION (KUNSHAN) CO LTD
+00:1E:EC;COMPAL INFORMATION  KUNSHAN  CO LTD
 00:1E:ED;Adventiq Ltd
 00:1E:EE;ETL Systems Ltd
 00:1E:EF;Cantronic International Limited
@@ -7992,7 +7992,7 @@
 00:1F:52;UVT Unternehmensberatung fur Verkehr und Technik GmbH
 00:1F:53;GEMAC Gesellschaft für Mikroelektronikanwendung Chemnitz mbH
 00:1F:54;Lorex Technology Inc
-00:1F:55;Honeywell Security (China) Co Ltd
+00:1F:55;Honeywell Security  China  Co Ltd
 00:1F:56;DIGITAL FORECAST
 00:1F:57;Phonik Innovation CoLTD
 00:1F:58;EMH Energiemesstechnik GmbH
@@ -8070,7 +8070,7 @@
 00:1F:A0;A10 Networks
 00:1F:A1;Gtran Inc
 00:1F:A2;Datron World Communications Inc
-00:1F:A3;T W Electronics(Shenzhen)CoLtd
+00:1F:A3;T W Electronics Shenzhen CoLtd
 00:1F:A4;ShenZhen Gongjin Electronics CoLtd
 00:1F:A5;Blue:White Industries
 00:1F:A6;Stilo srl
@@ -8081,7 +8081,7 @@
 00:1F:AB;IS HIGH TECHINC
 00:1F:AC;Goodmill Systems Ltd
 00:1F:AD;Brown Innovations Inc
-00:1F:AE;Blick South Africa (Pty) Ltd
+00:1F:AE;Blick South Africa  Pty  Ltd
 00:1F:AF;NextIO Inc
 00:1F:B0;TimeIPS Inc
 00:1F:B1;Cybertech Inc
@@ -8291,7 +8291,7 @@
 00:20:7D;ADVANCED COMPUTER APPLICATIONS
 00:20:7E;FINECOM Co Ltd
 00:20:7F;KYOEI SANGYO CO LTD
-00:20:80;SYNERGY (UK) LTD
+00:20:80;SYNERGY  UK  LTD
 00:20:81;TITAN ELECTRONICS
 00:20:82;ONEAC CORPORATION
 00:20:83;PRESTICOM INCORPORATED
@@ -8372,9 +8372,9 @@
 00:20:CE;LOGICAL DESIGN GROUP INC
 00:20:CF;TEST   MEASUREMENT SYSTEMS INC
 00:20:D0;VERSALYNX CORPORATION
-00:20:D1;MICROCOMPUTER SYSTEMS (M) SDN
+00:20:D1;MICROCOMPUTER SYSTEMS  M  SDN
 00:20:D2;RAD DATA COMMUNICATIONS LTD
-00:20:D3;OST (OUEST STANDARD TELEMATIQU
+00:20:D3;OST  OUEST STANDARD TELEMATIQU
 00:20:D4;CABLETRON : ZEITTNET INC
 00:20:D5;VIPA GMBH
 00:20:D6;BREEZECOM
@@ -8420,7 +8420,7 @@
 00:20:FE;TOPWARE INC  GRAND COMPUTER
 00:20:FF;SYMMETRICAL TECHNOLOGIES
 00:21:00;GemTek Technology Co Ltd
-00:21:01;Aplicaciones Electronicas Quasar (AEQ)
+00:21:01;Aplicaciones Electronicas Quasar  AEQ 
 00:21:02;UpdateLogic Inc
 00:21:03;GHI Electronics LLC
 00:21:04;Gigaset Communications GmbH
@@ -8529,7 +8529,7 @@
 00:21:6B;Intel Corporate
 00:21:6C;ODVA
 00:21:6D;Soltech Co Ltd
-00:21:6E;Function ATI (Huizhou) Telecommunications Co Ltd
+00:21:6E;Function ATI  Huizhou  Telecommunications Co Ltd
 00:21:6F;SymCom Inc
 00:21:70;Dell Inc
 00:21:71;Wesung TNC Co Ltd
@@ -8630,7 +8630,7 @@
 00:21:D0;Global Display Solutions Spa
 00:21:D1;Samsung Electronics CoLtd
 00:21:D2;Samsung Electronics CoLtd
-00:21:D3;BOCOM SECURITY(ASIA PACIFIC) LIMITED
+00:21:D3;BOCOM SECURITY ASIA PACIFIC  LIMITED
 00:21:D4;Vollmer Werke GmbH
 00:21:D5;X2E GmbH
 00:21:D6;LXI Consortium
@@ -8638,7 +8638,7 @@
 00:21:D8;CISCO SYSTEMS INC
 00:21:D9;SEKONIC CORPORATION
 00:21:DA;Automation Products Group Inc
-00:21:DB;Santachi Video Technology (Shenzhen) Co Ltd
+00:21:DB;Santachi Video Technology  Shenzhen  Co Ltd
 00:21:DC;TECNOALARM Srl
 00:21:DD;Northstar Systems Corp
 00:21:DE;Firepro Wireless
@@ -8690,7 +8690,7 @@
 00:22:0C;CISCO SYSTEMS INC
 00:22:0D;CISCO SYSTEMS INC
 00:22:0E;Indigo Security Co Ltd
-00:22:0F;MoCA (Multimedia over Coax Alliance)
+00:22:0F;MoCA  Multimedia over Coax Alliance 
 00:22:10;ARRIS Group Inc
 00:22:11;Rohati Systems
 00:22:12;CAI Networks Inc
@@ -9016,12 +9016,12 @@
 00:23:52;DATASENSOR SpA
 00:23:53;F E T Elettronica snc
 00:23:54;ASUSTek COMPUTER INC
-00:23:55;Kinco Automation(Shanghai) Ltd
+00:23:55;Kinco Automation Shanghai  Ltd
 00:23:56;Packet Forensics LLC
 00:23:57;Pitronot Technologies and Engineering PTE Ltd
 00:23:58;SYSTEL SA
-00:23:59;Benchmark Electronics ( Thailand ) Public Company Limited
-00:23:5A;COMPAL INFORMATION (KUNSHAN) CO Ltd
+00:23:59;Benchmark Electronics   Thailand   Public Company Limited
+00:23:5A;COMPAL INFORMATION  KUNSHAN  CO Ltd
 00:23:5B;Gulfstream
 00:23:5C;Aprius Inc
 00:23:5D;CISCO SYSTEMS INC
@@ -9060,7 +9060,7 @@
 00:23:7E;ELSTER GMBH
 00:23:7F;PLANTRONICS INC
 00:23:80;Nanoteq
-00:23:81;Lengda Technology(Xiamen) CoLtd
+00:23:81;Lengda Technology Xiamen  CoLtd
 00:23:82;Lih Rong Electronic Enterprise Co Ltd
 00:23:83;InMage Systems Inc
 00:23:84;GGH Engineering srl
@@ -9108,7 +9108,7 @@
 00:23:AE;Dell Inc
 00:23:AF;ARRIS Group Inc
 00:23:B0;COMXION Technology Inc
-00:23:B1;Longcheer Technology (Singapore) Pte Ltd
+00:23:B1;Longcheer Technology  Singapore  Pte Ltd
 00:23:B2;Intelligent Mechatronic Systems Inc
 00:23:B3;Lyyn AB
 00:23:B4;Nokia Danmark AS
@@ -9149,7 +9149,7 @@
 00:23:D7;Samsung Electronics
 00:23:D8;Ball:It Oy
 00:23:D9;Banner Engineering
-00:23:DA;Industrial Computer Source (Deutschland)GmbH
+00:23:DA;Industrial Computer Source  Deutschland GmbH
 00:23:DB;saxnet gmbh
 00:23:DC;Benein Inc
 00:23:DD;ELGIN SA
@@ -9215,14 +9215,14 @@
 00:24:19;PRIVATE
 00:24:1A;Red Beetle Inc
 00:24:1B;iWOW Communications Pte Ltd
-00:24:1C;FuGang Electronic (DG) CoLtd
+00:24:1C;FuGang Electronic  DG  CoLtd
 00:24:1D;GIGA:BYTE TECHNOLOGY COLTD
 00:24:1E;Nintendo Co Ltd
 00:24:1F;DCT:Delta GmbH
 00:24:20;NetUP Inc
 00:24:21;MICRO:STAR INTL CO LTD
 00:24:22;Knapp Logistik Automation GmbH
-00:24:23;AzureWave Technologies (Shanghai) Inc
+00:24:23;AzureWave Technologies  Shanghai  Inc
 00:24:24;Axis Network Technology
 00:24:25;Shenzhenshi chuangzhicheng Technology CoLtd
 00:24:26;NOHMI BOSAI LTD
@@ -9245,7 +9245,7 @@
 00:24:38;Brocade Communications Systems Inc
 00:24:39;Digital Barriers Advanced Technologies
 00:24:3A;Ludl Electronic Products
-00:24:3B;CSSI (S) Pte Ltd
+00:24:3B;CSSI  S  Pte Ltd
 00:24:3C;SAAA
 00:24:3D;Emerson Appliance Motors and Controls
 00:24:3F;Storwize Inc
@@ -9287,7 +9287,7 @@
 00:24:64;Bridge Technologies Co AS
 00:24:65;Elentec
 00:24:66;Unitron nv
-00:24:67;AOC International (Europe) GmbH
+00:24:67;AOC International  Europe  GmbH
 00:24:68;Sumavision Technologies CoLtd
 00:24:69;Smart Doorphones
 00:24:6A;Solid Year Co Ltd
@@ -9301,7 +9301,7 @@
 00:24:72;ReDriven Power Inc
 00:24:73;3Com Europe Ltd
 00:24:74;Autronica Fire And Securirty
-00:24:75;Compass System(Embedded Dept)
+00:24:75;Compass System Embedded Dept 
 00:24:76;TAPtv
 00:24:77;Tibbo Technology
 00:24:78;Mag Tech Electronics Co Limited
@@ -9553,7 +9553,7 @@
 00:25:70;Eastern Communications Company Limited
 00:25:71;Zhejiang Tianle Digital Electric CoLtd
 00:25:72;Nemo:Q International AB
-00:25:73;ST Electronics (Info:Security) Pte Ltd
+00:25:73;ST Electronics  Info:Security  Pte Ltd
 00:25:74;KUNIMI MEDIA DEVICE Co Ltd
 00:25:75;FiberPlex Technologies LLC
 00:25:76;NELI TECHNOLOGIES
@@ -9568,7 +9568,7 @@
 00:25:7F;CallTechSolution CoLtd
 00:25:80;Equipson SA
 00:25:81;x:star networks Inc
-00:25:82;Maksat Technologies (P) Ltd
+00:25:82;Maksat Technologies  P  Ltd
 00:25:83;CISCO SYSTEMS INC
 00:25:84;CISCO SYSTEMS INC
 00:25:85;KOKUYO S T Co Ltd
@@ -9606,7 +9606,7 @@
 00:25:A5;Walnut Media Network
 00:25:A6;Central Network Solution Co Ltd
 00:25:A7;Comverge Inc
-00:25:A8;Kontron (BeiJing) Technology CoLtd
+00:25:A8;Kontron  BeiJing  Technology CoLtd
 00:25:A9;Shanghai Embedway Information Technologies CoLtd
 00:25:AA;Beijing Soul Technology CoLtd
 00:25:AB;AIO LCD PC BU  TPV
@@ -9651,13 +9651,13 @@
 00:25:D2;InpegVision Co Ltd
 00:25:D3;AzureWave Technologies Inc
 00:25:D4;Fortress Technologies
-00:25:D5;Robonica (Pty) Ltd
+00:25:D5;Robonica  Pty  Ltd
 00:25:D6;The Kroger Co
 00:25:D7;CEDO
 00:25:D8;KOREA MAINTENANCE
 00:25:D9;DataFab Systems Inc
 00:25:DA;Secura Key
-00:25:DB;ATI Electronics(Shenzhen) Co LTD
+00:25:DB;ATI Electronics Shenzhen  Co LTD
 00:25:DC;Sumitomo Electric Networks Inc
 00:25:DD;SUNNYTEK INFORMATION CO LTD
 00:25:DE;Probits Co LTD
@@ -9673,7 +9673,7 @@
 00:25:E8;Idaho Technology
 00:25:E9;i:mate Development Inc
 00:25:EA;Iphion BV
-00:25:EB;Reutech Radar Systems (PTY) Ltd
+00:25:EB;Reutech Radar Systems  PTY  Ltd
 00:25:EC;Humanware
 00:25:ED;NuVo Technologies LLC
 00:25:EE;Avtex Ltd
@@ -9723,11 +9723,11 @@
 00:26:1B;LAUREL BANK MACHINES CO LTD
 00:26:1C;NEOVIA INC
 00:26:1D;COP SECURITY SYSTEM CORP
-00:26:1E;QINGBANG ELEC(SZ) CO LTD
-00:26:1F;SAE Magnetics (HK) Ltd
+00:26:1E;QINGBANG ELEC SZ  CO LTD
+00:26:1F;SAE Magnetics  HK  Ltd
 00:26:20;ISGUS GmbH
 00:26:21;InteliCloud Technology Inc
-00:26:22;COMPAL INFORMATION (KUNSHAN) CO LTD
+00:26:22;COMPAL INFORMATION  KUNSHAN  CO LTD
 00:26:23;JRD Communication Inc
 00:26:24;Thomson Inc
 00:26:25;MediaSputnik
@@ -9779,7 +9779,7 @@
 00:26:55;Hewlett:Packard Company
 00:26:56;Sansonic Electronics USA
 00:26:57;OOO NPP EKRA
-00:26:58;T:Platforms (Cyprus) Limited
+00:26:58;T:Platforms  Cyprus  Limited
 00:26:59;Nintendo Co Ltd
 00:26:5A;D:Link Corporation
 00:26:5B;Hitron Technologies Inc
@@ -9925,7 +9925,7 @@
 00:26:E7;Shanghai ONLAN Communication Tech Co Ltd
 00:26:E8;Murata Manufacturing Co Ltd
 00:26:E9;SP Corp
-00:26:EA;Cheerchip Electronic Technology (ShangHai) Co Ltd
+00:26:EA;Cheerchip Electronic Technology  ShangHai  Co Ltd
 00:26:EB;Advanced Spectrum Technology Co Ltd
 00:26:EC;Legrand Home Systems Inc
 00:26:ED;zte corporation
@@ -9970,13 +9970,13 @@
 00:27:14;Grainmustards Coltd
 00:27:15;Rebound Telecom Co Ltd
 00:27:16;Adachi:Syokai Co Ltd
-00:27:17;CE Digital(Zhenjiang)CoLtd
+00:27:17;CE Digital Zhenjiang CoLtd
 00:27:18;Suzhou NEW SEAUNION Video Technology CoLtd
 00:27:19;TP:LINK TECHNOLOGIES CO LTD
 00:27:1A;Geenovo Technology Ltd
 00:27:1B;Alec Sicherheitssysteme GmbH
 00:27:1C;MERCURY CORPORATION
-00:27:1D;Comba Telecom Systems (China) Ltd
+00:27:1D;Comba Telecom Systems  China  Ltd
 00:27:1E;Xagyl Communications
 00:27:1F;MIPRO Electronics Co Ltd
 00:27:20;NEW:SOL COM
@@ -10055,7 +10055,7 @@
 00:30:42;DeTeWe:Deutsche Telephonwerke
 00:30:43;IDREAM TECHNOLOGIES PTE LTD
 00:30:44;CradlePoint Inc
-00:30:45;Village Networks Inc (VNI)
+00:30:45;Village Networks Inc  VNI 
 00:30:46;Controlled Electronic Manageme
 00:30:47;NISSEI ELECTRIC CO LTD
 00:30:48;Supermicro Computer Inc
@@ -10527,7 +10527,7 @@
 00:50:04;3COM CORPORATION
 00:50:06;TAC AB
 00:50:07;SIEMENS TELECOMMUNICATION SYSTEMS LIMITED
-00:50:08;TIVA MICROCOMPUTER CORP (TMC)
+00:50:08;TIVA MICROCOMPUTER CORP  TMC 
 00:50:09;PHILIPS BROADBAND NETWORKS
 00:50:0A;IRIS TECHNOLOGIES INC
 00:50:0B;CISCO SYSTEMS INC
@@ -10609,7 +10609,7 @@
 00:50:5E;DIGITEK MICROLOGIC SA
 00:50:5F;BRAND INNOVATORS
 00:50:60;TANDBERG TELECOM AS
-00:50:62;KOUWELL ELECTRONICS CORP**
+00:50:62;KOUWELL ELECTRONICS CORP  
 00:50:63;OY COMSEL SYSTEM AB
 00:50:64;CAE ELECTRONICS
 00:50:65;TDK:Lambda Corporation
@@ -10736,7 +10736,7 @@
 00:50:E3;ARRIS Group Inc
 00:50:E4;Apple
 00:50:E6;HAKUSAN CORPORATION
-00:50:E7;PARADISE INNOVATIONS (ASIA)
+00:50:E7;PARADISE INNOVATIONS  ASIA 
 00:50:E8;NOMADIX INC
 00:50:EA;XEL COMMUNICATIONS INC
 00:50:EB;ALPHA:TOP CORPORATION
@@ -10750,7 +10750,7 @@
 00:50:F3;GLOBAL NET INFORMATION CO Ltd
 00:50:F4;SIGMATEK GMBH   CO KG
 00:50:F6;PAN:INTERNATIONAL INDUSTRIAL CORP
-00:50:F7;VENTURE MANUFACTURING (SINGAPORE) LTD
+00:50:F7;VENTURE MANUFACTURING  SINGAPORE  LTD
 00:50:F8;ENTREGA TECHNOLOGIES INC
 00:50:F9;SENSORMATIC ACD
 00:50:FA;OXTEL LTD
@@ -10830,7 +10830,7 @@
 00:60:3F;PATAPSCO DESIGNS
 00:60:40;NETRO CORP
 00:60:41;Yokogawa Electric Corporation
-00:60:42;TKS (USA) INC
+00:60:42;TKS  USA  INC
 00:60:43;iDirect INC
 00:60:44;LITTONPOLY:SCIENTIFIC
 00:60:45;PATHLIGHT TECHNOLOGIES
@@ -10928,13 +10928,13 @@
 00:60:A1;VPNet Inc
 00:60:A2;NIHON UNISYS LIMITED CO
 00:60:A3;CONTINUUM TECHNOLOGY CORP
-00:60:A4;GEW Technologies (PTY)Ltd
+00:60:A4;GEW Technologies  PTY Ltd
 00:60:A5;PERFORMANCE TELECOM CORP
 00:60:A6;PARTICLE MEASURING SYSTEMS
 00:60:A7;MICROSENS GmbH   CO KG
 00:60:A8;TIDOMAT AB
 00:60:A9;GESYTEC MbH
-00:60:AA;INTELLIGENT DEVICES INC (IDI)
+00:60:AA;INTELLIGENT DEVICES INC  IDI 
 00:60:AB;LARSCOM INCORPORATED
 00:60:AC;RESILIENCE CORPORATION
 00:60:AD;MegaChips Corporation
@@ -10979,7 +10979,7 @@
 00:60:D4;ELDAT COMMUNICATION LTD
 00:60:D5;MIYACHI TECHNOS CORP
 00:60:D6;NovAtel Wireless Technologies Ltd
-00:60:D7;ECOLE POLYTECHNIQUE FEDERALE DE LAUSANNE (EPFL)
+00:60:D7;ECOLE POLYTECHNIQUE FEDERALE DE LAUSANNE  EPFL 
 00:60:D8;ELMIC SYSTEMS INC
 00:60:D9;TRANSYS NETWORKS INC
 00:60:DA;JBM ELECTRONICS CO
@@ -10996,7 +10996,7 @@
 00:60:E5;FUJI AUTOMATION CO LTD
 00:60:E6;SHOMITI SYSTEMS INCORPORATED
 00:60:E7;RANDATA
-00:60:E8;HITACHI COMPUTER PRODUCTS (AMERICA) INC
+00:60:E8;HITACHI COMPUTER PRODUCTS  AMERICA  INC
 00:60:E9;ATOP TECHNOLOGIES INC
 00:60:EA;StreamLogic
 00:60:EB;FOURTHTRACK SYSTEMS
@@ -11025,7 +11025,7 @@
 00:66:4B;Huawei Technologies Co Ltd
 00:6B:9E;VIZIO Inc
 00:6B:A0;SHENZHEN UNIVERSAL INTELLISYS PTE LTD
-00:6D:FB;Vutrix (UK) Ltd
+00:6D:FB;Vutrix  UK  Ltd
 00:70:B0;MA:COM INC COMPANIES
 00:70:B3;DATA RECALL LTD
 00:73:8D;Tinno Mobile Technology Corp
@@ -11036,7 +11036,7 @@
 00:7F:28;Actiontec Electronics Inc
 00:80:00;MULTITECH SYSTEMS INC
 00:80:01;PERIPHONICS CORPORATION
-00:80:02;SATELCOM (UK) LTD
+00:80:02;SATELCOM  UK  LTD
 00:80:03;HYTEC ELECTRONICS LTD
 00:80:04;ANTLOW COMMUNICATIONS LTD
 00:80:05;CACTUS COMPUTER INC
@@ -11074,7 +11074,7 @@
 00:80:25;STOLLMANN GMBH
 00:80:26;NETWORK PRODUCTS CORPORATION
 00:80:27;ADAPTIVE SYSTEMS INC
-00:80:28;TRADPOST (HK) LTD
+00:80:28;TRADPOST  HK  LTD
 00:80:29;EAGLE TECHNOLOGY INC
 00:80:2A;TEST SYSTEMS   SIMULATIONS INC
 00:80:2B;INTEGRATED MARKETING CO
@@ -11140,7 +11140,7 @@
 00:80:67;SQUARE D COMPANY
 00:80:68;YAMATECH SCIENTIFIC LTD
 00:80:69;COMPUTONE SYSTEMS
-00:80:6A;ERI (EMPAC RESEARCH INC)
+00:80:6A;ERI  EMPAC RESEARCH INC 
 00:80:6B;SCHMID TELECOMMUNICATION
 00:80:6C;CEGELEC PROJECTS LTD
 00:80:6D;CENTURY SYSTEMS CORP
@@ -11171,7 +11171,7 @@
 00:80:86;COMPUTER GENERATION INC
 00:80:87;OKI ELECTRIC INDUSTRY CO LTD
 00:80:88;VICTOR COMPANY OF JAPAN LTD
-00:80:89;TECNETICS (PTY) LTD
+00:80:89;TECNETICS  PTY  LTD
 00:80:8A;SUMMIT MICROSYSTEMS CORP
 00:80:8B;DACOLL LIMITED
 00:80:8C;NetScout Systems Inc
@@ -11220,7 +11220,7 @@
 00:80:B7;STELLAR COMPUTER
 00:80:B8;BUG MORISEIKI INCORPORATED
 00:80:B9;ARCHE TECHNOLIGIES INC
-00:80:BA;SPECIALIX (ASIA) PTE LTD
+00:80:BA;SPECIALIX  ASIA  PTE LTD
 00:80:BB;HUGHES LAN SYSTEMS
 00:80:BC;HITACHI ENGINEERING CO LTD
 00:80:BD;THE FURUKAWA ELECTRIC CO LTD
@@ -11328,7 +11328,7 @@
 00:90:1A;UNISPHERE SOLUTIONS
 00:90:1B;DIGITAL CONTROLS
 00:90:1C;mps Software Gmbh
-00:90:1D;PEC (NZ) LTD
+00:90:1D;PEC  NZ  LTD
 00:90:1E;Selesta Ingegneria SpA
 00:90:1F;ADTEC PRODUCTIONS INC
 00:90:20;PHILIPS ANALYTICAL X:RAY BV
@@ -11336,7 +11336,7 @@
 00:90:22;IVEX
 00:90:23;ZILOG INC
 00:90:24;PIPELINKS INC
-00:90:25;BAE Systems Australia (Electronic Systems) Pty Ltd
+00:90:25;BAE Systems Australia  Electronic Systems  Pty Ltd
 00:90:26;ADVANCED SWITCHING COMMUNICATIONS INC
 00:90:27;INTEL CORPORATION
 00:90:28;NIPPON SIGNAL CO LTD
@@ -11344,7 +11344,7 @@
 00:90:2A;COMMUNICATION DEVICES INC
 00:90:2B;CISCO SYSTEMS INC
 00:90:2C;DATA   CONTROL EQUIPMENT LTD
-00:90:2D;DATA ELECTRONICS (AUST) PTY LTD
+00:90:2D;DATA ELECTRONICS  AUST  PTY LTD
 00:90:2E;NAMCO LIMITED
 00:90:2F;NETCORE SYSTEMS INC
 00:90:30;HONEYWELL:DATING
@@ -11499,7 +11499,7 @@
 00:90:C5;INTERNET MAGIC INC
 00:90:C6;OPTIM SYSTEMS INC
 00:90:C7;ICOM INC
-00:90:C8;WAVERIDER COMMUNICATIONS (CANADA) INC
+00:90:C8;WAVERIDER COMMUNICATIONS  CANADA  INC
 00:90:C9;DPAC Technologies
 00:90:CA;ACCORD VIDEO TELECOMMUNICATIONS LTD
 00:90:CB;Wireless OnLine Inc
@@ -11553,7 +11553,7 @@
 00:90:FB;PORTWELL INC
 00:90:FC;NETWORK COMPUTING DEVICES
 00:90:FD;CopperCom Inc
-00:90:FE;ELECOM CO LTD(LANEED DIV)
+00:90:FE;ELECOM CO LTD LANEED DIV 
 00:90:FF;TELLUS TECHNOLOGY INC
 00:91:D6;Crystal Group Inc
 00:91:FA;Synapse Product Development
@@ -11684,7 +11684,7 @@
 00:A0:76;CARDWARE LAB INC
 00:A0:77;FUJITSU NEXION INC
 00:A0:78;Marconi Communications
-00:A0:79;ALPS ELECTRIC (USA) INC
+00:A0:79;ALPS ELECTRIC  USA  INC
 00:A0:7A;ADVANCED PERIPHERALS TECHNOLOGIES INC
 00:A0:7B;DAWN COMPUTER INCORPORATION
 00:A0:7C;TONYANG NYLON CO LTD
@@ -11825,7 +11825,7 @@
 00:AA:00;INTEL CORPORATION
 00:AA:01;INTEL CORPORATION
 00:AA:02;INTEL CORPORATION
-00:AA:3C;OLIVETTI TELECOM SPA (OLTECO)
+00:AA:3C;OLIVETTI TELECOM SPA  OLTECO 
 00:AA:70;LG Electronics
 00:AC:E0;ARRIS Group Inc
 00:B0:09;Grass Valley Group
@@ -11864,7 +11864,7 @@
 00:B0:EE;Ajile Systems Inc
 00:B0:F0;CALY NETWORKS
 00:B0:F5;NetWorth Technologies Inc
-00:B3:38;Kontron Design Manufacturing Services (M) Sdn Bhd
+00:B3:38;Kontron Design Manufacturing Services  M  Sdn Bhd
 00:B3:42;MacroSAN Technologies Co Ltd
 00:B5:6D;David Electronics Co LTD
 00:B5:D6;Omnibit Inc
@@ -11887,7 +11887,7 @@
 00:C0:06;NIPPON AVIONICS CO LTD
 00:C0:07;PINNACLE DATA SYSTEMS INC
 00:C0:08;SECO SRL
-00:C0:09;KT TECHNOLOGY (S) PTE LTD
+00:C0:09;KT TECHNOLOGY  S  PTE LTD
 00:C0:0A;MICRO CRAFT
 00:C0:0B;NORCONTROL AS
 00:C0:0C;RELIA TECHNOLGIES
@@ -12097,7 +12097,7 @@
 00:C0:D8;UNIVERSAL DATA SYSTEMS
 00:C0:D9;QUINTE NETWORK CONFIDENTIALITY
 00:C0:DA;NICE SYSTEMS LTD
-00:C0:DB;IPC CORPORATION (PTE) LTD
+00:C0:DB;IPC CORPORATION  PTE  LTD
 00:C0:DC;EOS TECHNOLOGIES INC
 00:C0:DD;QLogic Corporation
 00:C0:DE;ZCOMM INC
@@ -12528,7 +12528,7 @@
 00:E0:69;JAYCOR
 00:E0:6A;KAPSCH AG
 00:E0:6B;W G SPECIAL PRODUCTS
-00:E0:6C;Ultra Electronics Limited (AEP Networks)
+00:E0:6C;Ultra Electronics Limited  AEP Networks 
 00:E0:6D;COMPUWARE CORPORATION
 00:E0:6E;FAR SYSTEMS SpA
 00:E0:6F;ARRIS Group Inc
@@ -12699,7 +12699,7 @@
 02:70:B0;MA:COM INC COMPANIES
 02:70:B3;DATA RECALL LTD
 02:9D:8E;CARDIAC RECORDERS INC
-02:AA:3C;OLIVETTI TELECOMM SPA (OLTECO)
+02:AA:3C;OLIVETTI TELECOMM SPA  OLTECO 
 02:BB:01;OCTOTHORPE CORP
 02:C0:8C;3COM CORPORATION
 02:CF:1C;COMMUNICATION MACHINERY CORP
@@ -12722,20 +12722,20 @@
 04:26:05;GFR Gesellschaft für Regelungstechnik und Energieeinsparung mbH
 04:26:65;Apple
 04:2B:BB;PicoCELA Inc
-04:2F:56;ATOCS (Shenzhen) LTD
+04:2F:56;ATOCS  Shenzhen  LTD
 04:32:F4;Partron
 04:36:04;Gyeyoung I T
 04:3D:98;ChongQing QingJia Electronics COLTD
 04:44:A1;TELECON GALICIASA
 04:46:65;Murata Manufacturing Co Ltd
-04:4A:50;Ramaxel Technology (Shenzhen) limited company
+04:4A:50;Ramaxel Technology  Shenzhen  limited company
 04:4B:FF;GuangZhou Hedy Digital Technology Co Ltd
 04:4C:EF;Fujian Sanao Technology CoLtd
 04:4E:06;Ericsson AB
 04:4F:8B;Adapteva Inc
 04:4F:AA;Ruckus Wireless
 04:54:53;Apple
-04:55:CA;BriView (Xiamen) Corp
+04:55:CA;BriView  Xiamen  Corp
 04:58:6F;Sichuan Whayer information industry CoLTD
 04:5A:95;Nokia Corporation
 04:5C:06;Zmodo Technology Corporation
@@ -12744,7 +12744,7 @@
 04:62:D7;ALSTOM HYDRO FRANCE
 04:63:E0;Nome Oy
 04:6D:42;Bryston Ltd
-04:6E:49;TaiYear Electronic Technology (Suzhou) Co Ltd
+04:6E:49;TaiYear Electronic Technology  Suzhou  Co Ltd
 04:70:BC;Globalstar Inc
 04:74:A1;Aligera Equipamentos Digitais Ltda
 04:75:F5;CSST
@@ -12756,7 +12756,7 @@
 04:88:E2;Beats Electronics LLC
 04:8A:15;Avaya Inc
 04:8B:42;Skspruce Technology Limited
-04:8C:03;ThinPAD Technology (Shenzhen)COLTD
+04:8C:03;ThinPAD Technology  Shenzhen COLTD
 04:8D:38;Netcore Technology Inc
 04:94:A1;CATCH THE WIND INC
 04:98:F3;ALPS Electric Co Ltd
@@ -12766,7 +12766,7 @@
 04:A1:51;NETGEAR INC
 04:A3:F3;Emicon
 04:A8:2A;Nokia Corporation
-04:B3:B6;Seamap (UK) Ltd
+04:B3:B6;Seamap  UK  Ltd
 04:B4:66;BSP Co Ltd
 04:BF:A8;ISB Corporation
 04:C0:5B;Tigo Energy
@@ -12915,7 +12915,7 @@
 08:00:6E;MASSCOMP
 08:00:6F;PHILIPS APELDOORN BV
 08:00:70;MITSUBISHI ELECTRIC CORP
-08:00:71;MATRA (DSIE)
+08:00:71;MATRA  DSIE 
 08:00:72;XEROX CORP UNIV GRANT PROGRAM
 08:00:73;TECMAR INC
 08:00:74;CASIO COMPUTER CO LTD
@@ -12927,7 +12927,7 @@
 08:00:7A;INDATA
 08:00:7B;SANYO ELECTRIC CO LTD
 08:00:7C;VITALINK COMMUNICATIONS CORP
-08:00:7E;AMALGAMATED WIRELESS(AUS) LTD
+08:00:7E;AMALGAMATED WIRELESS AUS  LTD
 08:00:7F;CARNEGIE:MELLON UNIVERSITY
 08:00:80;AES DATA INC
 08:00:81;ASTECH INC
@@ -13049,7 +13049,7 @@
 08:FD:0E;Samsung Electronics CoLtd
 0C:04:00;Jantar doo
 0C:05:35;Juniper Systems
-0C:11:05;Ringslink (Xiamen) Network Communication Technologies Co Ltd
+0C:11:05;Ringslink  Xiamen  Network Communication Technologies Co Ltd
 0C:12:62;zte corporation
 0C:13:0B;Uniqoteq Ltd
 0C:14:20;Samsung Electronics CoLtd
@@ -13076,7 +13076,7 @@
 0C:51:F7;CHAUVIN ARNOUX
 0C:54:A5;PEGATRON CORPORATION
 0C:55:21;Axiros GmbH
-0C:56:5C;HyBroad Vision (Hong Kong) Technology Co Ltd
+0C:56:5C;HyBroad Vision  Hong Kong  Technology Co Ltd
 0C:57:EB;Mueller Systems
 0C:5A:19;Axtion Sdn Bhd
 0C:5C:D8;DOLI Elektronik GmbH
@@ -13109,7 +13109,7 @@
 0C:9D:56;Consort Controls Ltd
 0C:9E:91;Sankosha Corporation
 0C:A1:38;Blinq Wireless Inc
-0C:A2:F4;Chameleon Technology (UK) Limited
+0C:A2:F4;Chameleon Technology  UK  Limited
 0C:A4:02;Alcatel Lucent IPD
 0C:A4:2A;OB Telecom Electronic Technology Co Ltd
 0C:A6:94;Sunitec Enterprise CoLtd
@@ -13167,7 +13167,7 @@
 10:0D:7F;NETGEAR INC
 10:0E:2B;NEC CASIO Mobile Communications
 10:0E:7E;Juniper networks
-10:0F:18;Fu Gang Electronic(KunShan)COLTD
+10:0F:18;Fu Gang Electronic KunShan COLTD
 10:10:B6;McCain Inc
 10:12:12;Vivo International Corporation Pty Ltd
 10:12:48;ITG Inc
@@ -13186,7 +13186,7 @@
 10:33:78;FLECTRON Co LTD
 10:37:11;Simlink AS
 10:3B:59;Samsung Electronics CoLtd
-10:3D:EA;HFC Technology (Beijing) Ltd Co
+10:3D:EA;HFC Technology  Beijing  Ltd Co
 10:40:F3;Apple
 10:43:69;Soundmax Electronic Limited
 10:44:5A;Shaanxi Hitech Electronic Co LTD
@@ -13297,7 +13297,7 @@
 14:5A:05;Apple
 14:5B:D1;ARRIS Group Inc
 14:60:80;zte corporation
-14:63:08;JABIL CIRCUIT (SHANGHAI) LTD
+14:63:08;JABIL CIRCUIT  SHANGHAI  LTD
 14:6A:0B;Cypress Electronics Limited
 14:6E:0A;PRIVATE
 14:73:73;TUBITAK UEKAE
@@ -13309,7 +13309,7 @@
 14:89:FD;Samsung Electronics
 14:8A:70;ADS GmbH
 14:8F:C6;Apple
-14:90:90;KongTop industrial(shen zhen)COLTD
+14:90:90;KongTop industrial shen zhen COLTD
 14:94:48;BLU CASTLE SA
 14:99:E2;Apple Inc
 14:9F:E8;Lenovo Mobile Communication Technology Ltd
@@ -13436,7 +13436,7 @@
 18:D6:6A;Inmarsat
 18:D6:CF;Kurth Electronic GmbH
 18:D9:49;Qvis Labs LLC
-18:DC:56;Yulong Computer Telecommunication Scientific(shenzhen)CoLt
+18:DC:56;Yulong Computer Telecommunication Scientific shenzhen CoLt
 18:E2:88;STT Condigi
 18:E2:C2;Samsung Electronics
 18:E7:28;Cisco
@@ -13480,7 +13480,7 @@
 1C:4B:D6;AzureWave
 1C:51:B5;Techaya LTD
 1C:52:D6;FLAT DISPLAY TECHNOLOGY CORPORATION
-1C:5A:3E;Samsung Eletronics Co Ltd (Visual Display Divison)
+1C:5A:3E;Samsung Eletronics Co Ltd  Visual Display Divison 
 1C:5A:6B;Philips Electronics Nederland BV
 1C:5C:55;PRIMA Cinema Inc
 1C:5C:60;Shenzhen Belzon Technology CoLTD
@@ -13493,7 +13493,7 @@
 1C:69:A5;Research In Motion
 1C:6B:CA;Mitsunami Co Ltd
 1C:6F:65;GIGA:BYTE TECHNOLOGY COLTD
-1C:75:08;COMPAL INFORMATION (KUNSHAN) CO LTD
+1C:75:08;COMPAL INFORMATION  KUNSHAN  CO LTD
 1C:76:CA;Terasic Technologies Inc
 1C:78:39;Shenzhen Tencent Computer System Co Ltd
 1C:7B:21;Sony Mobile Communications AB
@@ -13557,13 +13557,13 @@
 20:13:E0;Samsung Electronics CoLtd
 20:16:D8;Liteon Technology Corporation
 20:18:0E;Shenzhen Sunchip Technology Co Ltd
-20:1A:06;COMPAL INFORMATION (KUNSHAN) CO LTD
+20:1A:06;COMPAL INFORMATION  KUNSHAN  CO LTD
 20:1D:03;Elatec GmbH
 20:21:A5;LG Electronics Inc
 20:25:64;PEGATRON CORPORATION
 20:25:98;Teleview
 20:2B:C1;Shenzhen Huawei Communication Technologies Co Ltd
-20:2C:B7;Kong Yue Electronics   Information Industry (Xinhui) Ltd
+20:2C:B7;Kong Yue Electronics   Information Industry  Xinhui  Ltd
 20:37:06;CISCO SYSTEMS INC
 20:37:BC;Kuipers Electronic Engineering BV
 20:3A:07;Cisco
@@ -13571,10 +13571,10 @@
 20:41:5A;Smarteh doo
 20:44:3A;Schneider Electric Asia Pacific Ltd
 20:46:A1;VECOW Co Ltd
-20:46:F9;Advanced Network Devices (dba:AND)
+20:46:F9;Advanced Network Devices  dba:AND 
 20:4A:AA;Hanscan Spain SA
 20:4C:6D;Hugo Brennenstuhl Gmbh   Co KG
-20:4E:6B;Axxana(israel) ltd
+20:4E:6B;Axxana israel  ltd
 20:4E:7F;NETGEAR
 20:54:76;Sony Mobile Communications AB
 20:57:21;Salix Technology CO Ltd
@@ -13585,7 +13585,7 @@
 20:64:32;SAMSUNG ELECTRO MECHANICS COLTD
 20:67:B1;Pluto inc
 20:68:9D;Liteon Technology Corporation
-20:6A:8A;Wistron InfoComm Manufacturing(Kunshan)CoLtd
+20:6A:8A;Wistron InfoComm Manufacturing Kunshan CoLtd
 20:6A:FF;Atlas Elektronik UK Limited
 20:6F:EC;Braemac CA LLC
 20:73:55;ARRIS Group Inc
@@ -13595,7 +13595,7 @@
 20:7D:74;Apple
 20:85:8C;Assa
 20:87:AC;AES motomation
-20:89:84;COMPAL INFORMATION (KUNSHAN) CO LTD
+20:89:84;COMPAL INFORMATION  KUNSHAN  CO LTD
 20:89:86;zte corporation
 20:91:8A;PROFALUX
 20:91:D9;IM SPA
@@ -13684,7 +13684,7 @@
 24:A4:2C;KOUKAAM as
 24:A4:3C;Ubiquiti Networks INC
 24:A4:95;Thales Canada Inc
-24:A8:7D;Panasonic Automotive Systems Asia Pacific(Thailand)CoLtd
+24:A8:7D;Panasonic Automotive Systems Asia Pacific Thailand CoLtd
 24:A9:37;PURE Storage
 24:AB:81;Apple
 24:AF:4A;Alcatel:Lucent:IPD
@@ -13741,7 +13741,7 @@
 28:22:46;Beijing Sinoix Communication Co LTD
 28:26:A6;PBR electronics GmbH
 28:28:5D;ZyXEL Communications Corporation
-28:29:D9;GlobalBeiMing technology (Beijing)Co Ltd
+28:29:D9;GlobalBeiMing technology  Beijing Co Ltd
 28:2C:B2;TP:LINK TECHNOLOGIES COLTD
 28:31:52;HUAWEI TECHNOLOGIES COLTD
 28:34:10;Enigma Diagnostics Limited
@@ -13752,7 +13752,7 @@
 28:3C:E4;Huawei Technologies Co Ltd
 28:40:1A;C8 MediSensors Inc
 28:41:21;OptiSense Network LLC
-28:44:30;GenesisTechnical Systems (UK) Ltd
+28:44:30;GenesisTechnical Systems  UK  Ltd
 28:47:AA;Nokia Corporation
 28:48:46;GridCentric Inc
 28:4C:53;Intune Networks
@@ -13772,7 +13772,7 @@
 28:71:84;Spire Payments
 28:72:C5;Smartmatic Corp
 28:72:F0;ATHENA
-28:79:94;Realplay Digital Technology(Shenzhen) CoLtd
+28:79:94;Realplay Digital Technology Shenzhen  CoLtd
 28:85:2D;Touch Networks
 28:89:15;CashGuard Sverige AB
 28:8A:1C;Juniper networks
@@ -13787,7 +13787,7 @@
 28:9E:DF;Danfoss Turbocor Compressors Inc
 28:A1:86;enblink
 28:A1:92;GERP Solution
-28:A1:EB;ETEK TECHNOLOGY (SHENZHEN) COLTD
+28:A1:EB;ETEK TECHNOLOGY  SHENZHEN  COLTD
 28:A2:41;exlar corp
 28:A5:74;Miller Electric Mfg Co
 28:AF:0A;Sirius XM Radio Inc
@@ -13813,7 +13813,7 @@
 28:CF:DA;Apple
 28:CF:E9;Apple
 28:D1:AF;Nokia Corporation
-28:D2:44;LCFC(HeFei) Electronics Technology Co Ltd
+28:D2:44;LCFC HeFei  Electronics Technology Co Ltd
 28:D5:76;Premier Wireless Inc
 28:D9:3E;Telecor Inc
 28:D9:97;Yuduan Mobile Co Ltd
@@ -13875,7 +13875,7 @@
 2C:5D:93;Ruckus Wireless
 2C:5F:F3;Pertronic Industries
 2C:62:5A;Finest Security Systems Co Ltd
-2C:62:89;Regenersis (Glenrothes) Ltd
+2C:62:89;Regenersis  Glenrothes  Ltd
 2C:67:FB;ShenZhen Zhengjili Electronics Co LTD
 2C:69:BA;RF Controls LLC
 2C:6B:F5;Juniper networks
@@ -13938,7 +13938,7 @@
 30:19:66;Samsung Electronics CoLtd
 30:1A:28;Mako Networks Ltd
 30:21:5B;Shenzhen Ostar Display Electronic CoLtd
-30:2D:E8;JDA LLC (JDA Systems)
+30:2D:E8;JDA LLC  JDA Systems 
 30:32:94;W:IE:NE:R Plein   Baus GmbH
 30:32:D4;Hanilstm Co Ltd
 30:37:A6;CISCO SYSTEMS INC
@@ -13963,10 +13963,10 @@
 30:60:23;ARRIS Group Inc
 30:61:12;PAV GmbH
 30:61:18;Paradom Inc
-30:65:EC;Wistron (ChongQing)
+30:65:EC;Wistron  ChongQing 
 30:68:8C;Reach Technology Inc
 30:69:4B;RIM
-30:6C:BE;Skymotion Technology (HK) Limited
+30:6C:BE;Skymotion Technology  HK  Limited
 30:6E:5C;Validus Technologies
 30:71:B2;Hangzhou Prevail Optoelectronic Equipment CoLTD
 30:76:6F;LG Electronics
@@ -13998,14 +13998,14 @@
 30:E4:8E;Vodafone UK
 30:E4:DB;CISCO SYSTEMS INC
 30:EB:25;INTEK DIGITAL
-30:EF:D1;Alstom Strongwish (Shenzhen) Co Ltd
+30:EF:D1;Alstom Strongwish  Shenzhen  Co Ltd
 30:F3:1D;zte corporation
 30:F3:3A;+plugg srl
 30:F4:2F;ESP
 30:F7:0D;Cisco Systems
 30:F7:C5;Apple
 30:F9:ED;Sony Corporation
-30:FD:11;MACROTECH (USA) INC
+30:FD:11;MACROTECH  USA  INC
 34:07:FB;Ericsson AB
 34:08:04;D:Link Corporation
 34:13:A8;Mediplan Limited
@@ -14039,7 +14039,7 @@
 34:6F:92;White Rodgers Division
 34:75:C7;Avaya Inc
 34:76:C5;I:O DATA DEVICE INC
-34:78:77;O:NET Communications(Shenzhen) Limited
+34:78:77;O:NET Communications Shenzhen  Limited
 34:7E:39;Nokia Danmark AS
 34:81:37;UNICARD SA
 34:82:DE;Kayo Technology Inc
@@ -14087,7 +14087,7 @@
 34:C9:9D;EIDOLON COMMUNICATIONS TECHNOLOGY CO LTD
 34:CD:6D;CommSky Technologies
 34:CD:BE;Huawei Technologies Co Ltd
-34:CE:94;Parsec (Pty) Ltd
+34:CE:94;Parsec  Pty  Ltd
 34:D0:9B;MobilMAX Technology Inc
 34:D2:C4;RENA GmbH Print Systeme
 34:D7:B4;Tributary Systems Inc
@@ -14137,7 +14137,7 @@
 38:5A:A8;Beijing Zhongdun Security Technology Development Co
 38:5F:C3;Yu Jeong System CoLtd
 38:60:77;PEGATRON CORPORATION
-38:63:F6;3NOD MULTIMEDIA(SHENZHEN)COLTD
+38:63:F6;3NOD MULTIMEDIA SHENZHEN COLTD
 38:66:45;OOSIC Technology COLtd
 38:67:93;Asia Optical Co Inc
 38:6B:BB;ARRIS Group Inc
@@ -14246,18 +14246,18 @@
 3C:86:A8;Sangshin elecom co LTD
 3C:89:A6;KAPELSE
 3C:8A:B0;Juniper Networks
-3C:8A:E5;Tensun Information Technology(Hangzhou) CoLTD
+3C:8A:E5;Tensun Information Technology Hangzhou  CoLTD
 3C:8B:FE;Samsung Electronics
 3C:91:57;Hangzhou Yulong Conmunication CoLtd
 3C:91:74;ALONG COMMUNICATION TECHNOLOGY
 3C:94:D5;Juniper Networks
-3C:97:0E;Wistron InfoComm(Kunshan)CoLtd
+3C:97:0E;Wistron InfoComm Kunshan CoLtd
 3C:97:7E;IPS Technology Limited
 3C:98:BF;Quest Controls Inc
 3C:99:F7;Lansentechnology AB
 3C:9F:81;Shenzhen CATIC Bit Communications Technology CoLtd
 3C:A3:15;Bless Information   Communications Co Ltd
-3C:A7:2B;MRV Communications (Networks) LTD
+3C:A7:2B;MRV Communications  Networks  LTD
 3C:A9:F4;Intel Corporate
 3C:B1:5B;Avaya Inc
 3C:B1:7F;Wattwatchers Pty Ld
@@ -14275,7 +14275,7 @@
 3C:D0:F8;Apple
 3C:D1:6E;Telepower Communication Co Ltd
 3C:D4:D6;WirelessWERX Inc
-3C:D7:DA;SK Mtek microelectronics(shenzhen)limited
+3C:D7:DA;SK Mtek microelectronics shenzhen limited
 3C:D9:2B;Hewlett:Packard Company
 3C:DF:1E;CISCO SYSTEMS INC
 3C:DF:BD;Huawei Technologies Co Ltd
@@ -14310,7 +14310,7 @@
 40:2B:A1;Sony Ericsson Mobile Communications AB
 40:2C:F4;Universal Global Scientific Industrial Co Ltd
 40:30:04;Apple
-40:30:67;Conlog (Pty) Ltd
+40:30:67;Conlog  Pty  Ltd
 40:33:6C;Godrej   Boyce Mfg co ltd
 40:37:AD;Macro Image Technology Inc
 40:3C:FC;Apple
@@ -14337,7 +14337,7 @@
 40:6F:2A;Research In Motion
 40:70:09;ARRIS Group Inc
 40:70:4A;Power Idea Technology Limited
-40:70:74;Life Technology (China) Co Ltd
+40:70:74;Life Technology  China  Co Ltd
 40:74:96;aFUN TECHNOLOGY INC
 40:78:75;IMBEL : Industria de Material Belico do Brasil
 40:7A:80;Nokia Corporation
@@ -14389,7 +14389,7 @@
 40:F3:08;Murata Manufactuaring CoLtd
 40:F4:07;Nintendo Co Ltd
 40:F4:EC;CISCO SYSTEMS INC
-40:F5:2E;Leica Microsystems (Schweiz) AG
+40:F5:2E;Leica Microsystems  Schweiz  AG
 40:FC:89;ARRIS Group Inc
 44:03:A7;Cisco
 44:0C:FD;NetMan Co Ltd
@@ -14438,11 +14438,11 @@
 44:6C:24;Reallin Electronic CoLtd
 44:6D:57;Liteon Technology Corporation
 44:70:0B;IFFU
-44:70:98;MING HONG TECHNOLOGY (SHEN ZHEN) LIMITED
-44:7B:C4;DualShine Technology(SZ)CoLtd
+44:70:98;MING HONG TECHNOLOGY  SHEN ZHEN  LIMITED
+44:7B:C4;DualShine Technology SZ CoLtd
 44:7C:7F;Innolight Technology Corporation
-44:7D:A5;VTION INFORMATION TECHNOLOGY (FUJIAN) COLTD
-44:7E:76;Trek Technology (S) Pte Ltd
+44:7D:A5;VTION INFORMATION TECHNOLOGY  FUJIAN  COLTD
+44:7E:76;Trek Technology  S  Pte Ltd
 44:7E:95;Alpha and Omega Inc
 44:83:12;Star:Net
 44:85:00;Intel Corporate
@@ -14469,7 +14469,7 @@
 44:C3:06;SIFROM Inc
 44:C3:9B;OOO RUBEZH NPO
 44:C4:A9;Opticom Communication LLC
-44:C5:6F;NGN Easy Satfinder (Tianjin) Electronic Co Ltd
+44:C5:6F;NGN Easy Satfinder  Tianjin  Electronic Co Ltd
 44:C9:A2;Greenwald Industries
 44:D1:5E;Shanghai Kingto Information Technology Ltd
 44:D2:CA;Anvia TV Oy
@@ -14489,7 +14489,7 @@
 44:F8:49;Union Pacific Railroad
 44:FB:42;Apple
 48:02:2A;B:Link Electronic Limited
-48:03:62;DESAY ELECTRONICS(HUIZHOU)COLTD
+48:03:62;DESAY ELECTRONICS HUIZHOU COLTD
 48:12:49;Luxcom Technologies Inc
 48:13:F3;BBK Electronics Corp Ltd
 48:17:4C;MicroPower technologies
@@ -14536,7 +14536,7 @@
 48:C1:AC;PLANTRONICS INC
 48:C8:62;Simo WirelessInc
 48:C8:B6;SysTec GmbH
-48:CB:6E;Cello Electronics (UK) Ltd
+48:CB:6E;Cello Electronics  UK  Ltd
 48:D0:CF;Universal Electronics Inc
 48:D2:24;Liteon Technology Corporation
 48:D5:4C;Jeda Networks
@@ -14549,7 +14549,7 @@
 48:EB:30;ETERNA TECHNOLOGY INC
 48:ED:80;daesung eltec
 48:EE:07;Silver Palm Technologies LLC
-48:EE:86;UTStarcom (China) CoLtd
+48:EE:86;UTStarcom  China  CoLtd
 48:F2:30;Ubizcore CoLTD
 48:F3:17;PRIVATE
 48:F4:7D;TechVision HoldingInternation Limited
@@ -14566,11 +14566,11 @@
 4C:07:C9;COMPUTER OFFICE CoLtd
 4C:09:B4;zte corporation
 4C:0B:3A;TCT Mobile Limited
-4C:0D:EE;JABIL CIRCUIT (SHANGHAI) LTD
+4C:0D:EE;JABIL CIRCUIT  SHANGHAI  LTD
 4C:0F:6E;Hon Hai Precision Ind CoLtd
 4C:0F:C7;Earda Electronics CoLtd
 4C:14:80;NOREGON SYSTEMS INC
-4C:14:A3;TCL Technoly Electronics (Huizhou) Co Ltd
+4C:14:A3;TCL Technoly Electronics  Huizhou  Co Ltd
 4C:17:EB;SAGEMCOM
 4C:1A:3A;PRIMA Research And Production Enterprise Ltd
 4C:1A:95;Novakon Co Ltd
@@ -14584,7 +14584,7 @@
 4C:32:2D;TELEDATA NETWORKS
 4C:32:D9;M Rutty Holdings Pty Ltd
 4C:39:10;Newtek Electronics co Ltd
-4C:3B:74;VOGTEC(HK) Co Ltd
+4C:3B:74;VOGTEC HK  Co Ltd
 4C:3C:16;Samsung Electronics CoLtd
 4C:4B:68;Mobile Device Inc
 4C:4E:35;Cisco
@@ -14599,7 +14599,7 @@
 4C:60:D5;airPointe of New Hampshire
 4C:60:DE;NETGEAR
 4C:62:55;SANMINA:SCI SYSTEM DE MEXICO SA DE CV
-4C:63:EB;Application Solutions (Electronics and Vision) Ltd
+4C:63:EB;Application Solutions  Electronics and Vision  Ltd
 4C:64:D9;Guangdong Leawin Group Co Ltd
 4C:72:B9;Pegatron Corporation
 4C:73:67;Genius Bytes Software Solutions GmbH
@@ -14622,12 +14622,12 @@
 4C:9E:E4;Hanyang Navicom CoLtd
 4C:A5:6D;Samsung Electronics CoLtd
 4C:A7:4B;Alcatel Lucent
-4C:AA:16;AzureWave Technologies (Shanghai) Inc
+4C:AA:16;AzureWave Technologies  Shanghai  Inc
 4C:AB:33;KST technology
 4C:AC:0A;ZTE Corporation
 4C:B1:6C;HUAWEI TECHNOLOGIES COLTD
 4C:B1:99;Apple
-4C:B4:EA;HRD (S) PTE LTD
+4C:B4:EA;HRD  S  PTE LTD
 4C:B8:1C;SAM Electronics GmbH
 4C:B9:C8;CONET CO LTD
 4C:BA:A3;Bison Electronics Inc
@@ -14640,7 +14640,7 @@
 4C:CC:34;Motorola Solutions Inc
 4C:D6:37;Qsono Electronics Co Ltd
 4C:D7:B6;Helmer Scientific
-4C:D9:C4;Magneti Marelli Automotive Electronics (Guangzhou) Co Ltd
+4C:D9:C4;Magneti Marelli Automotive Electronics  Guangzhou  Co Ltd
 4C:DF:3D;TEAM ENGINEERS ADVANCE TECHNOLOGIES INDIA PVT LTD
 4C:E1:BB;Zhuhai HiFocus Technology Co Ltd
 4C:E6:76;Buffalo Inc
@@ -14649,11 +14649,11 @@
 4C:F0:2E;Vifa Denmark AS
 4C:F4:5B;Blue Clover Devices
 4C:F7:37;SamJi Electronics Co Ltd
-50:00:8C;Hong Kong Telecommunications (HKT) Limited
+50:00:8C;Hong Kong Telecommunications  HKT  Limited
 50:01:BB;Samsung Electronics
 50:05:3D;CyWee Group Ltd
 50:06:04;Cisco
-50:0B:32;Foxda Technology Industrial(ShenZhen)CoLTD
+50:0B:32;Foxda Technology Industrial ShenZhen CoLTD
 50:0E:6D;TrafficCast International
 50:11:EB;SilverNet Ltd
 50:17:FF;Cisco
@@ -14823,7 +14823,7 @@
 54:E6:3F;ShenZhen LingKeWeiEr Technology Co Ltd
 54:E6:FC;TP:LINK TECHNOLOGIES CO LTD
 54:EA:A8;Apple Inc
-54:EE:75;Wistron InfoComm(Kunshan)CoLtd
+54:EE:75;Wistron InfoComm Kunshan CoLtd
 54:F5:B6;ORIENTAL PACIFIC INTERNATIONAL LIMITED
 54:F6:66;Berthold Technologies GmbH and CoKG
 54:FB:58;WISEWARE Lda
@@ -14925,7 +14925,7 @@
 5C:0E:8B;Motorola
 5C:11:93;Seal One AG
 5C:14:37;Thyssenkrupp Aufzugswerke GmbH
-5C:15:E1;AIDC TECHNOLOGY (S) PTE LTD
+5C:15:E1;AIDC TECHNOLOGY  S  PTE LTD
 5C:16:C7;Big Switch Networks
 5C:17:37;I:View Now LLC
 5C:17:D3;LGE
@@ -14941,7 +14941,7 @@
 5C:33:8E;Alpha Networkc Inc
 5C:35:3B;Compal Broadband Networks Inc
 5C:35:DA;There Corporation Oy
-5C:36:B8;TCL King Electrical Appliances (Huizhou) Ltd
+5C:36:B8;TCL King Electrical Appliances  Huizhou  Ltd
 5C:38:E0;Shanghai Super Electronics Technology CoLTD
 5C:3C:27;Samsung Electronics CoLtd
 5C:40:58;Jefferson Audio Video Systems Inc
@@ -14975,10 +14975,10 @@
 5C:A4:8A;Cisco
 5C:AC:4C;Hon Hai Precision Ind CoLtd
 5C:B5:24;Sony Ericsson Mobile Communications AB
-5C:BD:9E;HONGKONG MIRACLE EAGLE TECHNOLOGY(GROUP) LIMITED
+5C:BD:9E;HONGKONG MIRACLE EAGLE TECHNOLOGY GROUP  LIMITED
 5C:C2:13;Fr Sauter AG
 5C:C5:D4;Intel Corporate
-5C:C6:D0;Skyworth Digital technology(shenzhen)coltd
+5C:C6:D0;Skyworth Digital technology shenzhen coltd
 5C:C9:D3;PALLADIUM ENERGY ELETRONICA DA AMAZONIA LTDA
 5C:CA:32;Theben AG
 5C:CE:AD;CDYNE Corporation
@@ -14990,7 +14990,7 @@
 5C:D9:98;D:Link Corporation
 5C:DA:D4;Murata Manufacturing Co Ltd
 5C:DD:70;Hangzhou H3C Technologies Co Limited
-5C:E0:CA;FeiTian United (Beijing) System Technology Co Ltd
+5C:E0:CA;FeiTian United  Beijing  System Technology Co Ltd
 5C:E0:F6;NICbr: Nucleo de Informacao e Coordenacao do Ponto BR
 5C:E2:23;Delphin Technology AG
 5C:E2:86;Nortel Networks
@@ -15017,7 +15017,7 @@
 60:12:83;Soluciones Tecnologicas para la Salud y el Bienestar SA
 60:15:C7;IdaTech
 60:19:0C;RRAMAC
-60:19:29;VOLTRONIC POWER TECHNOLOGY(SHENZHEN) CORP
+60:19:29;VOLTRONIC POWER TECHNOLOGY SHENZHEN  CORP
 60:1D:0F;Midnite Solar
 60:1E:02;EltexAlatau
 60:21:03;STCUBEINC
@@ -15140,7 +15140,7 @@
 64:4B:F0;CalDigit Inc
 64:4D:70;dSPACE GmbH
 64:4F:74;LENUS Co Ltd
-64:51:7E;LONG BEN (DONGGUAN) ELECTRONIC TECHNOLOGY COLTD
+64:51:7E;LONG BEN  DONGGUAN  ELECTRONIC TECHNOLOGY COLTD
 64:52:99;The Chamberlain Group Inc
 64:53:5D;Frauscher Sensortechnik
 64:54:22;Equinox Payments
@@ -15187,7 +15187,7 @@
 64:9F:F7;Kone OYj
 64:A0:E7;CISCO SYSTEMS INC
 64:A2:32;OOO Samlight
-64:A3:41;Wonderlan (Beijing) Technology Co Ltd
+64:A3:41;Wonderlan  Beijing  Technology Co Ltd
 64:A3:CB;Apple
 64:A7:69;HTC Corporation
 64:A8:37;Juni Korea Co Ltd
@@ -15203,7 +15203,7 @@
 64:C6:67;Barnes Noble
 64:C6:AF;AXERRA Networks Ltd
 64:C9:44;LARK Technologies Inc
-64:D0:2D;Next Generation Integration (NGI)
+64:D0:2D;Next Generation Integration  NGI 
 64:D1:A3;Sitecom Europe BV
 64:D2:41;Keith   Koep GmbH
 64:D4:BD;ALPS ELECTRIC COLTD
@@ -15289,7 +15289,7 @@
 68:97:E8;Society of Motion Picture  amp; Television Engineers
 68:9C:5E;AcSiP Technology Corp
 68:9C:70;Apple
-68:A1:B7;Honghao Mingchuan Technology (Beijing) COLtd
+68:A1:B7;Honghao Mingchuan Technology  Beijing  COLtd
 68:A3:C4;Liteon Technology Corporation
 68:A4:0E;BSH Bosch and Siemens Home Appliances GmbH
 68:A8:6D;Apple
@@ -15354,7 +15354,7 @@
 6C:50:4D;CISCO SYSTEMS INC
 6C:57:79;Aclima Inc
 6C:5A:34;Shenzhen Haitianxiong Electronic Co Ltd
-6C:5A:B5;TCL Technoly Electronics (Huizhou) Co Ltd
+6C:5A:B5;TCL Technoly Electronics  Huizhou  Co Ltd
 6C:5C:DE;SunReports Inc
 6C:5D:63;ShenZhen Rapoo Technology Co Ltd
 6C:5E:7A;Ubiquitous Internet Telecom Co Ltd
@@ -15445,7 +15445,7 @@
 70:3C:39;SEAWING Kft
 70:41:B7;Edwards Lifesciences LLC
 70:46:42;CHYNG HONG ELECTRONIC CO LTD
-70:4A:AE;Xstream Flow (Pty) Ltd
+70:4A:AE;Xstream Flow  Pty  Ltd
 70:4A:E4;Rinstrum Pty Ltd
 70:4C:ED;TMRG Inc
 70:4E:01;KWANGWON TECH CO LTD
@@ -15457,7 +15457,7 @@
 70:58:12;Panasonic AVC Networks Company
 70:59:57;Medallion Instrumentation Systems
 70:59:86;OOO TTV
-70:5A:B6;COMPAL INFORMATION (KUNSHAN) CO LTD
+70:5A:B6;COMPAL INFORMATION  KUNSHAN  CO LTD
 70:5C:AD;Konami Gaming Inc
 70:5E:AA;Action Target Inc
 70:60:DE;LaVision GmbH
@@ -15473,7 +15473,7 @@
 70:73:CB;Apple
 70:76:30;Pace plc
 70:76:DD;Oxyguard International AS
-70:76:F0;LevelOne Communications (India) Private Limited
+70:76:F0;LevelOne Communications  India  Private Limited
 70:7B:E8;HUAWEI TECHNOLOGIES COLTD
 70:7C:18;ADATA Technology Co Ltd
 70:7E:43;ARRIS Group Inc
@@ -15517,7 +15517,7 @@
 70:E0:27;HONGYU COMMUNICATION TECHNOLOGY LIMITED
 70:E1:39;3view Ltd
 70:E2:4C;SAE IT:systems GmbH   Co KG
-70:E2:84;Wistron InfoComm(Zhongshan) Corporation
+70:E2:84;Wistron InfoComm Zhongshan  Corporation
 70:E8:43;Beijing C W Optical Communication Technology CoLtd
 70:EE:50;Netatmo
 70:F1:76;Data Modul AG
@@ -15527,7 +15527,7 @@
 70:F9:27;Samsung Electronics
 70:F9:6D;Hangzhou H3C Technologies Co Limited
 70:FF:76;Texas Instruments
-74:0A:BC;JSJS Designs (Europe) Limited
+74:0A:BC;JSJS Designs  Europe  Limited
 74:0E:DB;Optowiz Co Ltd
 74:14:89;SRT Wireless
 74:15:E2;Tri:Sen Systems Corporation
@@ -15535,7 +15535,7 @@
 74:1E:93;Fiberhome Telecommunication TechCoLtd
 74:25:8A;Hangzhou H3C Technologies Co Limited
 74:26:AC;Cisco
-74:27:3C;ChangYang Technology (Nanjing) Co LTD
+74:27:3C;ChangYang Technology  Nanjing  Co LTD
 74:27:EA;Elitegroup Computer Systems Co Ltd
 74:2B:0F;Infinidat Ltd
 74:2B:62;Fujitsu Limited
@@ -15619,10 +15619,10 @@
 74:F6:12;ARRIS Group Inc
 74:F7:26;Neuron Robotics
 74:F8:5D;Berkeley Nucleonics Corp
-74:FD:A0;Compupal (Group) Corporation
+74:FD:A0;Compupal  Group  Corporation
 74:FE:48;ADVANTECH CO LTD
 74:FF:7D;Wren Sound Systems LLC
-78:02:8F;Adaptive Spectrum and Signal Alignment (ASSIA) Inc
+78:02:8F;Adaptive Spectrum and Signal Alignment  ASSIA  Inc
 78:07:38;ZUK Elzab SA
 78:11:85;NBS Payment Solutions Inc
 78:12:B8;ORANTEK LIMITED
@@ -15646,7 +15646,7 @@
 78:3D:5B;TELNET Redes Inteligentes SA
 78:3E:53;BSkyB Ltd
 78:3F:15;EasySYNC Ltd
-78:44:05;FUJITU(HONG KONG) ELECTRONIC CoLTD
+78:44:05;FUJITU HONG KONG  ELECTRONIC CoLTD
 78:44:76;Zioncom technology coltd
 78:45:C4;Dell Inc
 78:46:C4;DAEHAP HYPER:TECH
@@ -15679,7 +15679,7 @@
 78:92:9C;Intel Corporate
 78:98:FD;Q9 Networks Inc
 78:99:5C;Nationz Technologies Inc
-78:99:66;Musilab Electronics (DongGuan)CoLtd
+78:99:66;Musilab Electronics  DongGuan CoLtd
 78:99:8F;MEDILINE ITALIA SRL
 78:9E:D0;Samsung Electronics
 78:9F:4C;HOERBIGER Elektronik GmbH
@@ -15904,7 +15904,7 @@
 80:7B:1E;Corsair Components
 80:7D:1B;Neosystem Co Ltd
 80:7D:E3;Chongqing Sichuan Instrument Microcircuit CoLTD
-80:81:A5;TONGQING COMMUNICATION EQUIPMENT (SHENZHEN) CoLtd
+80:81:A5;TONGQING COMMUNICATION EQUIPMENT  SHENZHEN  CoLtd
 80:82:87;ATCOM Technology CoLtd
 80:86:98;Netronics Technologies Inc
 80:86:F2;Intel Corporate
@@ -15950,7 +15950,7 @@
 84:00:D2;Sony Ericsson Mobile Communications AB
 84:0B:2D;SAMSUNG ELECTRO:MECHANICS CO LTD
 84:0F:45;Shanghai GMT Digital Technologies Co Ltd
-84:17:15;GP Electronics (HK) Ltd
+84:17:15;GP Electronics  HK  Ltd
 84:17:66;Weifang GoerTek Electronics Co Ltd
 84:18:88;Juniper Networks
 84:1B:38;Shenzhen Excelsecu Data Technology CoLtd
@@ -15986,7 +15986,7 @@
 84:5C:93;Chabrier Services
 84:5D:D7;Shenzhen Netcom Electronics CoLtd
 84:62:23;Shenzhen Coship Electronics Co Ltd
-84:62:A6;EuroCB (Phils) Inc
+84:62:A6;EuroCB  Phils  Inc
 84:6A:ED;Wireless TsukamotocoLTD
 84:6E:B1;Park Assist LLC
 84:72:07;I C Technology
@@ -16039,7 +16039,7 @@
 88:03:55;Arcadyan Technology Corp
 88:09:05;MTMCommunications
 88:0F:B6;Jabil Circuits India Pvt Ltd:EHTP unit
-88:10:36;Panodic(ShenZhen) Electronics Limted
+88:10:36;Panodic ShenZhen  Electronics Limted
 88:12:4E;Qualcomm Atheros
 88:14:2B;Protonic Holland
 88:15:44;Meraki Inc
@@ -16098,7 +16098,7 @@
 88:A5:BD;QPCOM INC
 88:A7:3C;Ragentek Technology Group
 88:AC:C1;Generiton Co Ltd
-88:AE:1D;COMPAL INFORMATION(KUNSHAN)COLTD
+88:AE:1D;COMPAL INFORMATION KUNSHAN COLTD
 88:B1:68;Delta Control GmbH
 88:B1:E1;AirTight Networks Inc
 88:B6:27;Gembird Europe BV
@@ -16117,11 +16117,11 @@
 88:E3:AB;Huawei Technologies Co Ltd
 88:E7:12;Whirlpool Corporation
 88:E7:A6;iKnowledge Integration Corp
-88:E8:F8;YONG TAI ELECTRONIC (DONGGUAN) LTD
+88:E8:F8;YONG TAI ELECTRONIC  DONGGUAN  LTD
 88:E9:17;Tamaggo
 88:ED:1C;Cudo Communication Co Ltd
 88:F0:77;CISCO SYSTEMS INC
-88:F4:88;cellon communications technology(shenzhen)CoLtd
+88:F4:88;cellon communications technology shenzhen CoLtd
 88:F4:90;Jetmobile Pte Ltd
 88:F7:C7;Technicolor USA Inc
 88:FD:15;LINEEYE CO LTD
@@ -16266,7 +16266,7 @@
 90:59:AF;Texas Instruments
 90:5F:2E;TCT Mobile Limited
 90:5F:8D;modas GmbH
-90:61:0C;Fida International (S) Pte Ltd
+90:61:0C;Fida International  S  Pte Ltd
 90:67:17;Alphion India Private Limited
 90:67:B5;Alcatel:Lucent
 90:67:F3;Alcatel Lucent
@@ -16337,7 +16337,7 @@
 94:00:70;Nokia Corporation
 94:01:49;AutoHotBox
 94:01:C2;Samsung Electronics CoLtd
-94:0B:2D;NetView Technologies(Shenzhen) Co Ltd
+94:0B:2D;NetView Technologies Shenzhen  Co Ltd
 94:0B:D5;Himax Technologies Inc
 94:0C:6D;TP:LINK Technologies CoLtd
 94:10:3E;Belkin International Inc
@@ -16386,7 +16386,7 @@
 94:9F:3F;Optek Digital Technology company limited
 94:9F:B4;ChengDu JiaFaAnTai Technology CoLtd
 94:A7:BC;BodyMedia Inc
-94:AA:B8;Joview(Beijing) Technology Co Ltd
+94:AA:B8;Joview Beijing  Technology Co Ltd
 94:AC:CA;trivum technologies GmbH
 94:AE:61;Alcatel Lucent
 94:B8:C5;RuggedCom Inc
@@ -16414,7 +16414,7 @@
 94:DD:3F;A+V Link Technologies Corp
 94:DE:0E;SmartOptics AS
 94:DE:80;GIGA:BYTE TECHNOLOGY COLTD
-94:DF:4E;Wistron InfoComm(Kunshan)CoLtd
+94:DF:4E;Wistron InfoComm Kunshan CoLtd
 94:DF:58;IJ Electron COLtd
 94:E0:D0;HealthStream Taiwan Inc
 94:E2:26;D ORtiz Consulting LLC
@@ -16449,7 +16449,7 @@
 98:35:71;Sub10 Systems Ltd
 98:35:B8;Assembled Products Corporation
 98:3B:16;AMPAK Technology Inc
-98:3F:9F;China SSJ (Suzhou) Network Technology Inc
+98:3F:9F;China SSJ  Suzhou  Network Technology Inc
 98:42:46;SOL INDUSTRY PTE LTD
 98:43:DA;INTERTECH
 98:47:3C;SHANGHAI SUNMON COMMUNICATION TECHNOGY COLTD
@@ -16458,7 +16458,7 @@
 98:4B:E1;Hewlett:Packard Company
 98:4C:04;Zhangzhou Keneng Electrical Equipment Co Ltd
 98:4C:D3;Mantis Deposition
-98:4E:97;Starlight Marketing (H K) Ltd
+98:4E:97;Starlight Marketing  H K  Ltd
 98:4F:EE;Intel Corporate
 98:52:B1;Samsung Electronics
 98:57:D3;HON HAI:CCPBGPRECISION INDCOLTD
@@ -16474,14 +16474,14 @@
 98:6D:C8;TOSHIBA MITSUBISHI:ELECTRIC INDUSTRIAL SYSTEMS CORPORATION
 98:73:C4;Sage Electronic Engineering LLC
 98:76:B6;Adafruit
-98:77:70;Pep Digital Technology (Guangzhou) Co Ltd
+98:77:70;Pep Digital Technology  Guangzhou  Co Ltd
 98:82:17;Disruptive Ltd
-98:86:B1;Flyaudio corporation (China)
+98:86:B1;Flyaudio corporation  China 
 98:89:ED;Anadem Information Inc
 98:8B:5D;SAGEM COMMUNICATION
 98:8B:AD;Corintech Ltd
 98:8E:34;ZHEJIANG BOXSAM ELECTRONIC COLTD
-98:8E:4A;NOXUS(BEIJING) TECHNOLOGY COLTD
+98:8E:4A;NOXUS BEIJING  TECHNOLOGY COLTD
 98:8E:DD;TE Connectivity Limerick
 98:90:80;Linkpower Network System Inc Ltd
 98:93:CC;LG Electronics Inc
@@ -16503,22 +16503,22 @@
 98:DA:92;Vuzix Corporation
 98:DC:D9;UNITEC Co Ltd
 98:E1:65;Accutome
-98:E7:9A;Foxconn(NanJing) Communication CoLtd
+98:E7:9A;Foxconn NanJing  Communication CoLtd
 98:EC:65;Cosesy ApS
 98:F0:AB;Apple
 98:F5:37;zte corporation
 98:F8:C1;IDT Technology Limited
 98:F8:DB;Marini Impianti Industriali srl
-98:FB:12;Grand Electronics (HK) Ltd
+98:FB:12;Grand Electronics  HK  Ltd
 98:FC:11;Cisco:Linksys LLC
 98:FE:03;Ericsson : North America
 98:FE:94;Apple
-98:FF:6A;OTEC(Shanghai)Technology CoLtd
+98:FF:6A;OTEC Shanghai Technology CoLtd
 98:FF:D0;Lenovo Mobile Communication Technology Ltd
 9C:01:11;Shenzhen Newabel Electronic Co Ltd
 9C:02:98;Samsung Electronics CoLtd
 9C:03:9E;Beijing Winchannel Software Technology Co Ltd
-9C:04:73;Tecmobile (International) Ltd
+9C:04:73;Tecmobile  International  Ltd
 9C:04:EB;Apple
 9C:06:6E;Hytera Communications Corporation Limited
 9C:0D:AC;Tymphany HK Limited
@@ -16551,7 +16551,7 @@
 9C:54:1C;Shenzhen My:power Technology CoLtd
 9C:54:CA;Zhengzhou VCOM Science and Technology CoLtd
 9C:55:B4;ISE Srl
-9C:57:11;Feitian Xunda(Beijing) Aeronautical Information Technology Co Ltd
+9C:57:11;Feitian Xunda Beijing  Aeronautical Information Technology Co Ltd
 9C:5B:96;NMR Corporation
 9C:5C:8D;FIREMAX INDÚSTRIA E COMÉRCIO DE PRODUTOS ELETRÔNICOSLTDA
 9C:5D:12;Aerohive Networks Inc
@@ -16565,7 +16565,7 @@
 9C:6A:BE;QEES ApS
 9C:75:14;Wildix srl
 9C:77:AA;NADASNV
-9C:79:AC;Suntec Software(Shanghai) Co Ltd
+9C:79:AC;Suntec Software Shanghai  Co Ltd
 9C:7B:D2;NEOLAB Convergence
 9C:80:7D;SYSCABLE Korea Inc
 9C:80:DF;Arcadyan Technology Corporation
@@ -16610,7 +16610,7 @@
 9C:E6:35;Nintendo Co Ltd
 9C:E6:E7;Samsung Electronics CoLtd
 9C:E7:BD;Winduskorea co Ltd
-9C:EB:E8;BizLink (Kunshan) CoLtd
+9C:EB:E8;BizLink  Kunshan  CoLtd
 9C:F6:1A;UTC Fire and Security
 9C:F6:7D;Ricardo Prague sro
 9C:F8:DB;shenzhen eyunmei technology coltd
@@ -16675,7 +16675,7 @@ A0:86:1D;Chengdu Fuhuaxin Technology coLtd
 A0:86:EC;SAEHAN HITEC Co Ltd
 A0:88:69;Intel Corporate
 A0:88:B4;Intel Corporate
-A0:89:E4;Skyworth Digital Technology(Shenzhen) CoLtd
+A0:89:E4;Skyworth Digital Technology Shenzhen  CoLtd
 A0:8A:87;HuiZhou KaiYue Electronic CoLtd
 A0:8C:15;Gerhard D Wempe KG
 A0:8C:9B;Xtreme Technologies Corp
@@ -16708,7 +16708,7 @@ A0:DC:04;Becker:Antriebe GmbH
 A0:DD:97;PolarLink Technologies Ltd
 A0:DD:E5;SHARP Corporation
 A0:DE:05;JSC Irbis:T
-A0:E2:01;AVTrace Ltd(China)
+A0:E2:01;AVTrace Ltd China 
 A0:E2:5A;Amicus SK sro
 A0:E2:95;DAT System CoLtd
 A0:E4:53;Sony Mobile Communications AB
@@ -16719,7 +16719,7 @@ A0:EB:76;AirCUVE Inc
 A0:EC:80;zte corporation
 A0:ED:CD;Apple
 A0:EF:84;Seine Image Intl Co Ltd
-A0:F2:17;GE Medical System(China) Co Ltd
+A0:F2:17;GE Medical System China  Co Ltd
 A0:F3:C1;TP:LINK TECHNOLOGIES CO LTD
 A0:F3:E4;Alcatel Lucent IPD
 A0:F4:19;Nokia Corporation
@@ -16748,7 +16748,7 @@ A4:38:FC;Plastic Logic
 A4:3A:69;Vers Inc
 A4:46:6B;EOC Technology
 A4:46:FA;AmTRAN Video Corporation
-A4:4B:15;Sun Cupid Technology (HK) LTD
+A4:4B:15;Sun Cupid Technology  HK  LTD
 A4:4C:11;CISCO SYSTEMS INC
 A4:4E:2D;Adaptive Wireless Solutions LLC
 A4:4E:31;Intel Corporate
@@ -16759,7 +16759,7 @@ A4:56:30;CISCO SYSTEMS INC
 A4:5A:1C;smart:electronic GmbH
 A4:5C:27;Nintendo Co Ltd
 A4:5D:36;Hewlett Packard
-A4:60:32;MRV Communications (Networks) LTD
+A4:60:32;MRV Communications  Networks  LTD
 A4:67:06;Apple
 A4:6C:C1;LTi REEnergy GmbH
 A4:6E:79;DFT System CoLtd
@@ -16802,7 +16802,7 @@ A4:C0:C7;ShenZhen Hitom Communication Technology CoLTD
 A4:C0:E1;Nintendo Co Ltd
 A4:C2:AB;Hangzhou LEAD:IT Information   Technology CoLtd
 A4:C3:61;Apple
-A4:C7:DE;Cambridge Industries(Group) CoLtd
+A4:C7:DE;Cambridge Industries Group  CoLtd
 A4:D0:94;Erwin Peters Systemtechnik GmbH
 A4:D1:8F;Shenzhen Skyee Optical Fiber Communication Technology Ltd
 A4:D1:D1;ECOtality North America
@@ -16886,11 +16886,11 @@ A8:B0:AE;LEONI
 A8:B1:D4;CISCO SYSTEMS INC
 A8:B9:B3;ESSYS
 A8:BB:CF;Apple
-A8:BD:1A;Honey Bee (Hong Kong) Limited
+A8:BD:1A;Honey Bee  Hong Kong  Limited
 A8:BD:3A;UNIONMAN TECHNOLOGY COLTD
 A8:C2:22;TM:Research Inc
 A8:CB:95;EAST BEST CO LTD
-A8:CC:C5;Saab AB (publ)
+A8:CC:C5;Saab AB  publ 
 A8:CE:90;CVC
 A8:D0:E5;Juniper Networks
 A8:D2:36;Lightware Visual Engineering
@@ -16968,7 +16968,7 @@ AC:83:17;Shenzhen Furtunetel Communication Co Ltd
 AC:83:F0;ImmediaTV Corporation
 AC:85:3D;HUAWEI TECHNOLOGIES COLTD
 AC:86:74;Open Mesh Inc
-AC:86:7E;Create New Technology (HK) Limited Company
+AC:86:7E;Create New Technology  HK  Limited Company
 AC:8A:CD;ROGER DWensker GWensker spj
 AC:8D:14;Smartrove Inc
 AC:93:2F;Nokia Corporation
@@ -16993,7 +16993,7 @@ AC:C9:35;Ness Corporation
 AC:CA:54;Telldus Technologies AB
 AC:CA:8E;ODA Technologies
 AC:CA:BA;Midokura Co Ltd
-AC:CB:09;Hefcom Metering (Pty) Ltd
+AC:CB:09;Hefcom Metering  Pty  Ltd
 AC:CC:8E;Axis Communications AB
 AC:CE:8F;HWA YAO TECHNOLOGIES CO LTD
 AC:CF:23;Hi:flying electronics technology CoLtd
@@ -17132,7 +17132,7 @@ B4:2A:39;ORBIT MERRET spol s r o
 B4:2C:92;Zhejiang Weirong Electronic Co Ltd
 B4:2C:BE;Direct Payment Solutions Limited
 B4:31:B8;Aviwest
-B4:34:6C;MATSUNICHI DIGITAL TECHNOLOGY (HONG KONG) LIMITED
+B4:34:6C;MATSUNICHI DIGITAL TECHNOLOGY  HONG KONG  LIMITED
 B4:35:64;Fujian Tian Cheng Electron Science   Technical Development CoLtd
 B4:35:F7;Zhejiang Pearmain Electronics Coltd
 B4:37:41;Consert Inc
@@ -17158,7 +17158,7 @@ B4:66:98;Zealabs srl
 B4:67:E9;Qingdao GoerTek Technology Co Ltd
 B4:74:9F;askey computer corp
 B4:75:0E;Belkin International Inc
-B4:7F:5E;Foresight Manufacture (S) Pte Ltd
+B4:7F:5E;Foresight Manufacture  S  Pte Ltd
 B4:82:55;Research Products Corporation
 B4:82:7B;AKG Acoustics GmbH
 B4:82:C5;Relay2 Inc
@@ -17204,12 +17204,12 @@ B4:EE:D4;Texas Instruments
 B4:F0:AB;Apple
 B4:F2:E8;Pace plc
 B4:F3:23;PETATEL INC
-B4:FC:75;SEMA Electronics(HK) COLTD
+B4:FC:75;SEMA Electronics HK  COLTD
 B4:FE:8C;Centro Sicurezza Italia SpA
 B8:03:05;Intel Corporate
 B8:04:15;Bayan Audio
 B8:0B:9D;ROPEX Industrie:Elektronik GmbH
-B8:14:13;Keen High Holding(HK) Ltd
+B8:14:13;Keen High Holding HK  Ltd
 B8:16:19;ARRIS Group Inc
 B8:17:C2;Apple
 B8:19:99;Nesys
@@ -17228,36 +17228,36 @@ B8:30:A8;Road:Track Telematics Development
 B8:36:D8;Videoswitch
 B8:38:61;Cisco
 B8:38:CA;Kyokko Tsushin System COLTD
-B8:3A:7B;Worldplay (Canada) Inc
+B8:3A:7B;Worldplay  Canada  Inc
 B8:3D:4E;Shenzhen Cultraview Digital Technology CoLtd Shanghai Branch
 B8:3E:59;Roku Inc
 B8:41:5F;ASP AG
 B8:43:E4;Vlatacom
 B8:47:C6;SanJet Technology Corp
-B8:55:10;Zioncom Electronics (Shenzhen) Ltd
+B8:55:10;Zioncom Electronics  Shenzhen  Ltd
 B8:58:10;NUMERA INC
 B8:5A:F7;Ouya Inc
-B8:5A:FE;Handaer Communication Technology (Beijing) Co Ltd
+B8:5A:FE;Handaer Communication Technology  Beijing  Co Ltd
 B8:5E:7B;Samsung Electronics CoLtd
 B8:60:91;Onnet Technologies and Innovations LLC
-B8:61:6F;Accton Wireless Broadband(AWB) Corp
+B8:61:6F;Accton Wireless Broadband AWB  Corp
 B8:62:1F;CISCO SYSTEMS INC
 B8:63:BC;ROBOTIS Co Ltd
 B8:64:91;CK Telecom Ltd
 B8:65:3B;Bolymin Inc
 B8:6B:23;Toshiba
 B8:6C:E8;Samsung Electronics CoLtd
-B8:70:F4;COMPAL INFORMATION (KUNSHAN) CO LTD
+B8:70:F4;COMPAL INFORMATION  KUNSHAN  CO LTD
 B8:74:24;Viessmann Elektronik GmbH
 B8:74:47;Convergence Technologies
 B8:76:3F;Hon Hai Precision Ind CoLtd
 B8:77:C3;Decagon Devices Inc
 B8:78:2E;Apple
-B8:79:7E;Secure Meters (UK) Limited
+B8:79:7E;Secure Meters  UK  Limited
 B8:7A:C9;Siemens Ltd
 B8:87:1E;Good Mind Industries Co Ltd
 B8:87:A8;Step Ahead Innovations Inc
-B8:88:E3;COMPAL INFORMATION (KUNSHAN) CO LTD
+B8:88:E3;COMPAL INFORMATION  KUNSHAN  CO LTD
 B8:89:CA;ILJIN ELECTRIC Co Ltd
 B8:8A:60;Intel Corporate
 B8:8D:12;Apple
@@ -17328,7 +17328,7 @@ BC:15:A6;Taiwan Jantek ElectronicsLtd
 BC:16:65;Cisco
 BC:1A:67;YF Technology Co Ltd
 BC:20:A4;Samsung Electronics
-BC:20:BA;Inspur (Shandong) Electronic Information Co Ltd
+BC:20:BA;Inspur  Shandong  Electronic Information Co Ltd
 BC:26:1D;HONG KONG TECON TECHNOLOGY
 BC:28:46;NextBIT Computing Pvt Ltd
 BC:28:D6;Rowley Associates Limited
@@ -17475,7 +17475,7 @@ C0:AC:54;SAGEMCOM
 C0:B3:39;Comigo Ltd
 C0:B3:57;Yoshiki Electronics Industry Ltd
 C0:B8:B1;BitBox Ltd
-C0:BA:E6;Application Solutions (Electronics and Vision) Ltd
+C0:BA:E6;Application Solutions  Electronics and Vision  Ltd
 C0:BD:42;ZPA Smart Energy as
 C0:C1:C0;Cisco:Linksys LLC
 C0:C3:B6;Automatic Systems
@@ -17576,7 +17576,7 @@ C4:AD:21;MEDIAEDGE Corporation
 C4:B5:12;General Electric Digital Energy
 C4:BA:99;I+ME Actia Informatik und Mikro:Elektronik GmbH
 C4:C0:AE;MIDORI ELECTRONIC CO LTD
-C4:C1:9F;National Oilwell Varco Instrumentation Monitoring and Optimization (NOV IMO)
+C4:C1:9F;National Oilwell Varco Instrumentation Monitoring and Optimization  NOV IMO 
 C4:C7:55;Beijing HuaqinWorld Technology CoLtd
 C4:C9:19;Energy Imports Ltd
 C4:CA:D9;Hangzhou H3C Technologies Co Limited
@@ -17601,13 +17601,13 @@ C8:02:58;ITW GSE ApS
 C8:02:A6;Beijing Newmine Technology
 C8:07:18;TDSi
 C8:0A:A9;Quanta Computer Inc
-C8:0E:77;Le Shi Zhi Xin Electronic Technology (Tianjin)CoLtd
+C8:0E:77;Le Shi Zhi Xin Electronic Technology  Tianjin CoLtd
 C8:0E:95;OmniLync Inc
 C8:14:79;Samsung Electronics CoLtd
 C8:16:BD;HISENSE ELECTRIC COLTD
 C8:19:F7;Samsung Electronics CoLtd
 C8:1A:FE;DLOGIC GmbH
-C8:1E:8E;ADV Security (S) Pte Ltd
+C8:1E:8E;ADV Security  S  Pte Ltd
 C8:1F:66;Dell Inc PCBA Test
 C8:20:8E;Storagedata
 C8:29:2A;Barun Electronics
@@ -17674,7 +17674,7 @@ C8:CD:72;SAGEMCOM
 C8:D1:0B;Nokia Corporation
 C8:D1:5E;Huawei Technologies Co Ltd
 C8:D1:D1;AGAiT Technology Corporation
-C8:D2:C1;Jetlun (Shenzhen) Corporation
+C8:D2:C1;Jetlun  Shenzhen  Corporation
 C8:D3:A3;D:Link International
 C8:D4:29;Muehlbauer AG
 C8:D5:90;FLIGHT DATA SYSTEMS
@@ -17827,7 +17827,7 @@ D0:4C:C1;SINTRONES Technology Corp
 D0:50:99;ASRock Incorporation
 D0:51:62;Sony Mobile Communications AB
 D0:52:A8;Physical Graph Corporation
-D0:54:2D;Cambridge Industries(Group) CoLtd
+D0:54:2D;Cambridge Industries Group  CoLtd
 D0:57:4C;CISCO SYSTEMS INC
 D0:57:85;Pantech Co Ltd
 D0:57:A1;Werma Signaltechnik GmbH   Co KG
@@ -18008,7 +18008,7 @@ D4:F1:43;IPROADInc
 D4:F6:3F;IEA SRL
 D8:00:4D;Apple
 D8:05:2E;Skyviia Corporation
-D8:06:D1;Honeywell Fire System (Shanghai) Co Ltd
+D8:06:D1;Honeywell Fire System  Shanghai  Co Ltd
 D8:08:F5;Arcadia Networks Co Ltd
 D8:09:C3;Cercacor Labs
 D8:0D:E3;FXI TECHNOLOGIES AS
@@ -18113,7 +18113,7 @@ DC:05:75;SIEMENS ENERGY AUTOMATION
 DC:05:ED;NabtescoCorporation
 DC:07:C1;HangZhou QiYang Technology CoLtd
 DC:0B:1A;ADB Broadband Italia
-DC:0E:A1;COMPAL INFORMATION (KUNSHAN) CO LTD
+DC:0E:A1;COMPAL INFORMATION  KUNSHAN  CO LTD
 DC:16:A2;Medtronic Diabetes
 DC:17:5A;Hitachi High:Technologies Corporation
 DC:17:92;Captivate Network
@@ -18195,7 +18195,7 @@ E0:14:3E;Modoosis Inc
 E0:18:77;Fujitsu Limited
 E0:1C:41;Aerohive Networks Inc
 E0:1C:EE;Bravo Tech Inc
-E0:1D:3B;Cambridge Industries(Group) CoLtd
+E0:1D:3B;Cambridge Industries Group  CoLtd
 E0:1E:07;Anite TelecomsUS Inc
 E0:1F:0A;Xslent Energy Technologies LLC
 E0:24:7F;HUAWEI TECHNOLOGIES COLTD
@@ -18310,7 +18310,7 @@ E4:2F:26;Fiberhome Telecommunication TechCoLtd
 E4:2F:F6;Unicore communication Inc
 E4:32:CB;Samsung Electronics CoLtd
 E4:35:93;Hangzhou GoTo technology CoLtd
-E4:35:FB;Sabre Technology (Hull) Ltd
+E4:35:FB;Sabre Technology  Hull  Ltd
 E4:37:D7;HENRI DEPAEPE SAS
 E4:38:F2;Advantage Controls
 E4:3F:A2;Wuxi DSP Technologies Inc
@@ -18402,7 +18402,7 @@ E8:40:40;CISCO SYSTEMS INC
 E8:40:F2;PEGATRON CORPORATION
 E8:43:B6;QNAP Systems Inc
 E8:48:1F;Advanced Automotive Antennas
-E8:4E:06;EDUP INTERNATIONAL (HK) CO LTD
+E8:4E:06;EDUP INTERNATIONAL  HK  CO LTD
 E8:4E:84;Samsung Electronics CoLtd
 E8:4E:CE;Nintendo Co Ltd
 E8:51:6E;TSMART Inc
@@ -18421,7 +18421,7 @@ E8:6D:52;ARRIS Group Inc
 E8:6D:54;Digit Mobile Inc
 E8:6D:6E;Control   Display Systems Ltd ta CDSRail
 E8:71:8D;Elsys Equipamentos Eletronicos Ltda
-E8:75:7F;FIRS Technologies(Shenzhen) Co Ltd
+E8:75:7F;FIRS Technologies Shenzhen  Co Ltd
 E8:78:A1;BEOVIEW INTERCOM DOO
 E8:7A:F3;S5 Tech Srl
 E8:80:D8;GNTEK Electronics CoLtd
@@ -18447,7 +18447,7 @@ E8:BA:70;CISCO SYSTEMS INC
 E8:BB:3D;Sino Prime:Tech Limited
 E8:BB:A8;GUANGDONG OPPO MOBILE TELECOMMUNICATIONS CORPLTD
 E8:BE:81;SAGEMCOM
-E8:C2:29;H:Displays (MSC) Bhd
+E8:C2:29;H:Displays  MSC  Bhd
 E8:C3:20;Austco Communication Systems Pty Ltd
 E8:CB:A1;Nokia Corporation
 E8:CC:32;MicronetLTD
@@ -18530,7 +18530,7 @@ EC:B1:06;Acuro Networks Inc
 EC:B5:41;SHINANO E and E CoLtd
 EC:BB:AE;Digivoice Tecnologia em Eletronica Ltda
 EC:BD:09;FUSION Electronics Ltd
-EC:C3:8A;Accuenergy (CANADA) Inc
+EC:C3:8A;Accuenergy  CANADA  Inc
 EC:C8:82;CISCO SYSTEMS INC
 EC:CD:6D;Allied Telesis Inc
 EC:D0:0E;MiraeRecognition Co Ltd
@@ -18567,7 +18567,7 @@ F0:1F:AF;Dell Inc PCBA Test
 F0:21:9D;Cal:Comp Electronics   Communications Company Ltd
 F0:23:29;SHOWA DENKI COLTD
 F0:24:05;OPUS High Technology Corporation
-F0:24:08;Talaris (Sweden) AB
+F0:24:08;Talaris  Sweden  AB
 F0:25:72;CISCO SYSTEMS INC
 F0:25:B7;Samsung Electro Mechanics co LTD
 F0:26:4C;Dr Sigrist AG
@@ -18576,11 +18576,11 @@ F0:29:29;Cisco
 F0:2A:61;Waldo Networks Inc
 F0:2F:D8;Bi2:Vision
 F0:32:1A;Mita:Teknik AS
-F0:37:A1;Huike Electronics (SHENZHEN) CO LTD
+F0:37:A1;Huike Electronics  SHENZHEN  CO LTD
 F0:3A:4B;Bloombase Inc
 F0:3A:55;Omega Elektronik AS
 F0:3F:F8;R L Drake
-F0:43:35;DVN(Shanghai)Ltd
+F0:43:35;DVN Shanghai Ltd
 F0:4A:2B;PYRAMID Computer GmbH
 F0:4B:6A;Scientific Production Association Siberian Arsenal Ltd
 F0:4B:F2;JTECH Communications Inc
@@ -18624,7 +18624,7 @@ F0:AD:4E;Globalscale Technologies Inc
 F0:AE:51;Xi3 Corp
 F0:B4:79;Apple
 F0:B6:EB;Poslab Technology Co Ltd
-F0:BC:C8;MaxID (Pty) Ltd
+F0:BC:C8;MaxID  Pty  Ltd
 F0:BD:F1;Sipod Inc
 F0:BF:97;Sony Corporation
 F0:C1:F1;Apple Inc
@@ -18643,7 +18643,7 @@ F0:DB:F8;Apple
 F0:DC:E2;Apple
 F0:DE:71;Shanghai EDO Technologies CoLtd
 F0:DE:B9;ShangHai Y Y Electronics Co Ltd
-F0:DE:F1;Wistron InfoComm (Kunshan)Co
+F0:DE:F1;Wistron InfoComm  Kunshan Co
 F0:E5:C3;Drägerwerk AG   Co KG aA
 F0:E7:7E;Samsung Electronics CoLtd
 F0:EB:D0;Shanghai Feixun Communication CoLtd
@@ -18684,7 +18684,7 @@ F4:44:50;BND Co Ltd
 F4:45:ED;Portable Innovation Technology Ltd
 F4:47:2A;Nanjing Rousing Sci and Tech Industrial Co Ltd
 F4:48:48;Amscreen Group Ltd
-F4:4E:FD;Actions Semiconductor CoLtd(Cayman Islands)
+F4:4E:FD;Actions Semiconductor CoLtd Cayman Islands 
 F4:50:EB;Telechips Inc
 F4:52:14;Mellanox Technologies Inc
 F4:54:33;Rockwell Automation
@@ -18749,17 +18749,17 @@ F8:01:13;Huawei Technologies Co Ltd
 F8:03:32;Khomp
 F8:05:1C;DRS Imaging and Targeting Solutions
 F8:0B:BE;ARRIS Group Inc
-F8:0B:D0;Datang Telecom communication terminal (Tianjin) Co Ltd
+F8:0B:D0;Datang Telecom communication terminal  Tianjin  Co Ltd
 F8:0C:F3;LG Electronics
 F8:0D:EA;ZyCast Technology Inc
-F8:0F:41;Wistron InfoComm(ZhongShan) Corporation
+F8:0F:41;Wistron InfoComm ZhongShan  Corporation
 F8:0F:84;Natural Security SAS
 F8:10:37;Atopia Systems LP
 F8:15:47;Avaya Inc
 F8:16:54;Intel Corporate
 F8:1A:67;TP:LINK TECHNOLOGIES CO LTD
 F8:1C:E5;Telefonbau Behnke GmbH
-F8:1D:93;Longdhua(Beijing) Controls Technology CoLtd
+F8:1D:93;Longdhua Beijing  Controls Technology CoLtd
 F8:1E:DF;Apple
 F8:22:85;Cypress Technology CO LTD
 F8:27:93;Apple Inc
@@ -18815,10 +18815,10 @@ F8:9F:B8;YAZAKI Energy System Corporation
 F8:A0:3D;Dinstar Technologies Co Ltd
 F8:A2:B4;RHEWA:WAAGENFABRIK August Freudewald GmbH  amp;Co KG
 F8:A4:5F;Beijing Xiaomi communications coltd
-F8:A9:63;COMPAL INFORMATION (KUNSHAN) CO LTD
+F8:A9:63;COMPAL INFORMATION  KUNSHAN  CO LTD
 F8:A9:D0;LG Electronics
 F8:A9:DE;PUISSANCE PLUS
-F8:AA:8A;Axview Technology (Shenzhen) CoLtd
+F8:AA:8A;Axview Technology  Shenzhen  CoLtd
 F8:AC:6D;Deltenna Ltd
 F8:B1:56;Dell Inc PCBA Test
 F8:B5:99;Guangzhou CHNAVS Digital Technology CoLtd
@@ -18872,7 +18872,7 @@ FC:10:BD;Control Sistematizado SA
 FC:11:86;Logic3 plc
 FC:13:49;Global Apps Corp
 FC:15:B4;Hewlett Packard
-FC:16:07;Taian Technology(Wuxi) CoLtd
+FC:16:07;Taian Technology Wuxi  CoLtd
 FC:17:94;InterCreative Co Ltd
 FC:19:D0;Cloud Vision Networks Technology CoLtd
 FC:1B:FF;V:ZUG AG
@@ -18921,7 +18921,7 @@ FC:99:47;Cisco
 FC:9F:AE;Fidus Systems Inc
 FC:A1:3E;Samsung Electronics
 FC:A8:41;Avaya Inc
-FC:A9:B0;MIARTECH (SHANGHAI)INC
+FC:A9:B0;MIARTECH  SHANGHAI INC
 FC:AD:0F;QTS NETWORKS
 FC:AF:6A;Conemtech AB
 FC:B0:C4;Shanghai DareGlobal Technologies Co Ltd
