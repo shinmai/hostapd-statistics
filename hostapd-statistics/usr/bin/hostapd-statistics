@@ -56,7 +56,9 @@ connect () {
 		iplookup
 		hostname=`nslookup "$ip" | grep "name" | cut -d"=" -f2 | tr -d ' '` 
 		time=`date +"%H:%M"`
-		write="$mac;$ip;$hostname;$time"
+		shortmac=`echo $mac | cut -c1-8`
+		vendor=`cat /etc/hostapd-statistics/mac2vendor | grep $shortmac | cut -d";" -f2 | tr -d '\n'`
+		write="$vendor;$mac;$ip;$hostname;$time"
 		if  (( ${log} == 1 )); then
 			echo "Client $mac added."
 		fi
@@ -130,7 +132,7 @@ do
 	b=`echo "$a" | sed "s/;/ <\/td><td> /g"`
 	encoded="$b </td>"
 	echo "$encoded"
-	mac=`echo "$line" | cut -d";" -f1`
+	mac=`echo "$line" | cut -d";" -f2`
 	iwstationdump=`iw dev "$wlandev" station dump | tr "\n" "%" | sed "s/Station/;/g" | tr ";" "\n" | grep -i "$mac"`
 	#timeout
 	echo "<td>"
@@ -169,6 +171,7 @@ refreshtablefunction() {
 	uptime #Todo: beautify this.
 	echo '<table>'
 	echo "<tr>"
+	echo "<th>VENDOR</th>"
 	echo "<th>MAC</th>"
 	echo "<th>IP</th>"
 	echo "<th>HOSTNAME</th>"
@@ -245,7 +248,9 @@ main() {
 		iplookup
 		hostname=`nslookup "$ip" | grep "name" | cut -d"=" -f2 | tr -d ' '` 
 		time=`date +"%H:%M"`
-		write="$mac;$ip;$hostname;$time"
+		shortmac=`echo $mac | cut -c1-8`
+                vendor=`cat /etc/hostapd-statistics/mac2vendor | grep $shortmac | cut -d";" -f2 | tr -d '\n'`
+		write="$vendor;$mac;$ip;$hostname;$time"
 		if  (( ${log} == 1 )); then
 			echo "Client $mac added."
 		fi
