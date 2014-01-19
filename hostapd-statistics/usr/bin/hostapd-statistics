@@ -32,12 +32,8 @@ do
 	fi
 done < "/dev/shm/conclients"
 }
-timeoutcheck_loop() {
-timeoutcheck
-while sleep "$sleeptime"; do 
-timeoutcheck 
-done
-}
+timeoutcheck_loop() { timeoutcheck; while sleep "$sleeptime"; do timeoutcheck; done; }
+
 disconnect() {
 	mac=`echo $disconnected | cut -d" " -f8`
 	sed -i -e "/$mac/d" "/dev/shm/conclients"
@@ -234,6 +230,7 @@ main() {
 	# Run the infinite loop
 	timeoutcheck_loop &
 	readonly TIMEOUTCHECK_PID=$!
+	echo $TIMEOUTCHECK_PID > /var/run/hostapd-statistics.2.pid
 	trap "kill ${TIMEOUTCHECK_PID}; rm '/dev/shm/hostapd_statistics_webradio.pid' > /dev/null 2>&1; rm /dev/shm/conclients " TERM EXIT
 	if  (( ${log} == 1 )); then
 		echo "Adding devices which are already connected.."

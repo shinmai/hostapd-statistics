@@ -40,8 +40,10 @@ case "$1" in
 		echo ""
 		kill -9 $(cat $PIDFILE) 2>&1 > /dev/null
 		kill -9 $(cat /var/run/hostapd-statistics.1.pid) 2>&1 > /dev/null
+                kill -9 $(cat /var/run/hostapd-statistics.2.pid) 2>&1 > /dev/null
 		rm $PIDFILE 2>&1 > /dev/null
 		rm /var/run/hostapd-statistics.1.pid 2>&1 > /dev/null
+                rm /var/run/hostapd-statistics.2.pid 2>&1 > /dev/null
 		echo "Hostapd-Statistics stopped" >> /var/log/hostapd-statistics
 	else
 	log_daemon_msg "$NAME is not running"
