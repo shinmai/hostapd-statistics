@@ -1,9 +1,6 @@
 #!/bin/bash
-#This script simply waits for stuff from Hostapd to appear in the syslog
-# uncomment to debug
-#set -x
 loadcfg() {
-#if we got no conf file define everything here.
+#Defaults
 wlandev="wlan0"
 sleeptime="5m"
 webinterfaceport="1500"
@@ -11,6 +8,7 @@ dhcpserverip="192.168.178.1"
 arp_scan_dev="br0"
 use_sensors="0"
 use_vnstat="0"
+log="1"
 webradio="0"
 webradio_url="http://main-high.rautemusik.fm"
 
@@ -20,27 +18,34 @@ source "/etc/hostapd-statistics/CONFIG"
 }
 loadcfg
 timeoutcheck() {
-# This function removes devices which aren't connected anymore but also don't disconnect properly.
-# It uses the iw tool to dump all connected clients.
+#Remove zombie clients
 while read -r line
 do
 	mac=`echo "$line" | cut -d";" -f1 | tr [:lower:] [:upper:]`
 	iwcheck=`iw dev "$wlandev" station dump | tr [:lower:] [:upper:] |grep -i "$mac"` 
 	if [ -z "$iwcheck" ]; then
 		sed -i -e "/$mac/d" "/dev/shm/conclients" #remove the line with $mac from conclients
-		echo "$mac timed out."
+		if  (( ${log} == 1 )); then
+			echo "$mac timed out."
+		fi
 	fi
 done < "/dev/shm/conclients"
 }
-timeoutcheck_loop() { timeoutcheck; while sleep "$sleeptime"; do timeoutcheck; done; }
+timeoutcheck_loop() {
+timeoutcheck
+while sleep "$sleeptime"; do 
+timeoutcheck 
+done
+}
 disconnect() {
 	mac=`echo $disconnected | cut -d" " -f8`
 	sed -i -e "/$mac/d" "/dev/shm/conclients"
-	echo "$mac removed from connected clients."
+	if  (( ${log} == 1 )); then
+		echo "$mac removed from connected clients."
+	fi
 }
 connect () {
 	mac=`echo $connected | cut -d" " -f8 | tr [:lower:] [:upper:]`
-#	echo "Looks like somebody says hello.."
 	unique
 	#check if the mac is already in our list of connected clients
 	alreadythere=`grep $mac "/dev/shm/conclients"`
@@ -49,21 +54,23 @@ connect () {
 		hostname=`nslookup "$ip" | grep "name" | cut -d"=" -f2 | tr -d ' '` 
 		time=`date +"%H:%M"`
 		write="$mac;$ip;$hostname;$time"
-		echo "Client $mac added."
+		if  (( ${log} == 1 )); then
+			echo "Client $mac added."
+		fi
 		echo "$write" >> "/dev/shm/conclients"
-#	else
-#		echo "Wait, he is already in our Database.."
 	fi
 
 }
 unique() {
 	if ! grep -q "$mac" "/etc/hostapd-statistics/uniquemacs" ; then
 		echo "$mac" >> "/etc/hostapd-statistics/uniquemacs"
-		echo "New device connected. Mac: $mac"
+		if  (( ${log} == 1 )); then
+			echo "New device connected. Mac: $mac"
+		fi
 	fi
 }
 iplookup() {
-	#Find out the corresponding IP to the mac adress
+	#MAC to IP resolution
 	ip=`grep "$mac" /proc/net/arp | cut -d" " -f1`
 	#for devices like my sgs2: find out the ip with arp-scan or nmap since it doesn't appear in the arp cache
 	trys=0
@@ -73,23 +80,23 @@ iplookup() {
 	arp-scanfailcheck
 }
 nmaplookup() {
-#	echo "IP lookup with nmap.."
-	ip=`nmap -sP "${dhcpserverip}"/24 | sed -n '/Nmap scan report for/{s/.* //;s/[)(]//g;h};/'"$mac"'/{x;p;q;}'` #thank you sluggr 	
-##sed on freenode
+	ip=`nmap -sP "${dhcpserverip}"/24 | sed -n '/Nmap scan report for/{s/.* //;s/[)(]//g;h};/'"$mac"'/{x;p;q;}'` #thank you sluggr 	##sed on freenode
 }
 arp-scanlookup() {
-#	echo "IP lookup with arp-scan.."
+
 	ip=`arp-scan -l -I "$arp_scan_dev" | grep -i "$mac" | head -n1 |grep -E -o '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}'`
 }
 failcheck() {
 	if [ -z "$ip" ]; then
 		trys=$((trys+1))
 		if (( trys < 3 )); then
-#			echo "Whoops, nmap ip lookup failed. Try again.."
+
 			nmaplookup
 			failcheck
 		else
-			echo "Looks like $mac disappeared from the network."
+			if  (( ${log} == 1 )); then
+				echo "Looks like $mac disappeared from the network."
+			fi
 			exit 0
 		fi
 	fi
@@ -100,12 +107,10 @@ arp-scanfailcheck() {
 	if [ -z "$ip" ]; then
 		trys=$((trys+1))
 		if (( trys < 3 )); then
-#			echo "Whoops, arp-scan ip lookup failed. Try again.."
 			arp-scanlookup
 			arp-scanfailcheck
 		else
 			trys=0
-			echo "Okay.. lets try nmap."
 			nmaplookup
 			failcheck
 	fi
@@ -123,47 +128,42 @@ do
 	b=`echo "$a" | sed "s/;/ <\/td><td> /g"`
 	encoded="$b </td>"
 	echo "$encoded"
-
-		#This uses current data aquired with iw.
-		mac=`echo "$line" | cut -d";" -f1`
-		iwstationdump=`iw dev "$wlandev" station dump | tr "\n" "%" | sed "s/Station/;/g" | tr ";" "\n" | grep -i "$mac"`
-		#timeout
-		echo "<td>"
-		echo "$iwstationdump" | cut -d"%" -f2 | cut -d":" -f2
-		echo "</td>"
-		#send
-		echo "<td>"
-		tmp=`echo "$iwstationdump" | cut -d"%" -f3 | cut -d":" -f2`
-		if [ -n "$tmp" ]; then
-			echo "$(($tmp/1048576)) MB"
-		fi
-		echo "</td>"
-		#recieved
-		echo "<td>"
-		tmp=`echo "$iwstationdump" | cut -d"%" -f5 | cut -d":" -f2`
-		if [ -n "$tmp" ]; then
-			echo "$(($tmp/1048576)) MB"
-		fi
-		echo "</td>"
-		#signal
-		echo "<td>"
-		echo "$iwstationdump" | cut -d"%" -f9 | cut -d":" -f2 | tr -d " "
-		echo "</td>"
-		#signal avg
-		echo "<td>"
-		echo "$iwstationdump" | cut -d"%" -f10 | cut -d":" -f2 | tr -d " "
-		echo "</td>"
-		#Bandwith
-		echo "<td>"
-		echo "$iwstationdump" | cut -d"%" -f11 | cut -d":" -f2 | tr -d " "
-		echo "</td>"
+	#This uses current data aquired with iw.
+	mac=`echo "$line" | cut -d";" -f1`
+	iwstationdump=`iw dev "$wlandev" station dump | tr "\n" "%" | sed "s/Station/;/g" | tr ";" "\n" | grep -i "$mac"`
+	#timeout
+	echo "<td>"
+	echo "$iwstationdump" | cut -d"%" -f2 | cut -d":" -f2
+	echo "</td>"
+	#send
+	echo "<td>"
+	tmp=`echo "$iwstationdump" | cut -d"%" -f3 | cut -d":" -f2`
+	if [ -n "$tmp" ]; then
+		echo "$(($tmp/1048576)) MB"
+	fi
+	echo "</td>"
+	#recieved
+	echo "<td>"
+	tmp=`echo "$iwstationdump" | cut -d"%" -f5 | cut -d":" -f2`
+	if [ -n "$tmp" ]; then
+		echo "$(($tmp/1048576)) MB"
+	fi
+	echo "</td>"
+	#signal
+	echo "<td>"
+	echo "$iwstationdump" | cut -d"%" -f9 | cut -d":" -f2 | tr -d " "
+	echo "</td>"
+	#signal avg
+	echo "<td>"
+	echo "$iwstationdump" | cut -d"%" -f10 | cut -d":" -f2 | tr -d " "
+	echo "</td>"
+	#Bandwith
+	echo "<td>"
+	echo "$iwstationdump" | cut -d"%" -f11 | cut -d":" -f2 | tr -d " "
+	echo "</td>"
 	
 	echo "</tr>"
 done < "/dev/shm/conclients"
-
-
-
-
 }
 refreshtablefunction() {
 	uptime #Todo: beautify this.
@@ -173,14 +173,12 @@ refreshtablefunction() {
 	echo "<th>IP</th>"
 	echo "<th>HOSTNAME</th>"
 	echo "<th>Con. since</th>"
-
-		echo "<th>Inactive Time</th>"
-		echo "<th>Send</th>"
-		echo "<th>Recieved</th>"
-		echo "<th>Signal</th>"
-		echo "<th>Signal Avg.</th>"
-		echo "<th>Bandwith</th>"
-
+	echo "<th>Inactive Time</th>"
+	echo "<th>Send</th>"
+	echo "<th>Recieved</th>"
+	echo "<th>Signal</th>"
+	echo "<th>Signal Avg.</th>"
+	echo "<th>Bandwith</th>"
 	echo "</tr>"
 	tablecontentgen
 	echo "</table>"
@@ -195,11 +193,7 @@ refreshtablefunction() {
 		LANG=C LC_ALL=C sensors -A | sed -nr -e 's,^(.*+)[:]\s+[+]?([0-9.]+).C.*$,<tr><td>\1</td><td>\2</td></tr>,p' #thanks dywi
 		echo "</table>"
 	fi
-
 #	exit 0
-
-
-
 }
 refreshvnstatifunction() {
 if  (( ${use_vnstat} == 1 )); then
@@ -221,15 +215,14 @@ if  (( ${use_vnstat} == 1 )); then
 		echo "<img src='data:image/png;base64,$t'>"
 	fi
 #	exit 0
-
-
 }
 
-#onto the real functions
 
+#core functions
 main() {
-
-	echo "Hostapd-statistics launched"
+	if  (( ${log} == 1 )); then
+		echo "Hostapd-statistics launched"
+	fi
 	# Remove all old entrys and create the file if it doesn't exist.
 	> "/dev/shm/conclients"
 	# Launch the webinterface listener.
@@ -239,7 +232,9 @@ main() {
 	timeoutcheck_loop &
 	readonly TIMEOUTCHECK_PID=$!
 	trap "kill ${TIMEOUTCHECK_PID}; rm '/dev/shm/hostapd_statistics_webradio.pid' > /dev/null 2>&1; rm /dev/shm/conclients " TERM EXIT
-	echo "Adding devices which are already connected.."
+	if  (( ${log} == 1 )); then
+		echo "Adding devices which are already connected.."
+	fi
 	initialdevices=`iw dev "$wlandev" station dump | sed -e "s/Station/;/g" | grep ";" | cut -d" " -f2`
 	for item in $initialdevices
 	do
@@ -249,11 +244,13 @@ main() {
 		hostname=`nslookup "$ip" | grep "name" | cut -d"=" -f2 | tr -d ' '` 
 		time=`date +"%H:%M"`
 		write="$mac;$ip;$hostname;$time"
-		echo "Client $mac added."
+		if  (( ${log} == 1 )); then
+			echo "Client $mac added."
+		fi
 		echo "$write" >> "/dev/shm/conclients"
 	done 
 	
-	# The whole watch the syslog thingy
+	# Watch for new Syslog entrys by hostapd
 	while :
 	do
 		inotifywait -q -q -e modify /var/log/syslog && bash /usr/bin/hostapd-statistics core
@@ -381,13 +378,11 @@ case  "$request"  in
 		echo "</head>"
 		echo "<body>"
 		echo "<center><h1>Hostapd-statistics</h1>"
-
 		echo "<div id='tableHolder'></div>"
 		echo "<script>"
 		echo "refreshMainTable();"
 #		echo "refreshVnstati();"
 		echo "</script>"
-
 #		echo "<div id='VnstatiHolder'></div>"
 		refreshvnstatifunction
 
@@ -411,15 +406,9 @@ case  "$request"  in
 		
 		;;
 esac
-
 }
 
-
-
-
-
-
-#teh real script
+#main class like stuff
 case  "$1"  in
 		"web")
 		web
