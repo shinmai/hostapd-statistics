@@ -4,11 +4,12 @@ loadcfg() {
 wlandev="wlan0"
 sleeptime="5m"
 webinterfaceport="1500"
-dhcpserverip="192.168.178.1"
+dhcpserverip="192.168.178.1" #todo: automate this
 arp_scan_dev="br0"
 use_sensors="0"
 use_vnstat="0"
 log="1"
+client_history="1"
 webradio="0"
 webradio_url="http://main-high.rautemusik.fm"
 
@@ -46,7 +47,9 @@ disconnect() {
 }
 connect () {
 	mac=`echo $connected | cut -d" " -f8 | tr [:lower:] [:upper:]`
-	unique
+	if  (( ${client_history} == 1 )); then
+		unique
+	fi
 	#check if the mac is already in our list of connected clients
 	alreadythere=`grep $mac "/dev/shm/conclients"`
 	if [ -z "$alreadythere" ]; then
@@ -123,12 +126,10 @@ while read -r line # cycle through all lines in conclients (flatfile ftw!) and p
 do
 	
 	echo "<tr>"
-	#this uses the values given in the file. (mac, ip, hostname)
 	a="<td> $line"
 	b=`echo "$a" | sed "s/;/ <\/td><td> /g"`
 	encoded="$b </td>"
 	echo "$encoded"
-	#This uses current data aquired with iw.
 	mac=`echo "$line" | cut -d";" -f1`
 	iwstationdump=`iw dev "$wlandev" station dump | tr "\n" "%" | sed "s/Station/;/g" | tr ";" "\n" | grep -i "$mac"`
 	#timeout
@@ -161,7 +162,6 @@ do
 	echo "<td>"
 	echo "$iwstationdump" | cut -d"%" -f11 | cut -d":" -f2 | tr -d " "
 	echo "</td>"
-	
 	echo "</tr>"
 done < "/dev/shm/conclients"
 }
@@ -239,7 +239,9 @@ main() {
 	for item in $initialdevices
 	do
 		mac=`echo $item | tr [:lower:] [:upper:]`
-		unique
+		if  (( ${client_history} == 1 )); then
+			unique
+		fi
 		iplookup
 		hostname=`nslookup "$ip" | grep "name" | cut -d"=" -f2 | tr -d ' '` 
 		time=`date +"%H:%M"`
