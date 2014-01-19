@@ -32,12 +32,7 @@ do
 	fi
 done < "/dev/shm/conclients"
 }
-timeoutcheck_loop() {
-timeoutcheck
-while sleep "$sleeptime"; do 
-timeoutcheck 
-done
-}
+timeoutcheck_loop() { timeoutcheck; while sleep "$sleeptime"; do timeoutcheck; done; }
 disconnect() {
 	mac=`echo $disconnected | cut -d" " -f8`
 	sed -i -e "/$mac/d" "/dev/shm/conclients"
