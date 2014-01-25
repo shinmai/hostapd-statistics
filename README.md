@@ -8,6 +8,8 @@ FIRST! Read the Manpage
 service hostapd-statistics start
 
 Incompatible with raspian due to the wrong realtek module.
+
+--> ##hostapd on freenode
 ________________________________
 Needs: socat, nmap, inotifywait, arp-scan, iw
 
