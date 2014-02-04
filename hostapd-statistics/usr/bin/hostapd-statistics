@@ -177,7 +177,7 @@ refreshtablefunction() {
 	echo "<th>Recieved</th>"
 	echo "<th>Signal</th>"
 	echo "<th>Signal Avg.</th>"
-	echo "<th>Bandwith</th>"
+	echo "<th>Bandwidth</th>"
 	echo "</tr>"
 	tablecontentgen
 	echo "</table>"
