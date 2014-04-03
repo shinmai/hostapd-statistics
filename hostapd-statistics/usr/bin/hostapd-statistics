@@ -157,11 +157,33 @@ do
 	echo "</td>"
 	#signal
 	echo "<td>"
-	echo "$iwstationdump" | cut -d"%" -f9 | cut -d":" -f2 | tr -d " "
+		value=`echo "$iwstationdump" | cut -d"%" -f9 | cut -d":" -f2 | tr -d " "`
+		value2=`echo $value | sed -e 's/-\(.*\)dBm/\1/'`
+		if [ "$value2" -lt 61 ]
+		then
+			color="#008a00"
+		elif [ "$value2" -lt 81 ]
+		then
+			color="#ffcb00"
+		else
+			color="#ff0c05"
+		fi
+		echo "<font color=\"$color\">$value</font>"
 	echo "</td>"
 	#signal avg
 	echo "<td>"
-	echo "$iwstationdump" | cut -d"%" -f10 | cut -d":" -f2 | tr -d " "
+		value=`echo "$iwstationdump" | cut -d"%" -f10 | cut -d":" -f2 | tr -d " "`
+		value2=`echo $value | sed -e 's/-\(.*\)dBm/\1/'`
+		if [ "$value2" -lt 61 ]
+		then
+			color="#008a00"
+		elif [ "$value2" -lt 81 ]
+		then
+			color="#ffcb00"
+		else
+			color="#ff0c05"
+		fi
+		echo "<font color=\"$color\">$value</font>"
 	echo "</td>"
 	#Bandwith
 	echo "<td>"
