@@ -154,7 +154,7 @@ fi
 
 }
 tablecontentgen() {
-iwstationdump=`iw dev "$wlandev" station dump | tr "\n" "%" | sed "s/Station/;/g" | tr ";" "\n"`
+iwresult=`iw dev "$wlandev" station dump | tr "\n" "%" | sed "s/Station/;/g" | tr ";" "\n"`
 while read -r line # cycle through all lines in conclients (flatfile ftw!) and parse the values so they fit into our html page
 do
 	
@@ -164,7 +164,7 @@ do
 	encoded="$b </td>"
 	echo "$encoded"
 	mac=`echo "$line" | cut -d";" -f2`
-	iwresult=`echo $iwstationdump | grep -i "$mac"`
+	iwstationdump=`echo $iwresult | grep -i "$mac"`
 	if [ -z "$iwstationdump" ]; then
 		echo "<td style=\"background-color:#ff0c05;\">"
 		echo "CONNECTION"
