@@ -15,22 +15,31 @@ SCRIPT_FILE=$( readlink -f "${BASH_SOURCE[0]}" )
 SCRIPT_DIR="${SCRIPT_FILE%/*}"
 source "/etc/hostapd-statistics/CONFIG"
 }
-loadcfg
+loadcfg # Load config or defaults
+
 timeoutcheck() {
-#Remove zombie clients
+# Remove zombie clients
 while read -r line
 do
-	mac=`echo "$line" | cut -d";" -f2 | tr [:lower:] [:upper:]`
-	iwcheck=`iw dev "$wlandev" station dump | tr [:lower:] [:upper:] |grep -i "$mac"` 
-	if [ -z "$iwcheck" ]; then
-		sed -i -e "/$mac/d" "/dev/shm/conclients" #remove the line with $mac from conclients
+	mac=`echo "$line" | cut -d";" -f2 | tr [:lower:] [:upper:]` # Get the mac of the current line
+	iwcheck=`iw dev "$wlandev" station dump | tr [:lower:] [:upper:] |grep -i "$mac"`  # Check if that mac is still connected
+	if [ -z "$iwcheck" ]; then # if not
+		sed -i -e "/$mac/d" "/dev/shm/conclients" # Remove the line with $mac from conclients
 		if  (( ${log} == 1 )); then
 			echo "$mac timed out."
 		fi
 	fi
 done < "/dev/shm/conclients"
 }
-timeoutcheck_loop() { timeoutcheck; while sleep "$sleeptime"; do timeoutcheck; done; }
+
+timeoutcheck_loop() { 
+# Endless loop
+timeoutcheck
+while sleep "$sleeptime"
+do 
+	timeoutcheck 
+done
+}
 
 disconnect() {
 	mac=`echo $disconnected | cut -d" " -f8 | tr [:lower:] [:upper:]`
@@ -194,8 +203,7 @@ refreshtablefunction() {
 }
 refreshvnstatifunction() {
 if  (( ${use_vnstat} == 1 )); then
-		#generate the vnstat images with vnstati
-		#This generates relatively much load on my atom n270.. (Load->Heat)
+		# Generate the vnstat images with vnstati
 		s=`vnstati -i eth0 -s -o /dev/stdout | base64`
 		h=`vnstati -i eth0 -h -o /dev/stdout | base64`
 		d=`vnstati -i eth0 -d -o /dev/stdout | base64`
@@ -222,7 +230,7 @@ main() {
 	fi
 	# Remove all old entrys and create the file if it doesn't exist.
 	> "/dev/shm/conclients"
-	# Launch the webinterface listener.
+	# Launch the Webinterface listener.
 	socat TCP4-LISTEN:"$webinterfaceport",fork,reuseaddr EXEC:"bash /usr/bin/hostapd-statistics web" &
 	echo $! > /var/run/hostapd-statistics.1.pid
 	# Run the infinite loop
