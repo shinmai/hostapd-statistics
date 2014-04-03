@@ -60,6 +60,7 @@ done
 
 timeoutcheck_loop() { 
 # Endless loop
+sleep "$sleeptime"
 timeoutcheck
 while sleep "$sleeptime"
 do 
@@ -163,59 +164,80 @@ do
 	echo "$encoded"
 	mac=`echo "$line" | cut -d";" -f2`
 	iwstationdump=`iw dev "$wlandev" station dump | tr "\n" "%" | sed "s/Station/;/g" | tr ";" "\n" | grep -i "$mac"`
-	#timeout
-	echo "<td>"
-	echo "$iwstationdump" | cut -d"%" -f2 | cut -d":" -f2
-	echo "</td>"
-	#send
-	echo "<td>"
-	tmp=`echo "$iwstationdump" | cut -d"%" -f3 | cut -d":" -f2`
-	if [ -n "$tmp" ]; then
-		echo "$(($tmp/1048576)) MB"
-	fi
-	echo "</td>"
-	#recieved
-	echo "<td>"
-	tmp=`echo "$iwstationdump" | cut -d"%" -f5 | cut -d":" -f2`
-	if [ -n "$tmp" ]; then
-		echo "$(($tmp/1048576)) MB"
-	fi
-	echo "</td>"
-	#signal
-	echo "<td>"
-		value=`echo "$iwstationdump" | cut -d"%" -f9 | cut -d":" -f2 | tr -d " "`
-		value2=`echo $value | sed -e 's/-\(.*\)dBm/\1/'`
-		if [ "$value2" -lt 61 ]
-		then
-			color="#008a00"
-		elif [ "$value2" -lt 81 ]
-		then
-			color="#ffcb00"
-		else
-			color="#ff0c05"
+	if [ -z "$iwstationdump" ]; then
+		echo "<td style=\"background-color:#ff0c05;\">"
+		echo "CONNECTION"
+		echo "</td>"
+		echo "<td style=\"background-color:#ff0c05;\">"
+		echo "LOST"
+		echo "</td>"
+		echo "<td style=\"background-color:#ff0c05;\">"
+		echo "CONNECTION"
+		echo "</td>"
+		echo "<td style=\"background-color:#ff0c05;\">"
+		echo "LOST"
+		echo "</td>"
+		echo "<td style=\"background-color:#ff0c05;\">"
+		echo "CONNECTION"
+		echo "</td>"
+		echo "<td style=\"background-color:#ff0c05;\">"
+		echo "LOST"
+		echo "</td>"
+	else
+		#timeout
+		echo "<td>"
+		echo "$iwstationdump" | cut -d"%" -f2 | cut -d":" -f2
+		echo "</td>"
+		#send
+		echo "<td>"
+		tmp=`echo "$iwstationdump" | cut -d"%" -f3 | cut -d":" -f2`
+		if [ -n "$tmp" ]; then
+			echo "$(($tmp/1048576)) MB"
 		fi
-		echo "<font color=\"$color\">$value</font>"
-	echo "</td>"
-	#signal avg
-	echo "<td>"
-		value=`echo "$iwstationdump" | cut -d"%" -f10 | cut -d":" -f2 | tr -d " "`
-		value2=`echo $value | sed -e 's/-\(.*\)dBm/\1/'`
-		if [ "$value2" -lt 61 ]
-		then
-			color="#008a00"
-		elif [ "$value2" -lt 81 ]
-		then
-			color="#ffcb00"
-		else
-			color="#ff0c05"
+		echo "</td>"
+		#recieved
+		echo "<td>"
+		tmp=`echo "$iwstationdump" | cut -d"%" -f5 | cut -d":" -f2`
+		if [ -n "$tmp" ]; then
+			echo "$(($tmp/1048576)) MB"
 		fi
-		echo "<font color=\"$color\">$value</font>"
-	echo "</td>"
-	#Bandwith
-	echo "<td>"
-	echo "$iwstationdump" | cut -d"%" -f11 | cut -d":" -f2 | tr -d " "
-	echo "</td>"
-	echo "</tr>"
+		echo "</td>"
+		#signal
+		echo "<td>"
+			value=`echo "$iwstationdump" | cut -d"%" -f9 | cut -d":" -f2 | tr -d " "`
+			value2=`echo $value | sed -e 's/-\(.*\)dBm/\1/'`
+			if [ "$value2" -lt 61 ]
+			then
+				color="#008a00"
+			elif [ "$value2" -lt 81 ]
+			then
+				color="#ffcb00"
+			else
+				color="#ff0c05"
+			fi
+			echo "<font color=\"$color\">$value</font>"
+		echo "</td>"
+		#signal avg
+		echo "<td>"
+			value=`echo "$iwstationdump" | cut -d"%" -f10 | cut -d":" -f2 | tr -d " "`
+			value2=`echo $value | sed -e 's/-\(.*\)dBm/\1/'`
+			if [ "$value2" -lt 61 ]
+			then
+				color="#008a00"
+			elif [ "$value2" -lt 81 ]
+			then
+				color="#ffcb00"
+			else
+				color="#ff0c05"
+			fi
+			echo "<font color=\"$color\">$value</font>"
+		echo "</td>"
+		#Bandwith
+		echo "<td>"
+		echo "$iwstationdump" | cut -d"%" -f11 | cut -d":" -f2 | tr -d " "
+		echo "</td>"
+		echo "</tr>"
+	fi
 done < "/dev/shm/conclients"
 }
 refreshtablefunction() {
