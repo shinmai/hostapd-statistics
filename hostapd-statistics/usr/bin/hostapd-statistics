@@ -239,18 +239,18 @@ do
 		echo "</tr>"
 	fi
 done < "/dev/shm/conclients"
-echo "</table>"
-echo "<br>"
+#echo "</table>"
+#echo "<br>"
 
 #other hosts on the network
 hosts=`arp -n | tail -n +2`
-echo '<table>'
-echo "<tr>"
-echo "<th>VENDOR</th>"
-echo "<th>MAC</th>"
-echo "<th>IP</th>"
-echo "<th>HOSTNAME</th>"
-echo "</tr>"
+#echo '<table>'
+#echo "<tr>"
+#echo "<th>VENDOR</th>"
+#echo "<th>MAC</th>"
+#echo "<th>IP</th>"
+#echo "<th>HOSTNAME</th>"
+#echo "</tr>"
 while read -r line
 do
         iface=`echo $line | cut -d" " -f5`
@@ -271,7 +271,8 @@ do
                 	both+=$ip
                 	both+="</td><td>"
                 	both+=$hostname
-                	both+="</td></tr>"
+                        both+="</td><td>LAN</td><td>LAN</td><td>LAN</td><td>LAN</td><td>LAN</td><td>LAN</td><td>LAN</td></tr>"
+                	#both+="</td></tr>"
                 	echo $both
 		fi
 fi
