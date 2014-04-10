@@ -108,7 +108,8 @@ unique() {
 }
 iplookup() {
 	#MAC to IP resolution
-	ip=`grep "$mac" /proc/net/arp | cut -d" " -f1`
+	ip=$(grep -i "$mac" /proc/net/arp)
+	ip="${ip%% *}"
 	#for devices like my sgs2: find out the ip with arp-scan or nmap since it doesn't appear in the arp cache
 	trys=0
 	if [ -z "$ip" ]; then
