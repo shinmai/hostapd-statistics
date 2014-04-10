@@ -157,7 +157,6 @@ tablecontentgen() {
 iwresult=`iw dev "$wlandev" station dump | tr "\n" "%" | sed "s/Station/;/g" | tr ";" "\n"`
 while read -r line # cycle through all lines in conclients (flatfile ftw!) and parse the values so they fit into our html page
 do
-	
 	echo "<tr>"
 	a="<td> $line"
 	b=`echo "$a" | sed "s/;/ <\/td><td> /g"`
@@ -240,9 +239,50 @@ do
 		echo "</tr>"
 	fi
 done < "/dev/shm/conclients"
+echo "</table>"
+echo "<br>"
+
+#other hosts on the network
+hosts=`arp -n | tail -n +2`
+echo '<table>'
+echo "<tr>"
+echo "<th>VENDOR</th>"
+echo "<th>MAC</th>"
+echo "<th>IP</th>"
+echo "<th>HOSTNAME</th>"
+echo "</tr>"
+while read -r line
+do
+        iface=`echo $line | cut -d" " -f5`
+        if [ "$iface" == "br0" ]
+        then
+		mac=`echo $line | cut -d" " -f3 | tr [:lower:] [:upper:]`
+		alreadythere=`grep $mac "/dev/shm/conclients"`
+		if [ -z "$alreadythere" ]; then
+                	shortmac=`echo $mac | cut -c1-8`
+               		vendor=`cat /etc/hostapd-statistics/mac2vendor | grep $shortmac | cut -d";" -f2 | tr -d '\n'`
+                	ip=`echo $line | cut -d" " -f1`
+                	hostname=`nslookup "$ip" | grep "name" | cut -d"=" -f2 | tr -d ' '`
+                	both="<tr><td>"
+                	both+=$vendor
+                	both+="</td><td>"
+                	both+=$mac
+                	both+="</td><td>"
+                	both+=$ip
+                	both+="</td><td>"
+                	both+=$hostname
+                	both+="</td></tr>"
+                	echo $both
+		fi
+fi
+done  <<< "$hosts"
+echo "</table>"
+
+
+
 }
 refreshtablefunction() {
-	uptime #Todo: beautify this.
+	#uptime #Todo: beautify this.
 	echo '<table>'
 	echo "<tr>"
 	echo "<th>VENDOR</th>"
@@ -258,7 +298,6 @@ refreshtablefunction() {
 	echo "<th>Bandwidth</th>"
 	echo "</tr>"
 	tablecontentgen
-	echo "</table>"
 	echo "<br>"
 	if  (( ${use_sensors} == 1 )); then
 	# A new table for our temperature values
