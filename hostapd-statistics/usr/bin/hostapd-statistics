@@ -212,21 +212,37 @@ done < <(iw dev wlan0 station dump)
 process_data
 
 
-while read -r line # cycle through all lines in conclients (flatfile ftw!) and parse the values so they fit into our html page
+while read -r line
 do
-	echo "<tr>"
-	a="<td> $line"
-	b=`echo "$a" | sed "s/;/ <\/td><td> /g"`
-	encoded="$b </td>"
-	echo "$encoded"
-	mac=`echo "$line" | cut -d";" -f2`
-	mac=${mac^^}
+	OLDIFS="${IFS}"
+	local IFS=\;
+	set $line
+	IFS="${OLDIFS}"
+
+	output="<tr><td>"
+	output+="$1"
+	output+="</td><td>"
+	output+="$2"
+	output+="</td><td><a href=\"http://"
+	output+="$3"
+	output+="\">"
+	output+="$3"
+	output+="</a></td><td><a href=\"http://"
+	output+="$4"
+	output+="\">"
+	output+="$4"
+	output+="</a></td><td>"
+	output+="$5"
+	output+="</td>"
+	echo "$output"
+	mac=${2^^}
 	if [ -a "/dev/shm/conclients.d/$mac" ]; then
 		cat "/dev/shm/conclients.d/$mac"
 	else
 		echo "<td style=\"background-color:#ff0c05;\">CONNECTION</td><td style=\"background-color:#ff0c05;\">LOST</td><td style=\"background-color:#ff0c05;\">CONNECTION</td><td style=\"background-color:#ff0c05;\">LOST</td><td style=\"background-color:#ff0c05;\">CONNECTION</td><td style=\"background-color:#ff0c05;\">LOST</td>"
 	fi
 done < "/dev/shm/conclients"
+
 
 #other hosts on the network
 hosts=`arp -n | tail -n +2`
@@ -247,12 +263,15 @@ do
                 	both+=$vendor
                 	both+="</td><td>"
                 	both+=$mac
-                	both+="</td><td>"
+                	both+="</td><td><a href=\"http://"
                 	both+=$ip
-                	both+="</td><td>"
+					both+="\">"
+                	both+=$ip
+                	both+="</a></td><td><a href=\"http://"
                 	both+=$hostname
-                    both+="</td><td>LAN</td><td>LAN</td><td>LAN</td><td>LAN</td><td>LAN</td><td>LAN</td><td>LAN</td></tr>"
-                	#both+="</td></tr>"
+                    both+="\">"
+					both+=$hostname
+					both+="</a></td><td>LAN</td><td>LAN</td><td>LAN</td><td>LAN</td><td>LAN</td><td>LAN</td><td>LAN</td></tr>"
                 	echo $both
 		fi
 fi
