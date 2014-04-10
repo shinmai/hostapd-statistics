@@ -254,7 +254,7 @@ echo "</tr>"
 while read -r line
 do
         iface=`echo $line | cut -d" " -f5`
-        if [ "$iface" == "br0" ]
+        if [ "$iface" == "$arp_scan_dev" ]
         then
 		mac=`echo $line | cut -d" " -f3 | tr [:lower:] [:upper:]`
 		alreadythere=`grep $mac "/dev/shm/conclients"`
