@@ -7,3 +7,6 @@ use_sensors="0"
 use_vnstat="0"
 log="1"
 client_history="1"
+mail="0"
+mailaddr="user@host.tld"
+
