@@ -17,3 +17,7 @@ Needs: socat, nmap, inotifywait, arp-scan, iw
 
 Optional: vnstati, sensors, mplayer
 
+
+If you like this project consider buying me something from my amazon wishlist
+http://www.amazon.de/gp/registry/wishlist/6A82Q6JQNDVG
+
