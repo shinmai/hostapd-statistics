@@ -37,8 +37,9 @@ xmlhttp2.onreadystatechange=function()
     document.getElementById("VnstatiHolder").innerHTML=xmlhttp2.responseText;
    }
   }
-xmlhttp.open("GET","refreshvnstati",true);
-xmlhttp.send();
+xmlhttp2.open("GET","refreshvnstati",true);
+xmlhttp2.send();
 setTimeout(refreshVnstati, 120000);
 }
+refreshVnstati();
 </script>
