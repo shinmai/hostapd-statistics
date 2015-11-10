@@ -14,5 +14,7 @@ sudo dpkg -i hostapd-statistics.deb
 service hostapd-statistics start
 ```
 ________________________________
+
 Requires: socat, nmap, inotifywait, arp-scan, iw
+
 Optionally: vnstati, sensors, mplayer
