@@ -30,7 +30,7 @@ case "$1" in
 	fi
 	log_daemon_msg "Starting $DESC" "$NAME"
 	echo ""
-	bash /usr/bin/hostapd-statistics 2>&1 >> /var/log/hostapd-statistics &
+	bash /usr/sbin/hostapd-statistics 2>&1 >> /var/log/hostapd-statistics &
 	echo $! > $PIDFILE
 	;;
   stop)
