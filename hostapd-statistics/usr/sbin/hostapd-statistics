@@ -1,0 +1,429 @@
+#!/bin/bash
+loadcfg() {
+#Defaults
+wlandev="wlan0"
+sleeptime="5m"
+webinterfaceport="1500"
+dhcpserverip="192.168.178.1" #todo: automate this
+arp_scan_dev="br0"
+use_sensors="0"
+use_vnstat="0"
+log="1"
+client_history="1"
+mail="0"
+mailaddr="user@host.tld"
+
+
+SCRIPT_FILE=$( readlink -f "${BASH_SOURCE[0]}" )
+SCRIPT_DIR="${SCRIPT_FILE%/*}"
+source "/etc/hostapd-statistics/CONFIG"
+}
+loadcfg # Load config or defaults
+
+timeoutcheck() {
+# Remove zombie clients
+iwline=`iw dev "$wlandev" station dump` # Less load
+iwline=${iwline^^}
+while read -r line
+do
+	mac=`echo "$line" | cut -d";" -f2` # Get the mac of the current line
+	mac=${mac^^}
+	iwcheck=`echo "$iwline" |grep -i "$mac"`  # Check if that mac is still connected
+	if [ -z "$iwcheck" ]; then # if not
+		sed -i -e "/$mac/d" "/dev/shm/conclients" # Remove the line with $mac from conclients
+		if (( ${log} == 1 )); then
+			echo "$mac timed out."
+		fi
+	fi
+done < "/dev/shm/conclients"
+
+# For whatever reason, hostapd doesn't always notify us of new devices
+# This is pretty ugly
+rescandevices=`iw dev "$wlandev" station dump | sed -e "s/Station/;/g" | grep ";" | cut -d" " -f2`
+for item in $rescandevices
+do
+	mac=${item^^}
+	if (( ${client_history} == 1 )); then
+		unique
+	fi
+	#check if the mac is already in our list of connected clients
+	alreadythere=`grep $mac "/dev/shm/conclients"`
+	if [ -z "$alreadythere" ]; then
+		iplookup
+		hostname=`nslookup "$ip" | grep "name" | cut -d"=" -f2 | tr -d ' '` 
+		time=`date +"%H:%M"`
+		shortmac=${mac:0:8}
+		vendor=`grep $shortmac /etc/hostapd-statistics/mac2vendor | cut -d";" -f2 | tr -d '\n'`
+		write="$vendor;$mac;$ip;$hostname;$time"
+		if (( ${log} == 1 )); then
+			echo "Client $mac added. Hostapd didn't notify us about that one. Wat?"
+		fi
+		echo "$write" >> "/dev/shm/conclients"
+	fi
+done	
+}
+
+timeoutcheck_loop() { 
+# Endless loop
+sleep "$sleeptime"
+timeoutcheck
+while sleep "$sleeptime"
+do 
+	timeoutcheck 
+done
+}
+
+disconnect() {
+	mac=`echo $disconnected | cut -d" " -f8 | tr [:lower:] [:upper:]`
+	sed -i -e "/$mac/d" "/dev/shm/conclients"
+	if (( ${log} == 1 )); then
+		echo "$mac removed from connected clients."
+	fi
+}
+connect () {
+	mac=`echo $connected | cut -d" " -f8 | tr [:lower:] [:upper:]`
+	if (( ${client_history} == 1 )); then
+		unique
+	fi
+	#check if the mac is already in our list of connected clients
+	alreadythere=`grep $mac "/dev/shm/conclients"`
+	if [ -z "$alreadythere" ]; then
+		iplookup
+		hostname=`nslookup "$ip" | grep "name" | cut -d"=" -f2 | tr -d ' '` 
+		time=`date +"%H:%M"`
+		shortmac=${mac:0:8}
+		vendor=`grep $shortmac /etc/hostapd-statistics/mac2vendor | cut -d";" -f2 | tr -d '\n'`
+		write="$vendor;$mac;$ip;$hostname;$time"
+		if (( ${log} == 1 )); then
+			echo "Client $mac added."
+		fi
+		echo "$write" >> "/dev/shm/conclients"
+	fi
+
+}
+unique() {
+	touch /etc/hostapd-statistics/uniquemacs
+	if ! grep -q "$mac" "/etc/hostapd-statistics/uniquemacs" ; then
+		echo "$mac" >> "/etc/hostapd-statistics/uniquemacs"
+		if (( ${log} == 1 )); then
+			echo "New device connected. Mac: $mac"
+		fi
+		if (( ${mail} == 1 )); then
+					iplookup
+					hostname=`nslookup "$ip" | grep "name" | cut -d"=" -f2 | tr -d ' '`
+			shortmac=${mac:0:8}
+			vendor=`grep $shortmac /etc/hostapd-statistics/mac2vendor | cut -d";" -f2 | tr -d '\n'`
+			mailmessage="Hostapd-Statistics on "
+			mailmessage+=`hostname`
+			mailmessage+=" at "
+			mailmessage+=`date`
+			mailmessage+="\n\nNew device connected.\nMac: $mac \nVendor: $vendor \nIP: $ip \nHostname: $hostname"
+			echo -e ${mailmessage} | mail -s 'Hostapd-statistics Notification' ${mailaddr}
+		fi
+	fi
+}
+iplookup() {
+	#TODO: Global vars? WAT?
+	#MAC to IP resolution
+	ip=$(grep -i "$mac" /proc/net/arp)
+	ip="${ip%% *}"
+	#for devices like my sgs2: find out the ip with arp-scan or nmap since it doesn't appear in the arp cache
+	trys=0
+	if [ -z "$ip" ]; then
+		arp-scanlookup
+	fi
+	arp-scanfailcheck
+}
+nmaplookup() {
+	ip=`nmap -sP "${dhcpserverip}"/24 | sed -n '/Nmap scan report for/{s/.* //;s/[)(]//g;h};/'"$mac"'/{x;p;q;}'` #thank you sluggr 	##sed on freenode
+}
+arp-scanlookup() {
+
+	ip=`arp-scan -l -I "$arp_scan_dev" | grep -i "$mac" | head -n1 |grep -E -o '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}'`
+}
+failcheck() {
+	if [ -z "$ip" ]; then
+		trys=$((trys+1))
+		if (( trys < 3 )); then
+
+			nmaplookup
+			failcheck
+		else
+			if (( ${log} == 1 )); then
+				echo "Looks like $mac disappeared from the network."
+			fi
+			exit 0
+		fi
+	fi
+
+
+}
+arp-scanfailcheck() {
+	if [ -z "$ip" ]; then
+		trys=$((trys+1))
+		if (( trys < 3 )); then
+			arp-scanlookup
+			arp-scanfailcheck
+		else
+			trys=0
+			nmaplookup
+			failcheck
+	fi
+fi
+
+
+}
+process_data() {
+	if [[ "${data['mac']-}" ]]; then
+		echo -ne "<td>${data['inactive time']}</td><td>$((${data['tx bytes']}/1048576)) MB</td><td>$((${data['rx bytes']}/1048576)) MB</td>" > /dev/shm/conclients.d/${data['mac']^^}
+		signal=${data['signal']%% *}
+		signal_avg=${data['signal avg']%% *}
+		if [ "$signal" -gt -61 ]
+		then
+				color="#008a00"
+		elif [ "$value2" -gt -81 ]
+		then
+				color="#ffcb00"
+		else
+				color="#ff0c05"
+		fi
+		if [ "$signal_avg" -gt -61 ]
+		then
+				color2="#008a00"
+		elif [ "$value2" -gt -81 ]
+		then
+				color2="#ffcb00"
+		else
+				color2="#ff0c05"
+		fi
+		echo "<td><font color=\"$color\">$signal dBm</font></td><td><font color=\"$color2\">$signal_avg dBm</font></td><td>${data['tx bitrate']}</td></tr>" >> /dev/shm/conclients.d/${data['mac']^^}
+
+	fi
+}
+
+tablecontentgen() {
+mkdir -p /dev/shm/conclients.d
+declare -A data=()
+while read -r line; do
+	set -- ${line}
+	[[ "${1-}" ]] || continue
+	case "${1,,}" in
+	  'station')
+		 # neue station
+		 : ${2:?} ${4?}
+		 # alte daten verarbeiten
+		 process_data
+		 declare -A data=( ['mac']="${2}" ['device']="${4%\)}" )
+	  ;;
+	  *)
+		 # attribut?
+		 key="${line%%:*}"
+		 set -- ${line#*:}
+		 if [[ "${data['mac']-}" && "${key}" ]]; then
+			data["${key}"]="${*}"
+		 fi
+	  ;;
+	esac
+done < <(iw dev wlan0 station dump)
+process_data
+
+
+while read -r line
+do
+	OLDIFS="${IFS}"
+	local IFS=\;
+	set $line
+	IFS="${OLDIFS}"
+
+	output="<tr><td>"
+	output+="$1"
+	output+="</td><td>"
+	output+="$2"
+	output+="</td><td><a href=\"http://"
+	output+="$3"
+	output+="\">"
+	output+="$3"
+	output+="</a></td><td><a href=\"http://"
+	output+="$4"
+	output+="\">"
+	output+="$4"
+	output+="</a></td><td>"
+	output+="$5"
+	output+="</td>"
+	echo "$output"
+	mac=${2^^}
+	if [ -a "/dev/shm/conclients.d/$mac" ]; then
+		cat "/dev/shm/conclients.d/$mac"
+	else
+		echo "<td style=\"background-color:#ff0c05;\">CONNECTION</td><td style=\"background-color:#ff0c05;\">LOST</td><td style=\"background-color:#ff0c05;\">CONNECTION</td><td style=\"background-color:#ff0c05;\">LOST</td><td style=\"background-color:#ff0c05;\">CONNECTION</td><td style=\"background-color:#ff0c05;\">LOST</td>"
+	fi
+done < "/dev/shm/conclients"
+
+
+#other hosts on the network
+hosts=`arp -n | tail -n +2`
+
+while read -r line
+do
+		iface=`echo $line | cut -d" " -f5`
+		if [ "$iface" == "$arp_scan_dev" ]
+		then
+		mac=`echo $line | cut -d" " -f3 | tr [:lower:] [:upper:]`
+		alreadythere=`grep $mac "/dev/shm/conclients"`
+		if [ -z "$alreadythere" ]; then
+					shortmac=${mac:0:8}
+						vendor=`grep $shortmac /etc/hostapd-statistics/mac2vendor | cut -d";" -f2 | tr -d '\n'`
+					ip=`echo $line | cut -d" " -f1`
+					hostname=`nslookup "$ip" | grep "name" | cut -d"=" -f2 | tr -d ' '`
+					both="<tr><td>"
+					both+=$vendor
+					both+="</td><td>"
+					both+=$mac
+					both+="</td><td><a href=\"http://"
+					both+=$ip
+					both+="\">"
+					both+=$ip
+					both+="</a></td><td><a href=\"http://"
+					both+=$hostname
+					both+="\">"
+					both+=$hostname
+					both+="</a></td><td>LAN</td><td>LAN</td><td>LAN</td><td>LAN</td><td>LAN</td><td>LAN</td><td>LAN</td></tr>"
+					echo $both
+		fi
+fi
+done  <<< "$hosts"
+echo "</table>"
+
+
+
+}
+refreshtablefunction() {
+	#uptime #Todo: beautify this.
+	echo "<table><tr><th>VENDOR</th><th>MAC</th><th>IP</th><th>HOSTNAME</th><th>Con. since</th><th>Inactive Time</th><th>Send</th><th>Recieved</th><th>Signal</th><th>Signal Avg.</th><th>Bandwidth</th></tr>"
+	tablecontentgen
+	echo "<br>"
+	if (( ${use_sensors} == 1 )); then
+	# A new table for our temperature values
+		echo "<table><tr><th>Sensor</th><th>T (&deg;C)</th></tr>"
+		LANG=C LC_ALL=C sensors -A | sed -nr -e 's,^(.*+)[:]\s+[+]?([0-9.]+).C.*$,<tr><td>\1</td><td>\2</td></tr>,p' #thanks dywi
+		echo "</table>"
+	fi
+
+}
+refreshvnstatifunction() {
+if (( ${use_vnstat} == 1 )); then
+		# Generate the vnstat images with vnstati
+		s=`vnstati -i eth0 -s -o /dev/stdout | base64`
+		h=`vnstati -i eth0 -h -o /dev/stdout | base64`
+		d=`vnstati -i eth0 -d -o /dev/stdout | base64`
+		t=`vnstati -i eth0 -m -o /dev/stdout | base64`
+		echo "<br><img src='data:image/png;base64,$s'><img src='data:image/png;base64,$h'><br><img src='data:image/png;base64,$d'><img src='data:image/png;base64,$t'>"
+				s=`vnstati -i wlan0 -s -o /dev/stdout | base64`
+				h=`vnstati -i wlan0 -h -o /dev/stdout | base64`
+				d=`vnstati -i wlan0 -d -o /dev/stdout | base64`
+				t=`vnstati -i wlan0+eth0 -t -o /dev/stdout | base64`
+				m=`vnstati -i wlan0 -m -o /dev/stdout | base64`
+				echo "<br><img src='data:image/png;base64,$s'><img src='data:image/png;base64,$h'><br><img src='data:image/png;base64,$d'><img src='data:image/png;base64,$m'><br><br><hr><br><img src='data:image/png;base64,$t'>"
+	fi
+
+}
+
+
+#core functions
+main() {
+	if (( ${log} == 1 )); then
+		echo "Hostapd-statistics launched"
+	fi
+	# Remove all old entrys and create the file if it doesn't exist.
+	> "/dev/shm/conclients"
+	# Launch the Webinterface listener.
+	socat TCP4-LISTEN:"$webinterfaceport",fork,reuseaddr EXEC:"bash /usr/bin/hostapd-statistics web" 2>1 >>/var/log/hostapd-statistics &
+	echo $! > /var/run/hostapd-statistics.1.pid
+	# Run the infinite loop
+	timeoutcheck_loop &
+	readonly TIMEOUTCHECK_PID=$!
+	echo $TIMEOUTCHECK_PID > /var/run/hostapd-statistics.2.pid
+	trap "kill ${TIMEOUTCHECK_PID}; rm /dev/shm/conclients " TERM EXIT
+	if (( ${log} == 1 )); then
+		echo "Adding devices which are already connected.."
+	fi
+	initialdevices=`iw dev "$wlandev" station dump | sed -e "s/Station/;/g" | grep ";" | cut -d" " -f2`
+	for item in $initialdevices
+	do
+		mac=`echo $item | tr [:lower:] [:upper:]`
+		if (( ${client_history} == 1 )); then
+			unique
+		fi
+		iplookup
+		hostname=`nslookup "$ip" | grep "name" | cut -d"=" -f2 | tr -d ' '` 
+		time=`date +"%H:%M"`
+		shortmac=${mac:0:8}
+				vendor=`grep $shortmac /etc/hostapd-statistics/mac2vendor | cut -d";" -f2 | tr -d '\n'`
+		write="$vendor;$mac;$ip;$hostname;$time"
+		if (( ${log} == 1 )); then
+			echo "Client $mac added."
+		fi
+		echo "$write" >> "/dev/shm/conclients"
+	done 
+	
+	# Watch for new Syslog entrys by hostapd
+	while :
+	do
+		inotifywait -q -q -e modify /var/log/syslog && bash /usr/bin/hostapd-statistics core
+	done
+}
+
+
+
+
+core() {
+	isthisimportant=`tail -1 /var/log/syslog | grep "hostapd"`
+	if [ -n "$isthisimportant" ]; then
+		connected=`echo "$isthisimportant" | grep "handshake"`
+		disconnected=`echo "$isthisimportant" | grep "deauthenticated"`
+		if [ -n "$connected" ]; then
+			connect
+		elif [ -n "$disconnected" ]; then
+			disconnect
+		fi
+	
+	fi
+}
+
+web() {
+#Headersnstuff
+read request
+request=`echo $request | cut -d" " -f2`
+echo -e "HTTP/1.1 200 OK\nAccess-Control-Allow-Origin: *\n"
+# Everything
+case  "$request"  in
+		"/refreshtable")
+		refreshtablefunction
+		;;
+		"/refreshvnstati")
+		refreshvnstatifunction
+		;;
+		*)
+		echo "<!DOCTYPE html><html>"
+		cat "/etc/hostapd-statistics/javascript1.js"
+		cat "/etc/hostapd-statistics/style.css"
+		echo "<head><title>Incompetent Alligators :: statistics</title></head><body><center><h1>Incompetent Alligators :: statistics</h1><h2>Network statistics</h2><div id='VnstatiHolder'></div><br><h2>Authenticated users</h2><div id='tableHolder'></div><script>refreshMainTable();refreshVnstati();</script><br><h2>System Stats</h2><img src='/cputemp.png' /><br><img src='/cpu-day.png' /><img src='/cpu-week.png' /><br><img src='/cpu-long.png' /><br></center></body></html>"
+		;;
+esac
+}
+
+#main class like stuff
+case  "$1"  in
+		"web")
+		web
+		;;
+		"core")
+		core
+		;;
+		*)		
+		main
+		;;
+esac
+
+
+
