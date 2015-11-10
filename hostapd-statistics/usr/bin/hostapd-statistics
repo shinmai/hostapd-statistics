@@ -317,9 +317,14 @@ if (( ${use_vnstat} == 1 )); then
 		s=`vnstati -i eth0 -s -o /dev/stdout | base64`
 		h=`vnstati -i eth0 -h -o /dev/stdout | base64`
 		d=`vnstati -i eth0 -d -o /dev/stdout | base64`
-		t=`vnstati -i eth0 -t -o /dev/stdout | base64`
-		m=`vnstati -i eth0 -m -o /dev/stdout | base64`
-		echo "<br><img src='data:image/png;base64,$s'><img src='data:image/png;base64,$h'><br><img src='data:image/png;base64,$d'><img src='data:image/png;base64,$m'><br><img src='data:image/png;base64,$t'>"
+		t=`vnstati -i eth0 -m -o /dev/stdout | base64`
+		echo "<br><img src='data:image/png;base64,$s'><img src='data:image/png;base64,$h'><br><img src='data:image/png;base64,$d'><img src='data:image/png;base64,$t'>"
+				s=`vnstati -i wlan0 -s -o /dev/stdout | base64`
+				h=`vnstati -i wlan0 -h -o /dev/stdout | base64`
+				d=`vnstati -i wlan0 -d -o /dev/stdout | base64`
+				t=`vnstati -i wlan0+eth0 -t -o /dev/stdout | base64`
+				m=`vnstati -i wlan0 -m -o /dev/stdout | base64`
+				echo "<br><img src='data:image/png;base64,$s'><img src='data:image/png;base64,$h'><br><img src='data:image/png;base64,$d'><img src='data:image/png;base64,$m'><br><br><hr><br><img src='data:image/png;base64,$t'>"
 	fi
 
 }
