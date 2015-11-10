@@ -1,8 +1,9 @@
+This is a custom fork of hostapd-statistics in use on a Raspberrypi access point.
+
 #hostapd-statistics
 
 
-![alt tag](https://raw2.github.com/Hypfer/hostapd-statistics/master/hostapd-statistics-demo.png)
-
+![screenshot of hostap-statistic generated webpage](hostapd-statistics-demo.png?raw=true)
 
 
 Webinterface with statistics for Hostapd
