@@ -408,7 +408,7 @@ case  "$request"  in
 		echo "<!DOCTYPE html><html>"
 		cat "/etc/hostapd-statistics/javascript1.js"
 		cat "/etc/hostapd-statistics/style.css"
-		echo "<head><title>Hostapd-statistics</title></head><body><center><h1>Hostapd-statistics</h1><div id='tableHolder'></div><script>refreshMainTable();refreshVnstati();</script><div id='VnstatiHolder'></div><br></center></body></html>"
+		echo "<head><title>Incompetent Alligators :: statistics</title></head><body><center><h1>Incompetent Alligators :: statistics</h1><h2>Network statistics</h2><div id='VnstatiHolder'></div><br><h2>Authenticated users</h2><div id='tableHolder'></div><script>refreshMainTable();refreshVnstati();</script><br><h2>System Stats</h2><img src='/cputemp.png' /><br><img src='/cpu-day.png' /><img src='/cpu-week.png' /><br><img src='/cpu-long.png' /><br></center></body></html>"
 		;;
 esac
 }
