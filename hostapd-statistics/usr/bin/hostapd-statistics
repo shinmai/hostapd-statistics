@@ -31,7 +31,7 @@ do
 	iwcheck=`echo "$iwline" |grep -i "$mac"`  # Check if that mac is still connected
 	if [ -z "$iwcheck" ]; then # if not
 		sed -i -e "/$mac/d" "/dev/shm/conclients" # Remove the line with $mac from conclients
-		if  (( ${log} == 1 )); then
+		if (( ${log} == 1 )); then
 			echo "$mac timed out."
 		fi
 	fi
@@ -43,7 +43,7 @@ rescandevices=`iw dev "$wlandev" station dump | sed -e "s/Station/;/g" | grep ";
 for item in $rescandevices
 do
 	mac=${item^^}
-	if  (( ${client_history} == 1 )); then
+	if (( ${client_history} == 1 )); then
 		unique
 	fi
 	#check if the mac is already in our list of connected clients
@@ -55,7 +55,7 @@ do
 		shortmac=${mac:0:8}
 		vendor=`grep $shortmac /etc/hostapd-statistics/mac2vendor | cut -d";" -f2 | tr -d '\n'`
 		write="$vendor;$mac;$ip;$hostname;$time"
-		if  (( ${log} == 1 )); then
+		if (( ${log} == 1 )); then
 			echo "Client $mac added. Hostapd didn't notify us about that one. Wat?"
 		fi
 		echo "$write" >> "/dev/shm/conclients"
@@ -76,13 +76,13 @@ done
 disconnect() {
 	mac=`echo $disconnected | cut -d" " -f8 | tr [:lower:] [:upper:]`
 	sed -i -e "/$mac/d" "/dev/shm/conclients"
-	if  (( ${log} == 1 )); then
+	if (( ${log} == 1 )); then
 		echo "$mac removed from connected clients."
 	fi
 }
 connect () {
 	mac=`echo $connected | cut -d" " -f8 | tr [:lower:] [:upper:]`
-	if  (( ${client_history} == 1 )); then
+	if (( ${client_history} == 1 )); then
 		unique
 	fi
 	#check if the mac is already in our list of connected clients
@@ -94,7 +94,7 @@ connect () {
 		shortmac=${mac:0:8}
 		vendor=`grep $shortmac /etc/hostapd-statistics/mac2vendor | cut -d";" -f2 | tr -d '\n'`
 		write="$vendor;$mac;$ip;$hostname;$time"
-		if  (( ${log} == 1 )); then
+		if (( ${log} == 1 )); then
 			echo "Client $mac added."
 		fi
 		echo "$write" >> "/dev/shm/conclients"
@@ -105,12 +105,12 @@ unique() {
 	touch /etc/hostapd-statistics/uniquemacs
 	if ! grep -q "$mac" "/etc/hostapd-statistics/uniquemacs" ; then
 		echo "$mac" >> "/etc/hostapd-statistics/uniquemacs"
-		if  (( ${log} == 1 )); then
+		if (( ${log} == 1 )); then
 			echo "New device connected. Mac: $mac"
 		fi
-		if  (( ${mail} == 1 )); then
-	                iplookup
-	                hostname=`nslookup "$ip" | grep "name" | cut -d"=" -f2 | tr -d ' '`
+		if (( ${mail} == 1 )); then
+					iplookup
+					hostname=`nslookup "$ip" | grep "name" | cut -d"=" -f2 | tr -d ' '`
 			shortmac=${mac:0:8}
 			vendor=`grep $shortmac /etc/hostapd-statistics/mac2vendor | cut -d";" -f2 | tr -d '\n'`
 			mailmessage="Hostapd-Statistics on "
@@ -149,7 +149,7 @@ failcheck() {
 			nmaplookup
 			failcheck
 		else
-			if  (( ${log} == 1 )); then
+			if (( ${log} == 1 )); then
 				echo "Looks like $mac disappeared from the network."
 			fi
 			exit 0
@@ -174,57 +174,57 @@ fi
 
 }
 process_data() {
-   if [[ "${data['mac']-}" ]]; then
-      # verarbeiten
-        echo -ne "<td>${data['inactive time']}</td><td>$((${data['tx bytes']}/1048576)) MB</td><td>$((${data['rx bytes']}/1048576)) MB</td>" > /dev/shm/conclients.d/${data['mac']^^}
-        signal=${data['signal']%% *}
-        signal_avg=${data['signal avg']%% *}
-        if [ "$signal" -gt -61 ]
-        then
-                color="#008a00"
-        elif [ "$value2" -gt -81 ]
-        then
-                color="#ffcb00"
-        else
-                color="#ff0c05"
-        fi
-        if [ "$signal_avg" -gt -61 ]
-        then
-                color2="#008a00"
-        elif [ "$value2" -gt -81 ]
-        then
-                color2="#ffcb00"
-        else
-                color2="#ff0c05"
-        fi
-        echo "<td><font color=\"$color\">$signal dBm</font></td><td><font color=\"$color2\">$signal_avg dBm</font></td><td>${data['tx bitrate']}</td></tr>" >> /dev/shm/conclients.d/${data['mac']^^}
+	if [[ "${data['mac']-}" ]]; then
+        # verarbeiten
+		echo -ne "<td>${data['inactive time']}</td><td>$((${data['tx bytes']}/1048576)) MB</td><td>$((${data['rx bytes']}/1048576)) MB</td>" > /dev/shm/conclients.d/${data['mac']^^}
+		signal=${data['signal']%% *}
+		signal_avg=${data['signal avg']%% *}
+		if [ "$signal" -gt -61 ]
+		then
+				color="#008a00"
+		elif [ "$value2" -gt -81 ]
+		then
+				color="#ffcb00"
+		else
+				color="#ff0c05"
+		fi
+		if [ "$signal_avg" -gt -61 ]
+		then
+				color2="#008a00"
+		elif [ "$value2" -gt -81 ]
+		then
+				color2="#ffcb00"
+		else
+				color2="#ff0c05"
+		fi
+		echo "<td><font color=\"$color\">$signal dBm</font></td><td><font color=\"$color2\">$signal_avg dBm</font></td><td>${data['tx bitrate']}</td></tr>" >> /dev/shm/conclients.d/${data['mac']^^}
 
-   fi
+	fi
 }
 
 tablecontentgen() {
 mkdir -p /dev/shm/conclients.d
 declare -A data=()
 while read -r line; do
-   set -- ${line}
-   [[ "${1-}" ]] || continue
-   case "${1,,}" in
-      'station')
-         # neue station
-         : ${2:?} ${4?}
-         # alte daten verarbeiten
-         process_data
-         declare -A data=( ['mac']="${2}" ['device']="${4%\)}" )
-      ;;
-      *)
-         # attribut?
-         key="${line%%:*}"
-         set -- ${line#*:}
-         if [[ "${data['mac']-}" && "${key}" ]]; then
-            data["${key}"]="${*}"
-         fi
-      ;;
-   esac
+	set -- ${line}
+	[[ "${1-}" ]] || continue
+	case "${1,,}" in
+	  'station')
+		 # neue station
+		 : ${2:?} ${4?}
+		 # alte daten verarbeiten
+		 process_data
+		 declare -A data=( ['mac']="${2}" ['device']="${4%\)}" )
+	  ;;
+	  *)
+		 # attribut?
+		 key="${line%%:*}"
+		 set -- ${line#*:}
+		 if [[ "${data['mac']-}" && "${key}" ]]; then
+			data["${key}"]="${*}"
+		 fi
+	  ;;
+	esac
 done < <(iw dev wlan0 station dump)
 process_data
 
@@ -266,30 +266,30 @@ hosts=`arp -n | tail -n +2`
 
 while read -r line
 do
-        iface=`echo $line | cut -d" " -f5`
-        if [ "$iface" == "$arp_scan_dev" ]
-        then
+		iface=`echo $line | cut -d" " -f5`
+		if [ "$iface" == "$arp_scan_dev" ]
+		then
 		mac=`echo $line | cut -d" " -f3 | tr [:lower:] [:upper:]`
 		alreadythere=`grep $mac "/dev/shm/conclients"`
 		if [ -z "$alreadythere" ]; then
-                	shortmac=${mac:0:8}
-               		vendor=`grep $shortmac /etc/hostapd-statistics/mac2vendor | cut -d";" -f2 | tr -d '\n'`
-                	ip=`echo $line | cut -d" " -f1`
-                	hostname=`nslookup "$ip" | grep "name" | cut -d"=" -f2 | tr -d ' '`
-                	both="<tr><td>"
-                	both+=$vendor
-                	both+="</td><td>"
-                	both+=$mac
-                	both+="</td><td><a href=\"http://"
-                	both+=$ip
+					shortmac=${mac:0:8}
+						vendor=`grep $shortmac /etc/hostapd-statistics/mac2vendor | cut -d";" -f2 | tr -d '\n'`
+					ip=`echo $line | cut -d" " -f1`
+					hostname=`nslookup "$ip" | grep "name" | cut -d"=" -f2 | tr -d ' '`
+					both="<tr><td>"
+					both+=$vendor
+					both+="</td><td>"
+					both+=$mac
+					both+="</td><td><a href=\"http://"
+					both+=$ip
 					both+="\">"
-                	both+=$ip
-                	both+="</a></td><td><a href=\"http://"
-                	both+=$hostname
-                    both+="\">"
+					both+=$ip
+					both+="</a></td><td><a href=\"http://"
+					both+=$hostname
+					both+="\">"
 					both+=$hostname
 					both+="</a></td><td>LAN</td><td>LAN</td><td>LAN</td><td>LAN</td><td>LAN</td><td>LAN</td><td>LAN</td></tr>"
-                	echo $both
+					echo $both
 		fi
 fi
 done  <<< "$hosts"
@@ -303,7 +303,7 @@ refreshtablefunction() {
 	echo "<table><tr><th>VENDOR</th><th>MAC</th><th>IP</th><th>HOSTNAME</th><th>Con. since</th><th>Inactive Time</th><th>Send</th><th>Recieved</th><th>Signal</th><th>Signal Avg.</th><th>Bandwidth</th></tr>"
 	tablecontentgen
 	echo "<br>"
-	if  (( ${use_sensors} == 1 )); then
+	if (( ${use_sensors} == 1 )); then
 	# A new table for our temperature values
 		echo "<table><tr><th>Sensor</th><th>T (&deg;C)</th></tr>"
 		LANG=C LC_ALL=C sensors -A | sed -nr -e 's,^(.*+)[:]\s+[+]?([0-9.]+).C.*$,<tr><td>\1</td><td>\2</td></tr>,p' #thanks dywi
@@ -312,7 +312,7 @@ refreshtablefunction() {
 
 }
 refreshvnstatifunction() {
-if  (( ${use_vnstat} == 1 )); then
+if (( ${use_vnstat} == 1 )); then
 		# Generate the vnstat images with vnstati
 		s=`vnstati -i eth0 -s -o /dev/stdout | base64`
 		h=`vnstati -i eth0 -h -o /dev/stdout | base64`
@@ -327,7 +327,7 @@ if  (( ${use_vnstat} == 1 )); then
 
 #core functions
 main() {
-	if  (( ${log} == 1 )); then
+	if (( ${log} == 1 )); then
 		echo "Hostapd-statistics launched"
 	fi
 	# Remove all old entrys and create the file if it doesn't exist.
@@ -340,23 +340,23 @@ main() {
 	readonly TIMEOUTCHECK_PID=$!
 	echo $TIMEOUTCHECK_PID > /var/run/hostapd-statistics.2.pid
 	trap "kill ${TIMEOUTCHECK_PID}; rm /dev/shm/conclients " TERM EXIT
-	if  (( ${log} == 1 )); then
+	if (( ${log} == 1 )); then
 		echo "Adding devices which are already connected.."
 	fi
 	initialdevices=`iw dev "$wlandev" station dump | sed -e "s/Station/;/g" | grep ";" | cut -d" " -f2`
 	for item in $initialdevices
 	do
 		mac=`echo $item | tr [:lower:] [:upper:]`
-		if  (( ${client_history} == 1 )); then
+		if (( ${client_history} == 1 )); then
 			unique
 		fi
 		iplookup
 		hostname=`nslookup "$ip" | grep "name" | cut -d"=" -f2 | tr -d ' '` 
 		time=`date +"%H:%M"`
 		shortmac=${mac:0:8}
-                vendor=`grep $shortmac /etc/hostapd-statistics/mac2vendor | cut -d";" -f2 | tr -d '\n'`
+				vendor=`grep $shortmac /etc/hostapd-statistics/mac2vendor | cut -d";" -f2 | tr -d '\n'`
 		write="$vendor;$mac;$ip;$hostname;$time"
-		if  (( ${log} == 1 )); then
+		if (( ${log} == 1 )); then
 			echo "Client $mac added."
 		fi
 		echo "$write" >> "/dev/shm/conclients"
@@ -416,7 +416,7 @@ case  "$1"  in
 		"core")
 		core
 		;;
-		*)       
+		*)		
 		main
 		;;
 esac
