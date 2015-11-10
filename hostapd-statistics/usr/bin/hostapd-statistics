@@ -175,7 +175,6 @@ fi
 }
 process_data() {
 	if [[ "${data['mac']-}" ]]; then
-        # verarbeiten
 		echo -ne "<td>${data['inactive time']}</td><td>$((${data['tx bytes']}/1048576)) MB</td><td>$((${data['rx bytes']}/1048576)) MB</td>" > /dev/shm/conclients.d/${data['mac']^^}
 		signal=${data['signal']%% *}
 		signal_avg=${data['signal avg']%% *}
