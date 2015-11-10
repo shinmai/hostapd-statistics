@@ -1,4 +1,7 @@
 <style type='text/css'>
+* {
+font-family: 'Varela Round', sans-serif;
+}
 table {
     *border-collapse: collapse; /* IE7 and lower */
     border-spacing: 0;
