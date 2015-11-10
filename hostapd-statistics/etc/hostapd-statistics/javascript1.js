@@ -16,7 +16,7 @@ xmlhttp.onreadystatechange=function()
     document.getElementById("tableHolder").innerHTML=xmlhttp.responseText;
     }
   }
-xmlhttp.open("GET","refreshtable",true);
+xmlhttp.open("GET","stats/refreshtable",true);
 xmlhttp.send();
 setTimeout(refreshMainTable, 5000);
 }
@@ -37,7 +37,7 @@ xmlhttp2.onreadystatechange=function()
     document.getElementById("VnstatiHolder").innerHTML=xmlhttp2.responseText;
    }
   }
-xmlhttp2.open("GET","refreshvnstati",true);
+xmlhttp2.open("GET","stats/refreshvnstati",true);
 xmlhttp2.send();
 setTimeout(refreshVnstati, 120000);
 }
